@@ -137,8 +137,26 @@ Spatial annotations are not annotated since they harbour little information and 
 
 ### More specific relations
 Similar to the *inf* prefix that infers relations, there are cases where the relations are described with very little detail i.e. words like *with* are used when for example *holds* would be more fitting. If the image contains these more detailed information then also include those with the *img* and *inf* prefixes. For that the entity annotation box has to be copied and marked their linking has to be marked with an underscore "\_".  
-The figure \ref{fig:withorhold} shows an example. Both babies have the \textit{with} relation with the respective adult, but also at the same time the adults have the more detailed holds relation inferred. Pay close attention to the linking on the right. The entities with the inferred relation end with the underscore.
+The figure below shows an example. Both babies have the *with* relation with the respective adult, but also at the same time the adults have the more detailed holds relation inferred. Pay close attention to the linking on the right. The entities with the inferred relation end with the underscore.
 
+|  <img width="2037" height="1092" alt="with_or_hold" src="https://github.com/user-attachments/assets/9c311810-7c81-4213-a6a5-c82f18de6101" />|
+|:--:|
+|"It shows mainly Elisabeth *with* baby John the Baptist, Joseph and Mary *with* infant baby Jesus (l.t.r.).These figures of the New Testament maintain eye contact."|
+
+### Wikidata linking
+For every entity given in the text, there might be more than just one in the image. If it is clear that all of the present entities in the image are described, then annotations need to specifically count each instance of the entity. This ensures that the correctness and completeness.
+In first figure below, the instance count for the selected angel is displayed as 2 since it is the second angel. There is no particular rule regarding the orders or where to start counting. However, the instances have to match those described in the text. 
+The second figure highlights a second group of angels in the foreground. Those angels refer to the ones standing next to Jesus.
+Taking this information into account, the instance counts in the linkings for the text needs to fit those in the painting. 
+The expected linking for the flying angels would be "https://www.wikidata.org/wiki/Q235113\#1-2" and for the foreground angels it would be www.wikidata.org/wiki/Q235113\#3-6. Both would be for the corresponding *angels* term. 
+
+|<img width="2017" height="1088" alt="instances1" src="https://github.com/user-attachments/assets/459e7040-88bc-4b48-a371-d284543e9e46" />|
+|:--:|
+|"It depicts Christ standing on a double basement, keeping the Cross. *Behind him is a damask cloth held by two angels* and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. In the foreground are four angels [...]."|
+
+|<img width="1995" height="1091" alt="instances2" src="https://github.com/user-attachments/assets/ebc373fc-b989-4e15-80db-554919f1ed95" />|
+|:--:|
+|"It depicts Christ standing on a double basement, keeping the Cross.Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. *In the foreground are four angels* [...]."|
 
 
 
