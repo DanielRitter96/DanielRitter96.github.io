@@ -110,12 +110,34 @@ One can see that in the below figure, in order to capture the three archangels w
 |"[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."|
 
 ### Individuals are part of a group
-If there are groups with distinguishable individuals, e.g. \ref{fig:big_box} then they have to have the _part\_of_ relation to the group. Keep in mind that groups can have other relations as well.
+If there are groups with distinguishable individuals, like in the below figure, then they have to have the _part\_of_ relation to the group. Keep in mind that groups can have other relations as well.
 
 |<img width="2281" height="1110" alt="part_of" src="https://github.com/user-attachments/assets/e0a3a60f-fdbf-4fbc-96e0-80dae6825822" />|
 |:--:|
 |"[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."|
 
+### Group annotations
+Entities have to be annotated as a group if
+-  They are not specifically named
+-  The number of relevant entities start overlapping and reach 5 overlapped entities
+-  multiple entities of the same type close together e.g. flowers
+
+The figure below shows the blessed and the damned on the left and right side of the painting respectively. Since they both are a big group of people they exceed the maximum amount of individual entities and become a group.
+
+| <img width="548" height="730" alt="when_group" src="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d" />|
+|:--:|
+|"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the *blessed*, whilst the *damned* fall into hell on the right hand side [...]."|
+
+### No spatial annotations
+Spatial annotations are not annotated since they harbour little information and can be inferred by the location of the boxes. Additionally, relations such as _together with_ are treated as spatial information. An exception for that is discussed later. The below figure with the emphasis on the caption shows that those relations are left out.
+
+| <img width="2127" height="1015" alt="big_box" src="https://github.com/user-attachments/assets/4983f5f8-89f8-4d1b-9686-738c91160f04" />|
+|:--:|
+|"[...] the picture represents the three archangels: Michael _on the left_ Raphael _in the centre_, and Gabriel holding a lily, together with a young Tobias, son of Tobit."|
+
+### More specific relations
+Similar to the *inf* prefix that infers relations, there are cases where the relations are described with very little detail i.e. words like *with* are used when for example *holds* would be more fitting. If the image contains these more detailed information then also include those with the *img* and *inf* prefixes. For that the entity annotation box has to be copied and marked their linking has to be marked with an underscore "\_".  
+The figure \ref{fig:withorhold} shows an example. Both babies have the \textit{with} relation with the respective adult, but also at the same time the adults have the more detailed holds relation inferred. Pay close attention to the linking on the right. The entities with the inferred relation end with the underscore.
 
 
 
