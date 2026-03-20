@@ -23,8 +23,10 @@ The figure below shows an example image with an
 excerpt of its description in the caption. Since both modalities contain the information about the *around* relation, it is marked with both the *txt* and the *img* prefix
 <figure>
   <img width="677" height="1097" alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" />
+  
   <figcaption>A scenic mountain view at sunrise</figcaption>
-</figure>
+</
+  figure>
 Please note that neither *txt* nor *img* can be used alone. while *txt* only has the *img* prefix to pair with the *img* prefix has more.
 
 # Inferences
@@ -37,6 +39,7 @@ That also means that *only* relations can be inferred.
 
 <figure>
   <img width="673" height="1096" alt="inf" src="https://github.com/user-attachments/assets/1623ea7c-ae59-4aae-ada1-939b0befe020" />
+  
   <figcaption>A scenic mountain view at sunrise</figcaption>
 </figure>>
 
