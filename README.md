@@ -21,6 +21,26 @@ Since the information richness between text and image are not always the same i.
 we also mark whether the information is within the text (*txt* *around*), the image (*img* *around*) or present in both modalities (*txt* *img* *around*). 
 The figure below shows an example image with an 
 excerpt of its description in the caption. Since both modalities contain the information about the *around* relation, it is marked with both the *txt* and the *img* prefix
-
-<img width="677" height="1097" alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" />
+<figure>
+  <img width="677" height="1097" alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" />
+  <figcaption>A scenic mountain view at sunrise</figcaption>
+<\figure>
 Please note that neither *txt* nor *img* can be used alone. while *txt* only has the *img* prefix to pair with the *img* prefix has more.
+
+# Inferences
+There are cases where the information of the image is richer than the description. 
+Figure below shows the same example as before but with the *inf* and *img* prefixes and the relation *touch*. That shows that the *touch* relation between the angel and the throne is inferred from the image.
+The condition that needs to be met for such inferred relations is that both entities, in this case the angel and the throne, are present in the description.
+Since both are present this inference has to be made. 
+On the other hand, the Christ child is not annotated since he is not present in the text.
+That also means that *only* relations can be inferred. 
+
+<figure>
+  <img width="673" height="1096" alt="inf" src="https://github.com/user-attachments/assets/1623ea7c-ae59-4aae-ada1-939b0befe020" />
+  <figcaption>A scenic mountain view at sunrise</figcaption>
+<\figure>
+
+
+
+
+
