@@ -143,7 +143,16 @@ The figure below shows an example. Both babies have the *with* relation with the
 |:--:|
 |"It shows mainly Elisabeth *with* baby John the Baptist, Joseph and Mary *with* infant baby Jesus (l.t.r.).These figures of the New Testament maintain eye contact."|
 
+
 ### Wikidata linking
+Every entity has to be linked as closely as possible to the correct Wikidata page. If it is a group annotation then the number of individual entities are given before the linking. The figure below shows how such a linking looks like for a group of more than 10 people. Since this group is unique the instance count denoted with the '\#' is 1. 
+
+|<img width="2063" height="1087" alt="group_instance" src="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39" />|
+|:--:|
+|"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."|
+
+
+### instances
 For every entity given in the text, there might be more than just one in the image. If it is clear that all of the present entities in the image are described, then annotations need to specifically count each instance of the entity. This ensures that the correctness and completeness.
 In first figure below, the instance count for the selected angel is displayed as 2 since it is the second angel. There is no particular rule regarding the orders or where to start counting. However, the instances have to match those described in the text. 
 The second figure highlights a second group of angels in the foreground. Those angels refer to the ones standing next to Jesus.
@@ -158,5 +167,8 @@ The expected linking for the flying angels would be "https://www.wikidata.org/wi
 |:--:|
 |"It depicts Christ standing on a double basement, keeping the Cross.Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. *In the foreground are four angels* [...]."|
 
+|  |
+|:--:|
+||
 
 
