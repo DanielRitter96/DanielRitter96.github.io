@@ -1,24 +1,34 @@
 <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+<style>
+.zoom-container {
+  width: 300px;
+  height: 200px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+  text-align: center;
+}
+.zoom-container img {
+  width: 100%;
+  display: block;
+}
+</style>
 <script>
-  const elem = document.getElementById('zoom-img');
-  const panzoom = Panzoom(elem, {
+document.querySelectorAll('.zoom-img').forEach(img => {
+  const panzoom = Panzoom(img, {
     maxScale: 5,
     minScale: 1,
     contain: 'outside'
   });
-
-  // Zoom mit Mausrad
-  elem.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+  img.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
+});
 </script>
+
 
 # Annotation guidelines
 ## Task
 Given a Text image pair, 
 the goal of the annotations process is to annotate a scene graph based both on the text and the image. That means we annotate all the named entities within the text description. These include specific people such as Jesus Christ, John the Baptist or Zeus but also animals of any kind. Objects such tools, weapons  or buildings  are also annotated. The rules that need to be followed in order to achieve the maximum information richness and maintain consistency are listed below. The figure below shows both annotation modalities: the textual and the image one. The tool that is used for the annotations is called label studio.
-
-<div class="zoom-container">
-  <img width="2323" height="1207" alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586" id="zoom-img"  style="display:block"/>
-</div>
+|<div class="zoom-container"><img alt="Screenshot 2026-03-18 102952"  src="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586" class="zoom-img"><br><small>Caption zu Bild 1</small></div>|
 |:--:| 
 | This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations |
 
