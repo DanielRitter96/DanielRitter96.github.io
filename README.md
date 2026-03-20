@@ -167,8 +167,69 @@ The expected linking for the flying angels would be "https://www.wikidata.org/wi
 |:--:|
 |"It depicts Christ standing on a double basement, keeping the Cross.Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. *In the foreground are four angels* [...]."|
 
-|  |
+### Background objects
+Background entities are of equal importance as foreground entities, however, background entities that hold little importance are not instantiated. The figure below shows how the mountains in the background are annotated and how the wikidata linking is done. The only difference is the missing instance. 
+
+|<img width="1952" height="1072" alt="background1" src="https://github.com/user-attachments/assets/c2859c1f-2d7e-4e3d-8136-5d41491720ba" />|
 |:--:|
-||
+|"[...] The landscape background is typical of Perugino, *with mountains and hills in deep perspective*. To the left of the cross stand saint Jerome (inspiration for the Jesuati) and Francis of Assisi.To its right are Mary Magdalene touching Christ's feet, Blessed Giovanni Colombini (founder of the Jesuati) and John the Baptist (patron saint of Florence).John points to Christ, whilst Jerome has thrown down his cardinal's cap at the foot of the cross, symbolising his rejection of earthly honours. [...]."|
+
+### Relations
+Not every text-image pair has valid relations but valid entities. As long as there is at least one entity given, the pair is not skipped. 
+The first figure below shows an example with only one valid entity annotation
+and no relations. While those pairs are not skip, the second figure shows a pair that has no valid entity due to the uncertainty expressed in the description.
+
+|<img width="2106" height="1092" alt="skip" src="https://github.com/user-attachments/assets/5046dc1e-50b5-45f6-a752-0f3ef375f291" />|
+|:--:|
+|"A Goldsmith in His Shop, Possibly Saint Eligius is a 1449 painting by Petrus Christus, now in the Metropolitan Museum of Art. The main figure in the painting *was long thought to be Saint Eligius*, the patron saint of goldsmiths, due to the presence of a halo."|
+
+|<img width="1038" height="1090" alt="no_skip" src="https://github.com/user-attachments/assets/91377c6c-1cae-405e-8ecf-f3f5c44f1dcd" />|
+|:--:|
+|"[...] *The Madonna* was portrayed standing, alone, often with a closed book on her belly, an allusion to the Incarnate Word. The works were associated with the devotions of pregnant women, praying for a safe delivery. Here the Virgin wears the Girdle of Thomas, a belt of knotted cloth cord that was a relic held in Prato Cathedral, which many depictions wear."|
+
+### Only binary relations
+Since every relation is defined to be between a subject and an object, they have to be binary. Any relations that have more entities such as *between* are not allowed. Furthermore, there will be no inferences made to substitute these relations.
+The figure below shows, in the top panel, Christ with two cherubs. The relation would be *between* for both cherubs and Christ. Since it is impossible for a entity to be between just one other entity, this relation is left out.  
+
+|<img width="1055" height="1100" alt="tertiär" src="https://github.com/user-attachments/assets/4e5d8cb8-bf7c-48f3-9102-35337c489a0e" />|
+|:--:|
+|"The work is in a huge gilded and carved frame, with three cusps covered placed on jutting corbels. The three arches are decorated with vegetable motifs; over them are three panels (whose upper frame is lost), containing the paintings, from the left, of the Angel of the Annunciation, the Blessing *Christ between Cherubims* and the Annunciation. [...]."|
+
+### No meta information 
+The goal is not to annotate every named entity that is in the text or image but to find and annotate those that are in the painting. That means that we do not annotate any entities if they are e.g. the name of the painting or the name of the painter. This also includes cases where the description makes comparisons to other works in the epoch. The text-image pair in the figure with the pregnant Madonna two figures above is an example for that. Note that this is mostly relevant for the textual annotations.
+
+### Entities with further information
+Some descriptions describe a entity at some point and then at a later point give more details. For example, the text may say a person wears some sort of clothes. Later it describes those clothes in more detail naming particular parts like hats.
+In these cases all entities need to be annotated, the generic one and the more detailed entities. Furthermore those more detailed parts meed to be marked with the _part\_of_ relation
+The figure below shows the person on left wearing a _vestment_. This _vestment_ is later described as _cope_ and _mitre_, leading to him also wearing a _cope_ and a _mitre_. Finally, _Mitre_ and _cope_ are also _part\_of_ the _vestment_.
+
+|<img width="941" height="733" alt="cope" src="https://github.com/user-attachments/assets/81635172-89bd-473d-bad0-3c7e12e9059f" />|
+|:--:|
+|"[...] Saint Donatian, dressed in brightly coloured _vestments_, stands to the left. [...] The precision of the detail achieved is especially noticeable in the rendering of threads of St. Donatian's blue and golden embroidered _cope and mitre_, in the weave of the oriental carpet, and in the stubble and _veins on van der Paele's aging face_."|
+
+### Not to detailed
+Descriptions can describe the visual too detailed. Those entities and relations are not annotated. The same example shown in above figure describes the face of the kneeling person in too much detail describing the veins on his face. This relation is not annotated.
+
+### Body parts
+Body parts are not treated as their own entity and therefore can also not be part of a relation. Those body parts will be treated as the whole person. E.g. _child sits in her lap_ will be treated as child sits on mother.
+The figure below shows the same example image as before with different annotations, focusing on Mary and the Christ child. While the descriptions describes Christ siting on her lap, the annotation is still done for Mary as a whole.
+
+|<img width="942" height="732" alt="lap" src="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974" />|
+|:--:|
+|"[...] The Virgin Mary is enthroned at the centre of the semicircular space, which most likely represents a church interior, with the _Christ Child on her lap_.[...]."|
+
+### Transitive relations
+Sometimes descriptions  describe an entity doing something to another entity for the sake or goal of yet another entity. The figure below shows Mary presenting the Christ child to Rolin. To express this in the annotations, it is annotated that Mary presents Christ child and Chrits child is presented to Rolin.
+
+|<img width="727" height="731" alt="present" src="https://github.com/user-attachments/assets/b5356a18-d8ca-4431-bf78-35e1614caad8" />|
+|:--:|
+|"The scene depicts the Virgin Mary crowned by a hovering Angel while *she presents the Infant Jesus to Rolin*. [...]."|
+
+### Miscellaneous
+#### Long tail entities
+Some entities can be longer such as *Episodes of the lives of St. Benedict* or *Throne of Jesus and Madonna*. Those have to be annotated as one entity without extracting other entities like *St. Benedict*, *Jesus* or *Madonna*.
+
+#### Actions or Events
+As earlier described, Events that take place currently are annotated however those that must have already past, since those can not be seen, are not annotated. Also, similar to the point above, inferring that someone does something to someone else just because the event or action may hint to it is not allowed. For example, inferences from *Coronation of the Virgin*  to the entity *Jesus* and the relation *Jesus; crowns; the Virgin* are not allowed. However since the word *the Virgin* is within the event itself inferring the existence of her as a entity in the painting is allowed and annotated.
 
 
