@@ -42,7 +42,50 @@ That also means that *only* relations can be inferred.
 |:--:| 
 | "[...] having the *angels* around the Virgin simply placed one above the other, rather than being spatially arranged. The *throne* [...]." |
 
+# No meta information
+Annotations that have entities or relations present in the text but are not present within the image are not annotated within the text. The same text-image pair shown in figure below has no annotations with neither maesà nor with Cimabue or the Basilica of San Francesco di Assisi. Note the list of entities in the right part of the figure.
+Also note that these are mostly relevant for the textual annotation rather than the image one.
 
+|<img width="1993" height="1093" alt="no_assisi" src="https://github.com/user-attachments/assets/eb01e490-acda-496c-85fa-f58b2820b842" />|
+|:--:|
+|"[...]. The throne is similar to the *Maestà painted by Cimabue* in the Basilica of San Francesco di Assisi (1288–1292)."|
+
+
+# No unseen relations
+Just like the entities that are not present in the image, the relations that are not visible in the image are also not annotated. The figure below
+shows that the goddess Venus *has arrived* at the shore. It does not however, show that Venus emerged from the sea. She is depicted on a clam at the shore. The described event has already taken place and therefore not present in the image. 
+Remember: inferring this relation would mean the relation is inferred based on the description and not from the image. This is not allowed. 
+
+|<img width="1271" height="801" alt="emerge" src="https://github.com/user-attachments/assets/ed0ae98d-5f0e-4626-8889-c5c1d3856c68" />|
+|:--:|
+|"it depicts the goddess Venus arriving at the shore after her birth, when *she had emerged from the sea* fully-grown [...]."|
+
+# Synonyms
+Often times the description uses synonyms to describe the same entity in different ways. This is marked with the prefix \textit{syn}.
+ The figure with the dragon further down is an example. It shows saint George spearing a dragon. The description of the image also mentions a beast and refers to the dragon introducing a synonym.
+The annotations are done by copying the box of the dragon and renaming it as beast. Finally the *syn* prefix with a simple *is* relation is drawn between them. Note that the boxes will end up exactly on top of each other. 
+
+# Symbolize
+Similarly, to the synonymy case, in the same example figure, the belt is described to symbolize a leash. 
+Following the same approach the relation between the belt and leash (renamed belt copy) has the prefix *sym* with the relation *used as*.
+
+# Implications
+Furthermore, the phrase *story of Saint George and the dragon* in the same example figure below is in itself a entity that also implies the existence other entities. Those are *Saint George* together with *dragon*. This leads to three annotations instead of just one. The correct prefix for these cases is *impl* and since this applies to the entities rather than the relations it has be prepended on the entity meta string. 
+
+|<img width="1273" height="972" alt="dragon" src="https://github.com/user-attachments/assets/947e31e3-5c81-44ea-a27e-f1517b0d84c0" />|
+|:--:|
+|"It shows a scene from the famous *story of Saint George and the dragon*. On the right George is spearing the *beast*, and on the left the princess is using her *belt as a leash* to take the dragon up to the town.[...]."|
+
+# Uncertainty
+In some cases, the description is not giving certain information about e.g. people present in the image. In those cases, we use the *maybe* prefix to express that uncertainty. 
+if the image-text pair consists of only uncertain entities, said pair is skipped. The *maybe* prefix applies to both the entities and the relations.
+The figure below shows an example of this. Note the highlighted entities on the right side of the image. The saint with the 8 refers to the old woman on the right. Again, this follows the same approach as in the synonym and symbolize cases. Therefore, the boxes are exactly on top of each other. In this case the relations are also directly on top of each other making it seem like there is only one other box for the old woman when there are in fact two.
+
+|<img width="2121" height="1191" alt="maybe" src="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5" />|
+|:--:|
+|[...] *an old female saint (Anne or Elisabeth)* and an old male saint (Joachim or Joseph). On the left are *a female saint (possibly Mary Magdalene)* [...].|
+
+#
 
 
 
