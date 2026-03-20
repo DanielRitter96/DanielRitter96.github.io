@@ -11,9 +11,6 @@ the goal of the annotations process is to annotate a scene graph based both on t
         <figcaption>This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations</figcaption>
       </figure>
     </td>
-    <td>
-      Dein Textabschnitt kommt hier hin.
-    </td>
   </tr>
 </table>
 
