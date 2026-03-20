@@ -8,10 +8,10 @@ the goal of the annotations process is to annotate a scene graph based both on t
 ## Prefixes
 # Prefix
 The prefixes that are used are
-- marked for every relation that is present in the description
-- marked for every relation that is present in the image
-- marked for every relation that is inferred from the image
-- marked for every entity that is implied from event entities
-- marked for every relation that declares that two entities are synonyms
-- marked for every relation that declares that one entity symbolizes the other
-- marked for every relation that is shows uncertainty about the relation between two entities
+- txt - marked for every relation that is present in the description
+- img - marked for every relation that is present in the image
+- inf - marked for every relation that is inferred from the image
+- impl - marked for every entity that is implied from event entities
+- syn - marked for every relation that declares that two entities are synonyms
+- sym - marked for every relation that declares that one entity symbolizes the other
+- maybe - marked for every relation that is shows uncertainty about the relation between two entities
