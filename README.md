@@ -8,8 +8,8 @@ the goal of the annotations process is to annotate a scene graph based both on t
     <td>
       <figure class="zoom-container">
         <img class="zoom-container" alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586" class="zoom-img">
-        <p class="caption">This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations</p>
       </figure>
+      <p class="caption">This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations</p>
     </td>
   </tr>
 </table>
