@@ -1,3 +1,14 @@
+<style>
+.zoom {
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+}
+.zoom:hover {
+  transform: scale(1.5);
+}
+</style>
+
+
 # Annotation guidelines
 ## Task
 Given a Text image pair, 
@@ -24,7 +35,7 @@ we also mark whether the information is within the text (*txt* *around*), the im
 The figure below shows an example image with an 
 excerpt of its description in the caption. Since both modalities contain the information about the *around* relation, it is marked with both the *txt* and the *img* prefix
 
-|<img width="677" height="1097" alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" />|
+|<img width="677" height="1097" alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" class="zoom" />|
 |:--:| 
 | "It is also stylistically earlier to that work, being painted without pseudo-perspective, and having the *angels around the Virgin* [...]." |
 
