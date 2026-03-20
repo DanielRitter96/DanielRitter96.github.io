@@ -5,7 +5,7 @@ the goal of the annotations process is to annotate a scene graph based both on t
 
 |<img width="2323" height="1207" alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586" />|
 |:--:| 
-| *Space* |
+| This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations |
 
 ## Prefixes
 # Prefix
@@ -24,8 +24,9 @@ we also mark whether the information is within the text (*txt* *around*), the im
 The figure below shows an example image with an 
 excerpt of its description in the caption. Since both modalities contain the information about the *around* relation, it is marked with both the *txt* and the *img* prefix
 
-<img width="677" height="1097" alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" />
-*caption*
+|<img width="677" height="1097" alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" />|
+|:--:| 
+| "It is also stylistically earlier to that work, being painted without pseudo-perspective, and having the *angels around the Virgin* [...]." |
 
 Please note that neither *txt* nor *img* can be used alone. while *txt* only has the *img* prefix to pair with the *img* prefix has more.
 
@@ -36,12 +37,10 @@ The condition that needs to be met for such inferred relations is that both enti
 Since both are present this inference has to be made. 
 On the other hand, the Christ child is not annotated since he is not present in the text.
 That also means that *only* relations can be inferred. 
-
-<figure>
-  <img width="673" height="1096" alt="inf" src="https://github.com/user-attachments/assets/1623ea7c-ae59-4aae-ada1-939b0befe020" />
   
-  <figcaption>A scenic mountain view at sunrise</figcaption>
-</figure>>
+|<img width="673" height="1096" alt="inf" src="https://github.com/user-attachments/assets/1623ea7c-ae59-4aae-ada1-939b0befe020" />|
+|:--:| 
+| "[...] having the *angels* around the Virgin simply placed one above the other, rather than being spatially arranged. The *throne* [...]." |
 
 
 
