@@ -1,72 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Annotation guidelines</title>
+---
+layout: default
+---
 
-  <script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+{% capture content %}
+{% include_relative README.md %}
+{% endcapture %}
 
-  <style>
-    .zoom-container {
-      width: 300px;
-      height: 200px;
-      overflow: hidden;
-      border: 1px solid #ccc;
-      text-align: center;
-      margin: 1rem auto;
-    }
-    .zoom-container img {
-      width: 100%;
-      display: block;
-    }
-    table {
-      margin: 2rem auto;
-      border-collapse: collapse;
-    }
-    td {
-      padding: 0.5rem;
-    }
-  </style>
-</head>
-<body>
+{{ content | markdownify }}
 
-  <h1>Annotation guidelines</h1>
-  <h2>Task</h2>
-  <p>
-    Given a Text image pair, the goal of the annotations process is to annotate a scene graph …
-  </p>
-
-  <table>
-    <tr>
-      <td>
-        <div class="zoom-container">
-          <img
-            alt="Screenshot 2026-03-18 102952"
-            src="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586"
-            class="zoom-img">
-          <br>
-          <small>Caption zu Bild 1</small>
-        </div>
-      </td>
-    </tr>
-    <tr>
-      <td style="text-align:center;">
-        This figure shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations …
-      </td>
-    </tr>
-  </table>
-
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      document.querySelectorAll('.zoom-img').forEach(img => {
-        const panzoom = Panzoom(img, {
-          maxScale: 5,
-          minScale: 1,
-          contain: 'outside'
-        });
-        img.parentElement.addEventListener('wheel', panzoom.zoomWithWheel);
-      });
-    });
-  </script>
-</body>
-</html>
+<script src="https://unpkg.com/@panzoom/panzoom/dist/panzoom.min.js"></script>
+<script src="/assets/js/zoom.js"></script>
