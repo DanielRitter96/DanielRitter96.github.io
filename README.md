@@ -5,10 +5,9 @@ the goal of the annotations process is to annotate a scene graph based both on t
 
 <div class="zoom-container">
 |<img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586" class="zoom-img">|
-</div>
 |:--:| 
 | This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations |
-
+</div>
 ## Prefixes
 ### Prefix
 The prefixes that are used are
