@@ -377,7 +377,7 @@ The figure below shows the same example image as before with different annotatio
   <tr>
     <td>
       <figure class="zoom-container">
-        <img width="942" height="732" alt="lap" src="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974"
+        <img width="942" height="732" alt="lap" src="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974" class="zoom-img">
       </figure>
       <figcaption>"[...] The Virgin Mary is enthroned at the centre of the semicircular space, which most likely represents a church interior, with the _Christ Child on her lap_.[...]."</figcaption>
     </td>
@@ -395,7 +395,7 @@ Sometimes descriptions  describe an entity doing something to another entity for
   <tr>
     <td>
       <figure class="zoom-container">
-        <img width="727" height="731" alt="present" src="https://github.com/user-attachments/assets/b5356a18-d8ca-4431-bf78-35e1614caad8"
+        <img width="727" height="731" alt="present" src="https://github.com/user-attachments/assets/b5356a18-d8ca-4431-bf78-35e1614caad8" class="zoom-img">
       </figure>
       <figcaption>"The scene depicts the Virgin Mary crowned by a hovering Angel while *she presents the Infant Jesus to Rolin*. [...]."</figcaption>
     </td>
