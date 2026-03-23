@@ -37,7 +37,7 @@ excerpt of its description in the caption. Since both modalities contain the inf
       <figure class="zoom-container">
         <img width="677" height="1097" alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" class="zoom-img">
       </figure>
-      <figcaption>"It is also stylistically earlier to that work, being painted without pseudo-perspective, and having the *angels around the Virgin* [...]."</figcaption>
+      <figcaption>"It is also stylistically earlier to that work, being painted without pseudo-perspective, and having the <i>angels around the Virgin</i>[...]."</figcaption>
     </td>
   </tr>
 </table>
