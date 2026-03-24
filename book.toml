@@ -36,3 +36,10 @@ command = "cargo run --quiet --manifest-path guide-helper/Cargo.toml"
 
 [build]
 extra-watch-dirs = ["guide-helper/src"]
+
+[preprocessor.pagetoc]
+scroll_offset = 10  # pixels added to scroll position for active header detection (default: 10)
+
+[output.html]
+additional-css = ["theme/pagetoc.css"]
+additional-js  = ["theme/pagetoc.js"]
