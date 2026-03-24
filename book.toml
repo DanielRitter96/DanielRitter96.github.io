@@ -11,6 +11,7 @@ edition = "2018"
 smart-punctuation = true
 mathjax-support = true
 hash-files = true
+sidebar-header-nav = true
 
 [output.html.playground]
 editable = true
@@ -39,7 +40,3 @@ extra-watch-dirs = ["guide-helper/src"]
 
 [preprocessor.pagetoc]
 scroll_offset = 10  # pixels added to scroll position for active header detection (default: 10)
-
-[output.html]
-additional-css = ["theme/pagetoc.css"]
-additional-js  = ["theme/pagetoc.js"]
