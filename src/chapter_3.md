@@ -14,3 +14,5 @@ excerpt of its description in the caption. Since both modalities contain the inf
     </td>
   </tr>
 </table>
+
+Please note that neither *txt* nor *img* can be used alone. while *txt* only has the *img* prefix to pair with the *img* prefix has more.
