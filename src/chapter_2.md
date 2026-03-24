@@ -7,4 +7,4 @@ The used prefixes are:
 - impl - marked for every entity that is implied from event entities
 - syn - marked for every relation that declares that two entities are synonyms
 - sym - marked for every relation that declares that one entity symbolizes the other
-- maybe - marked for every relation that is shows uncertainty about the relation between two entities
+- uct - marked for every relation that is shows uncertainty about the relation between two entities
