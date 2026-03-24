@@ -11,7 +11,7 @@
 ## About this Guide
 
 This Guide is intended for the Japanese version of Boktai: The Sun is in your Hands and the Any% Category at the Normal 2 difficulty. It should work exactly the same for other languages but JP is significantly faster.  
-Credits go to the entire  and the many casual players that found strategies we use today.
+Credits go to the entirend the many casual players that found strategies we use today.
 
 ### Videos
 
@@ -23,8 +23,9 @@ Generally, if you pick up the same chests and kill the same enemies, you should 
 ### Solar Gauge
 
 A recommendation on which sun strength to use for that dungeon to prevent overheat and ensure you reach the required dungeon rank where necessary.  
-For purifications always use the highest possible solar gauge level.
+For 
 
+{{#include assets/tables/normal-2_any_lens-exp.html}}
 
 <!-- Items -->
 [speed_nut]: ./assets/images/icons/icon_speed_nut.webp
