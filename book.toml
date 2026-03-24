@@ -2,3 +2,4 @@
 title = "Annotation Guideline"
 authors = ["dritter"]
 language = "en"
+additional-js = ["theme/singlepage.js"]
