@@ -8,7 +8,7 @@
     - [Textual and image annotations](./chapter_6.md)
     - [Textual and image annotations](./chapter_7.md)
     - [Textual and image annotations](./chapter_8.md)
--[General Guidelines](./chpater_9.md) 
+- [General Guidelines](./chpater_9.md) 
     - [Textual and image annotations](./chapter_10.md)
     - [Textual and image annotations](./chapter_11.md)
     - [Textual and image annotations](./chapter_12.md)
