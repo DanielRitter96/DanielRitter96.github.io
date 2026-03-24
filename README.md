@@ -58,7 +58,7 @@ That also means that *only* relations can be inferred.
       <figure class="zoom-container">
         <img width="673" height="1096" alt="inf" src="https://github.com/user-attachments/assets/1623ea7c-ae59-4aae-ada1-939b0befe020" class="zoom-img">
       </figure>
-      <figcaption> "[...] having the *angels* around the Virgin simply placed one above the other, rather than being spatially arranged. The *throne* [...]."</figcaption>
+      <figcaption> "[...] having the <i>angels</i> around the Virgin simply placed one above the other, rather than being spatially arranged. The <i>throne</i> [...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -74,7 +74,7 @@ Also note that these are mostly relevant for the textual annotation rather than 
       <figure class="zoom-container">
         <img width="1993" height="1093" alt="no_assisi" src="https://github.com/user-attachments/assets/eb01e490-acda-496c-85fa-f58b2820b842"  class="zoom-img">
       </figure>
-      <figcaption> "[...]. The throne is similar to the *Maestà painted by Cimabue* in the Basilica of San Francesco di Assisi (1288–1292)."</figcaption>
+      <figcaption> "[...]. The throne is similar to the <i>Maestà painted by Cimabue</i> in the Basilica of San Francesco di Assisi (1288–1292)."</figcaption>
     </td>
   </tr>
 </table>
@@ -91,7 +91,7 @@ Remember: inferring this relation would mean the relation is inferred based on t
       <figure class="zoom-container">
         <img width="1271" height="801" alt="emerge" src="https://github.com/user-attachments/assets/ed0ae98d-5f0e-4626-8889-c5c1d3856c68"  class="zoom-img">
       </figure>
-      <figcaption> "it depicts the goddess Venus arriving at the shore after her birth, when *she had emerged from the sea* fully-grown [...]."</figcaption>
+      <figcaption> "it depicts the goddess Venus arriving at the shore after her birth, when <i>she had emerged from the sea</i> fully-grown [...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -115,7 +115,7 @@ Furthermore, the phrase *story of Saint George and the dragon* in the same examp
       <figure class="zoom-container">
         <img width="1273" height="972" alt="dragon" src="https://github.com/user-attachments/assets/947e31e3-5c81-44ea-a27e-f1517b0d84c0"  class="zoom-img">
       </figure>
-      <figcaption> "It shows a scene from the famous *story of Saint George and the dragon*. On the right George is spearing the *beast*, and on the left the princess is using her *belt as a leash* to take the dragon up to the town.[...]."</figcaption>
+      <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -131,7 +131,7 @@ The figure below shows an example of this. Note the highlighted entities on the 
       <figure class="zoom-container">
         <img width="2121" height="1191" alt="maybe" src="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"  class="zoom-img">
       </figure>
-      <figcaption> "[...] *an old female saint (Anne or Elisabeth)* and an old male saint (Joachim or Joseph). On the left are *a female saint (possibly Mary Magdalene)* [...]."</figcaption>
+      <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -148,7 +148,7 @@ The figure first image below shows a simple case to assign obstructed body parts
       <figure class="zoom-container">
         <img width="1407" height="1088" alt="span1" src="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6"  class="zoom-img">
       </figure>
-      <figcaption> "[...] *an old female saint (Anne or Elisabeth)* and an old male saint (Joachim or Joseph). On the left are *a female saint (possibly Mary Magdalene)* [...]."</figcaption>
+      <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -211,7 +211,7 @@ The figure below shows the blessed and the damned on the left and right side of 
       <figure class="zoom-container">
         <img width="548" height="730" alt="when_group" src="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d"  class="zoom-img">
       </figure>
-      <figcaption> "[...] Rising up the left hand side of the painting (at Jesus' right hand) are the *blessed*, whilst the *damned* fall into hell on the right hand side [...]."</figcaption>
+      <figcaption> "[...] Rising up the left hand side of the painting (at Jesus' right hand) are the <i>blessed</i>, whilst the <i>damned</i> fall into hell on the right hand side [...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -241,7 +241,7 @@ The figure below shows an example. Both babies have the *with* relation with the
       <figure class="zoom-container">
         <img width="2037" height="1092" alt="with_or_hold" src="https://github.com/user-attachments/assets/9c311810-7c81-4213-a6a5-c82f18de6101"  class="zoom-img">
       </figure>
-      <figcaption> "It shows mainly Elisabeth *with* baby John the Baptist, Joseph and Mary *with* infant baby Jesus (l.t.r.).These figures of the New Testament maintain eye contact."</figcaption>
+      <figcaption> "It shows mainly Elisabeth <i>with</i> baby John the Baptist, Joseph and Mary <i>with</i> infant baby Jesus (l.t.r.).These figures of the New Testament maintain eye contact."</figcaption>
     </td>
   </tr>
 </table>
@@ -273,7 +273,7 @@ The expected linking for the flying angels would be "https://www.wikidata.org/wi
       <figure class="zoom-container">
         <img width="2017" height="1088" alt="instances1" src="https://github.com/user-attachments/assets/459e7040-88bc-4b48-a371-d284543e9e46"  class="zoom-img">
       </figure>
-      <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. *Behind him is a damask cloth held by two angels* and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. In the foreground are four angels [...]."</figcaption>
+      <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. <i>Behind him is a damask cloth held by two angels</i> and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. In the foreground are four angels [...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -284,7 +284,7 @@ The expected linking for the flying angels would be "https://www.wikidata.org/wi
       <figure class="zoom-container">
         <img width="1995" height="1091" alt="instances2" src="https://github.com/user-attachments/assets/ebc373fc-b989-4e15-80db-554919f1ed95"  class="zoom-img">
       </figure>
-      <figcaption>"It depicts Christ standing on a double basement, keeping the Cross.Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. *In the foreground are four angels* [...]."</figcaption>
+      <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. <i>In the foreground are four angels</i> [...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -299,7 +299,7 @@ Background entities are of equal importance as foreground entities, however, bac
       <figure class="zoom-container">
         <img width="1952" height="1072" alt="background1" src="https://github.com/user-attachments/assets/c2859c1f-2d7e-4e3d-8136-5d41491720ba"  class="zoom-img">
       </figure>
-      <figcaption>"[...] The landscape background is typical of Perugino, *with mountains and hills in deep perspective*. To the left of the cross stand saint Jerome (inspiration for the Jesuati) and Francis of Assisi.To its right are Mary Magdalene touching Christ's feet, Blessed Giovanni Colombini (founder of the Jesuati) and John the Baptist (patron saint of Florence).John points to Christ, whilst Jerome has thrown down his cardinal's cap at the foot of the cross, symbolising his rejection of earthly honours. [...]."</figcaption>
+      <figcaption>"[...] The landscape background is typical of Perugino, <i>with mountains and hills in deep perspective</i>. To the left of the cross stand saint Jerome (inspiration for the Jesuati) and Francis of Assisi. To its right are Mary Magdalene touching Christ's feet, Blessed Giovanni Colombini (founder of the Jesuati) and John the Baptist (patron saint of Florence). John points to Christ, whilst Jerome has thrown down his cardinal's cap at the foot of the cross, symbolising his rejection of earthly honours. [...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -315,7 +315,7 @@ and no relations. While those pairs are not skip, the second figure shows a pair
       <figure class="zoom-container">
         <img width="2106" height="1092" alt="skip" src="https://github.com/user-attachments/assets/5046dc1e-50b5-45f6-a752-0f3ef375f291"  class="zoom-img">
       </figure>
-      <figcaption>"A Goldsmith in His Shop, Possibly Saint Eligius is a 1449 painting by Petrus Christus, now in the Metropolitan Museum of Art. The main figure in the painting *was long thought to be Saint Eligius*, the patron saint of goldsmiths, due to the presence of a halo."</figcaption>
+      <figcaption>"A Goldsmith in His Shop, Possibly Saint Eligius is a 1449 painting by Petrus Christus, now in the Metropolitan Museum of Art. The main figure in the painting <i>was long thought to be Saint Eligius</i>, the patron saint of goldsmiths, due to the presence of a halo."</figcaption>
     </td>
   </tr>
 </table>
@@ -327,7 +327,7 @@ and no relations. While those pairs are not skip, the second figure shows a pair
       <figure class="zoom-container">
         <img width="1038" height="1090" alt="no_skip" src="https://github.com/user-attachments/assets/91377c6c-1cae-405e-8ecf-f3f5c44f1dcd"  class="zoom-img">
       </figure>
-      <figcaption>"[...] *The Madonna* was portrayed standing, alone, often with a closed book on her belly, an allusion to the Incarnate Word. The works were associated with the devotions of pregnant women, praying for a safe delivery. Here the Virgin wears the Girdle of Thomas, a belt of knotted cloth cord that was a relic held in Prato Cathedral, which many depictions wear."</figcaption>
+      <figcaption>"[...] <i>The Madonna</i> was portrayed standing, alone, often with a closed book on her belly, an allusion to the Incarnate Word. The works were associated with the devotions of pregnant women, praying for a safe delivery. Here the Virgin wears the Girdle of Thomas, a belt of knotted cloth cord that was a relic held in Prato Cathedral, which many depictions wear."</figcaption>
     </td>
   </tr>
 </table>
@@ -342,7 +342,7 @@ The figure below shows, in the top panel, Christ with two cherubs. The relation 
       <figure class="zoom-container">
         <img width="1055" height="1100" alt="tertiär" src="https://github.com/user-attachments/assets/4e5d8cb8-bf7c-48f3-9102-35337c489a0e"  class="zoom-img">
       </figure>
-      <figcaption>"The work is in a huge gilded and carved frame, with three cusps covered placed on jutting corbels. The three arches are decorated with vegetable motifs; over them are three panels (whose upper frame is lost), containing the paintings, from the left, of the Angel of the Annunciation, the Blessing *Christ between Cherubims* and the Annunciation. [...]."</figcaption>
+      <figcaption>"The work is in a huge gilded and carved frame, with three cusps covered placed on jutting corbels. The three arches are decorated with vegetable motifs; over them are three panels (whose upper frame is lost), containing the paintings, from the left, of the Angel of the Annunciation, the Blessing <i>Christ between Cherubims</i> and the Annunciation. [...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -361,7 +361,7 @@ The figure below shows the person on left wearing a _vestment_. This _vestment_ 
       <figure class="zoom-container">
         <img width="941" height="733" alt="cope" src="https://github.com/user-attachments/assets/81635172-89bd-473d-bad0-3c7e12e9059f"  class="zoom-img">
       </figure>
-      <figcaption>"[...] Saint Donatian, dressed in brightly coloured _vestments_, stands to the left. [...] The precision of the detail achieved is especially noticeable in the rendering of threads of St. Donatian's blue and golden embroidered _cope and mitre_, in the weave of the oriental carpet, and in the stubble and _veins on van der Paele's aging face_."</figcaption>
+      <figcaption>"[...] Saint Donatian, dressed in brightly coloured <i>vestments</i>, stands to the left. [...] The precision of the detail achieved is especially noticeable in the rendering of threads of St. Donatian's blue and golden embroidered <i>cope and mitre</i>, in the weave of the oriental carpet, and in the stubble and <i>veins on van der Paele's aging face</i>."</figcaption>
     </td>
   </tr>
 </table>
@@ -379,7 +379,7 @@ The figure below shows the same example image as before with different annotatio
       <figure class="zoom-container">
         <img width="942" height="732" alt="lap" src="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974" class="zoom-img">
       </figure>
-      <figcaption>"[...] The Virgin Mary is enthroned at the centre of the semicircular space, which most likely represents a church interior, with the _Christ Child on her lap_.[...]."</figcaption>
+      <figcaption>"[...] The Virgin Mary is enthroned at the centre of the semicircular space, which most likely represents a church interior, with the <i>Christ Child on her lap</i>.[...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -393,7 +393,7 @@ Sometimes descriptions  describe an entity doing something to another entity for
       <figure class="zoom-container">
         <img width="727" height="731" alt="present" src="https://github.com/user-attachments/assets/b5356a18-d8ca-4431-bf78-35e1614caad8" class="zoom-img">
       </figure>
-      <figcaption>"The scene depicts the Virgin Mary crowned by a hovering Angel while *she presents the Infant Jesus to Rolin*. [...]."</figcaption>
+      <figcaption>"The scene depicts the Virgin Mary crowned by a hovering Angel while <i>she presents the Infant Jesus to Rolin</i>. [...]."</figcaption>
     </td>
   </tr>
 </table>
