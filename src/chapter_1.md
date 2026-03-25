@@ -75,12 +75,11 @@ Note that the annotation of the id at the beginning of each description is not r
 The boxes have their own class names. For example, the box drawn over Jesus Christ is called "Jesus" or one of the usual alias of him. DO NOT use different boxes of the same person, i.e. annotating Jesus as "Jesus" is as correct as "Christ". 
 The figure below shows Mary with infant Jesus and the annotation box is drawn over her. At the right, the name of the box can be seen as "Virgin" which is a usual alias for her. 
 
-das beipiels mit der named box hier
 <table>
   <tr>
     <td> 
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"><img alt="group_instance" src="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/45a50694-009d-4edd-b73c-ec28460adffc"><img alt="named_box" src="https://github.com/user-attachments/assets/45a50694-009d-4edd-b73c-ec28460adffc" /></a>
       </figure>
       <figcaption>"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."</figcaption>
     </td>
