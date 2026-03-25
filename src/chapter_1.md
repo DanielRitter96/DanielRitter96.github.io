@@ -382,13 +382,12 @@ The figure below shows an example. Both babies have the *with* relation with the
 
 ### Transitive relations 
 Sometimes descriptions  describe an entity doing something to another entity for the sake or goal of yet another entity. The figure below shows Mary presenting the Christ child to Rolin. To express this in the annotations, it is annotated that Mary presents Christ child and Chrits child is presented to Rolin.
-<img width="727" height="731" alt="present" src="https://github.com/user-attachments/assets/04387db2-f7f4-4ba4-8184-6bccdd39e12d" />
 
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/04387db2-f7f4-4ba4-8184-6bccdd39e12d"><img alt="present" src="https://github.com/user-attachments/assets/04387db2-f7f4-4ba4-8184-6bccdd39e12d" class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/5aee3217-184c-4664-b302-dfeeaadc7004"><img alt="present" src="https://github.com/user-attachments/assets/5aee3217-184c-4664-b302-dfeeaadc7004" class="zoom-img"></a>
       </figure>
       <figcaption>"The scene depicts the Virgin Mary crowned by a hovering Angel while <i>she presents the Infant Jesus to Rolin</i>. [...]."</figcaption>
     </td>
