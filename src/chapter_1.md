@@ -305,11 +305,12 @@ In some cases, the description is not giving certain information about e.g. peop
 if the image-text pair consists of only uncertain entities, said pair is skipped. The *uct* prefix applies to both the entities and the relations.
 The figure below shows an example of this. Note the highlighted entities on the right side of the image. The saint with the 8 refers to the old woman on the right. Again, this follows the same approach as in the synonym and symbolize cases. Therefore, the boxes are exactly on top of each other. In this case the relations are also directly on top of each other making it seem like there is only one other box for the old woman when there are in fact two.
 
+
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"><img alt="maybe" src="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/9fea82b2-5a66-4c06-85eb-4b68babd7d90" ><img alt="maybe" src="https://github.com/user-attachments/assets/9fea82b2-5a66-4c06-85eb-4b68babd7d90"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
     </td>
@@ -346,17 +347,17 @@ Please note that neither *txt* nor *img* can be used alone. Both would need othe
 
 ### Inferences
 There are cases where the information of the image is richer than the description. 
-The figure below shows the same example as before but with the *inf* and *img* prefixes and the relation *touch*. That shows that the *touch* relation between the angel and the throne is inferred from the image.
+The figure below shows the same example as before but with the *img_inf* prefix and the relation *touch*. That shows that the *touch* relation between the angel and the throne is inferred from the image.
 The condition that needs to be met for such inferred relations is that both entities, in this case the angel and the throne, are present in the description.
 Since both are present this inference has to be made. 
 On the other hand, the Christ child is not annotated since he is not present in the text.
 That also means once again that *only* relations can be inferred. 
-  
+
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/1623ea7c-ae59-4aae-ada1-939b0befe020"><img alt="inf" src="https://github.com/user-attachments/assets/1623ea7c-ae59-4aae-ada1-939b0befe020" class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531"><img alt="inf" src=<img width="670" height="1091" alt="inf" src="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531" class="zoom-img"></a>
       </figure>
       <figcaption> "[...] having the <i>angels</i> around the Virgin simply placed one above the other, rather than being spatially arranged. The <i>throne</i> [...]."</figcaption>
     </td>
@@ -367,11 +368,12 @@ That also means once again that *only* relations can be inferred.
 Similar to the *inf* prefix that infers relations, there are cases where the relations are described with very little detail i.e. words like *with* are used when for example *holds* would be more fitting. If the image contains these more detailed information then also include those with the *img* and *inf* prefixes. For that the entity annotation box has to be copied and marked their linking has to be marked with an underscore "\_".  
 The figure below shows an example. Both babies have the *with* relation with the respective adult, but also at the same time the adults have the more detailed holds relation inferred. Pay close attention to the linking on the right. The entities with the inferred relation end with the underscore.
 
+
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/9c311810-7c81-4213-a6a5-c82f18de6101"><img alt="with_or_hold" src="https://github.com/user-attachments/assets/9c311810-7c81-4213-a6a5-c82f18de6101"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/55bd74f8-2d30-4b4f-8e75-d416e15ca9c8"><img width="2048" height="1142" alt="with_or_hold" src="https://github.com/user-attachments/assets/55bd74f8-2d30-4b4f-8e75-d416e15ca9c8"  class="zoom-img"></a>
       </figure>
       <figcaption> "It shows mainly Elisabeth <i>with</i> baby John the Baptist, Joseph and Mary <i>with</i> infant baby Jesus (l.t.r.).These figures of the New Testament maintain eye contact."</figcaption>
     </td>
@@ -380,12 +382,13 @@ The figure below shows an example. Both babies have the *with* relation with the
 
 ### Transitive relations 
 Sometimes descriptions  describe an entity doing something to another entity for the sake or goal of yet another entity. The figure below shows Mary presenting the Christ child to Rolin. To express this in the annotations, it is annotated that Mary presents Christ child and Chrits child is presented to Rolin.
+<img width="727" height="731" alt="present" src="https://github.com/user-attachments/assets/04387db2-f7f4-4ba4-8184-6bccdd39e12d" />
 
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/b5356a18-d8ca-4431-bf78-35e1614caad8"><img alt="present" src="https://github.com/user-attachments/assets/b5356a18-d8ca-4431-bf78-35e1614caad8" class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/04387db2-f7f4-4ba4-8184-6bccdd39e12d"><img alt="present" src="https://github.com/user-attachments/assets/04387db2-f7f4-4ba4-8184-6bccdd39e12d" class="zoom-img"></a>
       </figure>
       <figcaption>"The scene depicts the Virgin Mary crowned by a hovering Angel while <i>she presents the Infant Jesus to Rolin</i>. [...]."</figcaption>
     </td>
