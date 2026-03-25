@@ -316,9 +316,13 @@ The figure below shows an example of this. Note the highlighted entities on the 
   </tr>
 </table>
 
----------------------------------------------------------------------------------------------------
 
-## Relation 
+
+
+
+
+
+## Relations
 As mentioned in the beginning, the second task is to mark the relations between two entities, *only* in the image. The relations that are marked do not necessarily have to be present in the description. However the corresponding entities have to. Again, The first image's right side shows an example with the tool label-studio.
 The steps to follow are described below. 
 
