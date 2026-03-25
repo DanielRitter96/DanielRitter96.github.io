@@ -10,6 +10,312 @@ The followup task after the entities are annotated is to annotate the relations 
 
 
 
+The following figure shows both annotation modalities: the textual and the image one. The tool that is used for the annotations is called label studio. You can see that only the entities are marked for the textual descriptions. For that only the subject field is necessary. The Qid at the beginning is not important and is not annotated. At the right, the image annotation shows boxes for every named entity and the relations between them with prefixes. 
+How to proceed in regular but also in special cases are described in more detail in the guidelines below.  
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586"><img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586" class="zoom-img"></a>
+      </figure>
+      <figcaption>This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations</figcaption>
+    </td>
+  </tr>
+</table>
+
+### Prefixes
+There are cases in which the information richness of the description and the image vary. Some descriptions describe meta-information and add more details than what can be observed within the image. However, with those cases being the only exception, the image always holds more information than the description. To address this, we differentiate whether the relation is from the text or the image. Additionally, there are numeroues cases in which the later discussed conditions are met to *infer* relations from the image or text alone. 
+In other rare cases, descriptions cannot with full certainty determine the enitities names or roles, leading to uncertain guesses. Furthermore, descriptions are often written in a way to make the text sound better, e.g., synonyms are used to describe the same entity in different ways. Similary to that, entities are often described to symbolize different entities. Finally, there are entities that describe an event or action rather than a person or object. Those can have additional entities within but are otherwise missing in the description. To deal with these different scenarios, we use prefixes in order to make it obvious which scenario a relation or enitity falls under.     
+Most prefixes are for the entities, others for the relations and few are for both applicable. 
+
+The used prefixes are:
+- txt - marked for every relation that is present in the description
+- img - marked for every relation that is present in the image
+- inf - marked for every relation that is inferred from the image
+- impl - marked for every entity that is implied from event entities
+- syn - marked for every relation that declares that two entities are synonyms. Note: that focuses on the entity
+- sym - marked for every relation that declares that one entity symbolizes the other. Note: that focuses on the entity
+- uct - marked for every uncertain entity or relation that is shows uncertainty about the relation between two entities
+
+Since we have two different tasks, (i) annotation of the entities and (ii) annotation of the shared relations, we split the prefixes in the respective parts.
+
+
+## Entities
+As already described above, the task is to mark the entities in both the text and the image at the same time. The entities that are marked in the image have to be present in the description as well. The first image shows an example with the tool label-studio.
+The steps to follow are described below. The example images here are fully annotated once, therefore they might already have the relations annotated. For this "Entities" section, please focus only on the boxes itself.
+### Spans
+The spans in both the textual and image annotations need to be as accurate as possible. The textual annotations are trivial, just mark the whole word and nothing but the word, however the box annotations within the images are more tricky. They need to be as accurate as possible, which means that the entirety of the body has to be in the box. This includes halos as much as it includes clothings, even if different objects would be partially annotated as well.  Few exceptions are made if body parts are partially obstructed by other objects and e.g. in group scenes hard to assign to the correct person.
+The first image in the figure below shows a simple case to assign obstructed body parts whereas the second shows a hard one. Since this particular example shows a small crowd close together they are annotated in a group. More on that follows later under the group annotation section.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6"><img alt="span1" src="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/ecb6ca93-d79d-4928-928e-55d0ced9538f"><img alt="span2" src="https://github.com/user-attachments/assets/ecb6ca93-d79d-4928-928e-55d0ced9538f"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "The painting represents the scene of the Last Supper of Jesus with his apostles, as it is told in the Gospel of John, 13:21."</figcaption>
+    </td>
+  </tr>
+</table>
+
+Note that the annotation of the id at the beginning of each description is not required. Those ids are not part of the actual descriptions.
+
+### Named box
+The boxes have their own class names. For example, the box drawn over Jesus Christ is called "Jesus" or one of the usual alias of him. DO NOT use different boxes of the same person, i.e. annotating Jesus as "Jesus" is as correct as "Christ". 
+The figure below shows Mary with infant Jesus and the annotation box is drawn over her. At the right, the name of the box can be seen as "Virgin" which is a usual alias for her. 
+
+das beipiels mit der named box hier
+<table>
+  <tr>
+    <td> 
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"><img alt="group_instance" src="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"  class="zoom-img"></a>
+      </figure>
+      <figcaption>"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
+
+### Wikidata linking
+Every entity has to be linked as closely as possible to the correct Wikidata page. If it is a group annotation then the number of individual entities are given before the linking. The figure below shows how such a linking looks like for the group of "blessed", which in this image are more than 10 people. The "G(n):" denotion  is only used in groups and since this group is unique the instance count denoted with the '\#' is 1. More on instances is in the next point.  
+For a *n* that is smaller than 10, please count the individuals and from 10 onwards just mark 10+. Also, please do not use any whitespaces " ". 
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"><img alt="group_instance" src="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"  class="zoom-img"></a>
+      </figure>
+      <figcaption>"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
+### Instances
+For every entity given in the text, there might be more than just one in the image. If it is clear that all of the present entities in the image are described, then annotations need to specifically count each instance of the entity. This ensures that the correctness and completeness.
+In first figure below, the instance count for the selected angel is displayed as 2 since it is the second angel. There is no particular rule regarding the orders or where to start counting. However, the instances have to match those described in the text. 
+The second figure highlights a second group of angels in the foreground. Those angels refer to the ones standing next to Jesus.
+Taking this information into account, the instance counts in the linkings for the text needs to fit those in the painting. 
+The expected linking for the flying angels would be "https://www.wikidata.org/wiki/Q235113\#1-2" and for the foreground angels it would be www.wikidata.org/wiki/Q235113\#3-6. Both would be for the corresponding *angels* term. 
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/459e7040-88bc-4b48-a371-d284543e9e46"><img alt="instances1" src="https://github.com/user-attachments/assets/459e7040-88bc-4b48-a371-d284543e9e46"  class="zoom-img"></a>
+      </figure>
+      <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. <i>Behind him is a damask cloth held by two angels</i> and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. In the foreground are four angels [...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/ebc373fc-b989-4e15-80db-554919f1ed95"><img alt="instances2" src="https://github.com/user-attachments/assets/ebc373fc-b989-4e15-80db-554919f1ed95"  class="zoom-img"></a>
+      </figure>
+      <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. <i>In the foreground are four angels</i> [...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
+
+### No meta information
+Entities  that come from meta-information, and are therefore not present in the image are not annotated within the text. This focuses mainly on information such as the painter, the name of the painting, etc. It does not however include entities that are meant be e.g. named groups. So if people belong to certain classes, groups or occupations, those annotations are made if it is distinctly matchable. 
+ The same text-image pair shown in figure below has no annotations with neither maesà nor with Cimabue or the Basilica of San Francesco di Assisi. Note the list of entities in the right part of the figure.
+Also note that these are mostly relevant for the textual annotation rather than the image one.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <<a href="https://github.com/user-attachments/assets/eb01e490-acda-496c-85fa-f58b2820b842"><img alt="no_assisi" src="https://github.com/user-attachments/assets/eb01e490-acda-496c-85fa-f58b2820b842"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "[...]. The throne is similar to the <i>Maestà painted by Cimabue</i> in the Basilica of San Francesco di Assisi (1288–1292)."</figcaption>
+    </td>
+  </tr>
+</table>
+
+### At least one entity
+As long as there is at least one entity given, the pair is not skipped. 
+The first figure below shows an example with only one valid entity annotation
+and no relations. While those pairs are not skip, the second figure shows a pair that has no valid entity due to the uncertainty expressed in the description.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/5046dc1e-50b5-45f6-a752-0f3ef375f291"><img alt="skip" src="https://github.com/user-attachments/assets/5046dc1e-50b5-45f6-a752-0f3ef375f291"  class="zoom-img"></a>
+      </figure>
+      <figcaption>"A Goldsmith in His Shop, Possibly Saint Eligius is a 1449 painting by Petrus Christus, now in the Metropolitan Museum of Art. The main figure in the painting <i>was long thought to be Saint Eligius</i>, the patron saint of goldsmiths, due to the presence of a halo."</figcaption>
+    </td>
+  </tr>
+</table>
+
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/91377c6c-1cae-405e-8ecf-f3f5c44f1dcd"><img alt="no_skip" src="https://github.com/user-attachments/assets/91377c6c-1cae-405e-8ecf-f3f5c44f1dcd"  class="zoom-img"></a>
+      </figure>
+      <figcaption>"[...] <i>The Madonna</i> was portrayed standing, alone, often with a closed book on her belly, an allusion to the Incarnate Word. The works were associated with the devotions of pregnant women, praying for a safe delivery. Here the Virgin wears the Girdle of Thomas, a belt of knotted cloth cord that was a relic held in Prato Cathedral, which many depictions wear."</figcaption>
+    </td>
+  </tr>
+</table>
+
+
+### Group annotations
+Entities have to be annotated as a group if
+-  They are not specifically named
+-  The number of relevant entities start overlapping and reach 5 overlapped entities
+-  multiple entities of the same type close together e.g. flowers
+
+The figure below shows the blessed and the damned on the left and right side of the painting respectively. Since they both are a big group of people they exceed the maximum amount of individual entities and become a group.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d"><img alt="when_group" src="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "[...] Rising up the left hand side of the painting (at Jesus' right hand) are the <i>blessed</i>, whilst the <i>damned</i> fall into hell on the right hand side [...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
+### Individuals are part of a group
+If there are groups with distinguishable individuals, like in the below figure, then they have to have the _part\_of_ relation to the group. Keep in mind that groups can have other relations as well.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/e0a3a60f-fdbf-4fbc-96e0-80dae6825822"><img alt="part_of" src="https://github.com/user-attachments/assets/e0a3a60f-fdbf-4fbc-96e0-80dae6825822"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."</figcaption>
+    </td>
+  </tr>
+</table>
+
+### Big bounding boxes
+Big bounding boxes that are drawn all over the image are allowed if a entity is a scene or if a group of people need to be annotated.
+In the below figure, in order to capture the three archangels within the painting, a box that spans over the entire image is needed.  The fact that the box is barely visible but still marked as such, as indicated one the right list of highlighted entities, shows that the box spans over the entire image.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/a606a077-728c-4fbd-af65-151e041823b9"><img alt="big_box" src="https://github.com/user-attachments/assets/a606a077-728c-4fbd-af65-151e041823b9"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."</figcaption>
+    </td>
+  </tr>
+</table>
+
+
+### Entities with further information
+Some descriptions describe a entity at some point and then at a later point give more details. For example, the text may say a person wears some sort of clothes. Later it describes those clothes in more detail naming particular parts like hats.
+In these cases all entities need to be annotated, the generic one and the more detailed entities. Furthermore those more detailed parts meed to be marked with the _part\_of_ relation
+The figure below shows the person on left wearing a _vestment_. This _vestment_ is later described as _cope_ and _mitre_, leading to him also wearing a _cope_ and a _mitre_. Finally, _Mitre_ and _cope_ are also _part\_of_ the _vestment_.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/81635172-89bd-473d-bad0-3c7e12e9059f"><img alt="cope" src="https://github.com/user-attachments/assets/81635172-89bd-473d-bad0-3c7e12e9059f"  class="zoom-img"></a>
+      </figure>
+      <figcaption>"[...] Saint Donatian, dressed in brightly coloured <i>vestments</i>, stands to the left. [...] The precision of the detail achieved is especially noticeable in the rendering of threads of St. Donatian's blue and golden embroidered <i>cope and mitre</i>, in the weave of the oriental carpet, and in the stubble and <i>veins on van der Paele's aging face</i>."</figcaption>
+    </td>
+  </tr>
+</table>
+
+### Not to detailed
+Descriptions can describe the visual too detailed. Those entities and relations are not annotated. The same example shown in above figure describes the face of the kneeling person in too much detail describing the veins on his face. This relation is not annotated.
+
+### Body parts 
+Body parts are not treated as their own entity and therefore can also not be part of a relation. Those body parts will be treated as the whole person. E.g. _child sits in her lap_ will be treated as child sits on mother.
+The figure below shows the same example image as before with different annotations, focusing on Mary and the Christ child. While the descriptions describes Christ siting on her lap, the annotation is still done for Mary as a whole.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974"><img alt="lap" src="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974" class="zoom-img"></a>
+      </figure>
+      <figcaption>"[...] The Virgin Mary is enthroned at the centre of the semicircular space, which most likely represents a church interior, with the <i>Christ Child on her lap</i>.[...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
+
+### Background objects
+Background entities are of equal importance as foreground entities, however, background entities that hold little importance are not instantiated. The figure below shows how the mountains in the background are annotated and how the wikidata linking is done. The only difference is the missing instance. 
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/c2859c1f-2d7e-4e3d-8136-5d41491720ba"><img alt="background1" src="https://github.com/user-attachments/assets/c2859c1f-2d7e-4e3d-8136-5d41491720ba"  class="zoom-img"></a>
+      </figure>
+      <figcaption>"[...] The landscape background is typical of Perugino, <i>with mountains and hills in deep perspective</i>. To the left of the cross stand saint Jerome (inspiration for the Jesuati) and Francis of Assisi. To its right are Mary Magdalene touching Christ's feet, Blessed Giovanni Colombini (founder of the Jesuati) and John the Baptist (patron saint of Florence). John points to Christ, whilst Jerome has thrown down his cardinal's cap at the foot of the cross, symbolising his rejection of earthly honours. [...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
+### Synonyms
+Often times the description uses synonyms to describe the same entity in different ways. This is marked with the prefix \textit{syn}.
+ The figure with the dragon further down is an example. It shows saint George spearing a dragon. The description of the image also mentions a beast and refers to the dragon introducing a synonym.
+The annotations are done by copying the box of the dragon and renaming it as beast. Finally the *syn* prefix with a simple *is* relation is drawn between them. Note that the boxes will end up exactly on top of each other. 
+
+### Symbolize
+Similarly, to the synonymy case, in the same example figure, the belt is described to symbolize a leash. 
+Following the same approach the relation between the belt and leash (renamed belt copy) has the prefix *sym* with the relation *used as*.
+
+### Implications
+Furthermore, the phrase *story of Saint George and the dragon* in the same example figure below is in itself a entity that also implies the existence other entities. Those are *Saint George* together with *dragon*. This leads to three annotations instead of just one. The correct prefix for these cases is *impl* and since this applies to the entities rather than the relations it has be prepended on the entity meta string. 
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/947e31e3-5c81-44ea-a27e-f1517b0d84c0"><img alt="dragon" src="https://github.com/user-attachments/assets/947e31e3-5c81-44ea-a27e-f1517b0d84c0"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
+
+### Uncertainty
+In some cases, the description is not giving certain information about e.g. people present in the image. In those cases, we use the *uct* prefix to express that uncertainty. 
+if the image-text pair consists of only uncertain entities, said pair is skipped. The *uct* prefix applies to both the entities and the relations.
+The figure below shows an example of this. Note the highlighted entities on the right side of the image. The saint with the 8 refers to the old woman on the right. Again, this follows the same approach as in the synonym and symbolize cases. Therefore, the boxes are exactly on top of each other. In this case the relations are also directly on top of each other making it seem like there is only one other box for the old woman when there are in fact two.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"><img alt="maybe" src="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
 
 
 
