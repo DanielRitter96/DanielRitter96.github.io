@@ -329,7 +329,7 @@ For example in the figure below with and excerpt of its description in the capti
 <table>
   <tr>
     <td>
-      <figure class="zoom-container">
+      <figure>
         <img alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" class="zoom-img">
       </figure>
       <figcaption>"It is also stylistically earlier to that work, being painted without pseudo-perspective, and having the <i>angels around the Virgin</i>[...]."</figcaption>
@@ -350,8 +350,8 @@ That also means once again that *only* relations can be inferred.
 <table>
   <tr>
     <td>
-      <figure class="zoom-container">
-        <img alt="inf" src="https://github.com/user-attachments/assets/1623ea7c-ae59-4aae-ada1-939b0befe020" class="zoom-img">
+      <figure>
+        <a href="https://github.com/user-attachments/assets/1623ea7c-ae59-4aae-ada1-939b0befe020"><img alt="inf" src="https://github.com/user-attachments/assets/1623ea7c-ae59-4aae-ada1-939b0befe020" class="zoom-img"></a>
       </figure>
       <figcaption> "[...] having the <i>angels</i> around the Virgin simply placed one above the other, rather than being spatially arranged. The <i>throne</i> [...]."</figcaption>
     </td>
@@ -366,7 +366,7 @@ The figure below shows an example. Both babies have the *with* relation with the
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="with_or_hold" src="https://github.com/user-attachments/assets/9c311810-7c81-4213-a6a5-c82f18de6101"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/9c311810-7c81-4213-a6a5-c82f18de6101"><img alt="with_or_hold" src="https://github.com/user-attachments/assets/9c311810-7c81-4213-a6a5-c82f18de6101"  class="zoom-img"></a>
       </figure>
       <figcaption> "It shows mainly Elisabeth <i>with</i> baby John the Baptist, Joseph and Mary <i>with</i> infant baby Jesus (l.t.r.).These figures of the New Testament maintain eye contact."</figcaption>
     </td>
@@ -380,7 +380,7 @@ Sometimes descriptions  describe an entity doing something to another entity for
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="present" src="https://github.com/user-attachments/assets/b5356a18-d8ca-4431-bf78-35e1614caad8" class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/b5356a18-d8ca-4431-bf78-35e1614caad8"><img alt="present" src="https://github.com/user-attachments/assets/b5356a18-d8ca-4431-bf78-35e1614caad8" class="zoom-img"></a>
       </figure>
       <figcaption>"The scene depicts the Virgin Mary crowned by a hovering Angel while <i>she presents the Infant Jesus to Rolin</i>. [...]."</figcaption>
     </td>
@@ -396,7 +396,7 @@ The figure below shows, in the top panel, Christ with two cherubs. The relation 
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="tertiär" src="https://github.com/user-attachments/assets/4e5d8cb8-bf7c-48f3-9102-35337c489a0e"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/4e5d8cb8-bf7c-48f3-9102-35337c489a0e"><img alt="tertiär" src="https://github.com/user-attachments/assets/4e5d8cb8-bf7c-48f3-9102-35337c489a0e"  class="zoom-img"></a>
       </figure>
       <figcaption>"The work is in a huge gilded and carved frame, with three cusps covered placed on jutting corbels. The three arches are decorated with vegetable motifs; over them are three panels (whose upper frame is lost), containing the paintings, from the left, of the Angel of the Annunciation, the Blessing <i>Christ between Cherubims</i> and the Annunciation. [...]."</figcaption>
     </td>
@@ -411,7 +411,7 @@ Spatial annotations are not annotated since they harbour little information and 
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="big_box" src="https://github.com/user-attachments/assets/4983f5f8-89f8-4d1b-9686-738c91160f04"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/4983f5f8-89f8-4d1b-9686-738c91160f04"><img alt="big_box" src="https://github.com/user-attachments/assets/4983f5f8-89f8-4d1b-9686-738c91160f04"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...] the picture represents the three archangels: Michael _on the left_ Raphael _in the centre_, and Gabriel holding a lily, together with a young Tobias, son of Tobit."</figcaption>
     </td>
