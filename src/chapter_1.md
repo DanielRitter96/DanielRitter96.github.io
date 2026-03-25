@@ -338,12 +338,16 @@ For example, in the figure below with and excerpt of its description in the capt
     <figure class="zoom-container">
         <a href="https://github.com/user-attachments/assets/eeb54add-0b5f-42b9-abc1-c09c08005fd4"><img alt="txt+img" src="https://github.com/user-attachments/assets/eeb54add-0b5f-42b9-abc1-c09c08005fd4" class="zoom-img"></a>
         </figure>
-      <figcaption>"It is also stylistically earlier to that work, being painted without pseudo-perspective, and having the <i>angels around the Virgin</i>[...]."</figcaption>
+      <figcaption>"it depicts the goddess Venus arriving at the shore after her birth, when <i>she had emerged from the sea</i> fully-grown [...]."</figcaption>
     </td>
   </tr>
 </table>
 
-Please note that neither *txt* nor *img* can be used alone. Both would need other prefixes. 
+### No unseen relations
+Just like the entities that are not present in the image, the relations that are not visible in the image are also not annotated. The same figure above
+shows that the goddess Venus *has arrived* at the shore. It does not, however, show that Venus emerged from the sea. She is depicted on a clam at the shore. The described event has already taken place and is therefore not present in the image. 
+Remember: inferring this relation would mean the relation is inferred based on the description and not from the image. Infereations are only allowed based on the images.
+
 
 ### Inferences
 There are cases where the information of the image is richer than the description. 
@@ -426,24 +430,10 @@ Spatial annotations are not annotated since they harbour little information and 
 </table>
 
 
-### No unseen relations
-Just like the entities that are not present in the image, the relations that are not visible in the image are also not annotated. The figure below
-shows that the goddess Venus *has arrived* at the shore. It does not, however, show that Venus emerged from the sea. She is depicted on a clam at the shore. The described event has already taken place and is therefore not present in the image. 
-Remember: inferring this relation would mean the relation is inferred based on the description and not from the image. Infereations are only allowed based on the images.
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/ed0ae98d-5f0e-4626-8889-c5c1d3856c68"><img alt="emerge" src="https://github.com/user-attachments/assets/ed0ae98d-5f0e-4626-8889-c5c1d3856c68"  class="zoom-img"></a>
-      </figure>
-      <figcaption> "it depicts the goddess Venus arriving at the shore after her birth, when <i>she had emerged from the sea</i> fully-grown [...]."</figcaption>
-    </td>
-  </tr>
-</table>
 
 
-### Miscellaneous {#Miscellaneous}
+
+### Miscellaneous 
 
 #### Long tail entities
 Some entities can be longer such as *Episodes of the lives of St. Benedict* or *Throne of Jesus and Madonna*. Those have to be annotated as one entity without extracting other entities like *St. Benedict*, *Jesus* or *Madonna*.
