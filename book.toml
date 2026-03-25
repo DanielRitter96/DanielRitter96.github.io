@@ -8,11 +8,5 @@ no-section-label = true
 git-repository-url = "https://github.com/DanielRitter96/DanielRitter96.github.io"
 git-repository-icon = "fab-github"
 edit-url-template = "https://github.com/DanielRitter96/DanielRitter96.github.io/edit/main/{path}"
-
-additional-css = [
-    "./theme/css/zoom.css",
-]
-
-additional-js = [
-    "./theme/js/full-screen-drag.js",
-]
+additional-css = ["./theme/css/zoom.css"]
+additional-js = ["./theme/js/full-screen-drag.js"]
