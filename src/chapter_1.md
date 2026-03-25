@@ -141,7 +141,7 @@ Also note that these are mostly relevant for the textual annotation rather than 
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/040d6a3d-7f68-4007-b919-3a396034eb55"><img width="1768" height="1095" alt="no_assisi" src="https://github.com/user-attachments/assets/040d6a3d-7f68-4007-b919-3a396034eb55"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/040d6a3d-7f68-4007-b919-3a396034eb55"><img alt="no_assisi" src="https://github.com/user-attachments/assets/040d6a3d-7f68-4007-b919-3a396034eb55"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...]. The throne is similar to the <i>Maestà painted by Cimabue</i> in the Basilica of San Francesco di Assisi (1288–1292)."</figcaption>
     </td>
@@ -377,7 +377,7 @@ The figure below shows an example. Both babies have the *with* relation with the
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/55bd74f8-2d30-4b4f-8e75-d416e15ca9c8"><img width="2048" height="1142" alt="with_or_hold" src="https://github.com/user-attachments/assets/55bd74f8-2d30-4b4f-8e75-d416e15ca9c8"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/55bd74f8-2d30-4b4f-8e75-d416e15ca9c8"><img alt="with_or_hold" src="https://github.com/user-attachments/assets/55bd74f8-2d30-4b4f-8e75-d416e15ca9c8"  class="zoom-img"></a>
       </figure>
       <figcaption> "It shows mainly Elisabeth <i>with</i> baby John the Baptist, Joseph and Mary <i>with</i> infant baby Jesus (l.t.r.).These figures of the New Testament maintain eye contact."</figcaption>
     </td>
