@@ -8,7 +8,7 @@ For the images, annotations are done through bounding boxes that span the entire
 ### Relations
 The followup task after the entities are annotated is to annotate the relations that two entites share between each oher. Those relation annotations are limited to the images. That means no relation annotation are made for the descriptions.
 
----
+
 
 The following figure shows both annotation modalities: the textual and the image one. The tool that is used for the annotations is called label studio. You can see that only the entities are marked for the textual descriptions. For that only the subject field is necessary. The Qid at the beginning is not important and is not annotated. At the right, the image annotation shows boxes for every named entity and the relations between them with prefixes. 
 How to proceed in regular but also in special cases are described in more detail in the guidelines below.  
@@ -309,7 +309,7 @@ The figure below shows an example of this. Note the highlighted entities on the 
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"><img alt="maybe" src="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"><img alt="maybe" src="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
     </td>
