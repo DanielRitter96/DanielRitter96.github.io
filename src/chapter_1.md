@@ -29,9 +29,8 @@ In other rare cases, descriptions cannot with full certainty determine the eniti
 Most prefixes are for the entities, others for the relations and few are for both applicable. 
 
 The used prefixes are:
-- txt - marked for every relation that is present in the description
-- img - marked for every relation that is present in the image
-- inf - marked for every relation that is inferred from the image
+- None - no mark is set if the relation is present in the image and the description.
+- img_inf - marked for every relation that is inferred from the image
 - impl - marked for every entity that is implied from event entities
 - syn - marked for every relation that declares that two entities are synonyms. Note: that focuses on the entity
 - sym - marked for every relation that declares that one entity symbolizes the other. Note: that focuses on the entity
@@ -282,7 +281,7 @@ The annotations are done by copying the box of the dragon and renaming it as bea
 
 ### Symbolize
 Similarly, to the synonymy case, in the same example figure, the belt is described to symbolize a leash. 
-Following the same approach the relation between the belt and leash (renamed belt copy) has the prefix *sym* with the relation *used as*.
+Following the same approach the relation between the belt and leash (renamed belt copy) has the prefix *sym* with the most fittong simple relation e.g. *used as* or *is*.
 
 ### Implications
 Furthermore, the phrase *story of Saint George and the dragon* in the same example figure below is in itself a entity that also implies the existence other entities. Those are *Saint George* together with *dragon*. This leads to three annotations instead of just one. The correct prefix for these cases is *impl* and since this applies to the entities rather than the relations it has be prepended on the entity meta string. 
@@ -326,14 +325,15 @@ As mentioned in the beginning, the second task is to mark the relations between 
 The steps to follow are described below. 
 
 ### Textual and image annotations
-Since the information richness between text and image are not always the same i.e. the image may show more than the description describes or vice versa. To deal with this disparity there are the two prefixes  *txt* and *img*. If the relation is present both in the description and image then there is no need to use both of them, since by using none of them it is implied that it is present in both rather than in none of them. 
-For example in the figure below with and excerpt of its description in the caption shows the triplet: "Angels *around* the Virgin". --> **vllt ein anderes Beispiel**
+Since the information richness between text and image are not always the same i.e. the image may show more than the description describes or vice versa. To deal with this disparity there is the option to use either no prefix before the relation or to select the *img_inf* relation. If the relation is present both in the description and image then no prefiy is used, since by using none of them it is implied that it is present in both rather than in none of them. The other case is described in the point below.
+For example, in the figure below with and excerpt of its description in the caption shows the triplet: "Venus *arrive* shore". 
+
 
 <table>
   <tr>
     <td>
     <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d"><img alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/eeb54add-0b5f-42b9-abc1-c09c08005fd4"><img alt="txt+img" src="https://github.com/user-attachments/assets/eeb54add-0b5f-42b9-abc1-c09c08005fd4" class="zoom-img"></a>
         </figure>
       <figcaption>"It is also stylistically earlier to that work, being painted without pseudo-perspective, and having the <i>angels around the Virgin</i>[...]."</figcaption>
     </td>
