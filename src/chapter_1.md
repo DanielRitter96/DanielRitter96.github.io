@@ -16,7 +16,7 @@ How to proceed in regular but also in special cases are described in more detail
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586" class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586"><img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/071a21c4-4bc3-4d0b-b97a-93725c499586" class="zoom-img"></a>
       </figure>
       <figcaption>This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations</figcaption>
     </td>
@@ -51,7 +51,7 @@ The first image in the figure below shows a simple case to assign obstructed bod
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="span1" src="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6"><img alt="span1" src="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
     </td>
@@ -62,7 +62,7 @@ The first image in the figure below shows a simple case to assign obstructed bod
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="span2" src="https://github.com/user-attachments/assets/ecb6ca93-d79d-4928-928e-55d0ced9538f"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/ecb6ca93-d79d-4928-928e-55d0ced9538f"><img alt="span2" src="https://github.com/user-attachments/assets/ecb6ca93-d79d-4928-928e-55d0ced9538f"  class="zoom-img"></a>
       </figure>
       <figcaption> "The painting represents the scene of the Last Supper of Jesus with his apostles, as it is told in the Gospel of John, 13:21."</figcaption>
     </td>
@@ -80,7 +80,7 @@ das beipiels mit der named box hier
   <tr>
     <td> 
       <figure class="zoom-container">
-        <img alt="group_instance" src="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"><img alt="group_instance" src="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"  class="zoom-img"></a>
       </figure>
       <figcaption>"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."</figcaption>
     </td>
@@ -96,7 +96,7 @@ For a *n* that is smaller than 10, please count the individuals and from 10 onwa
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="group_instance" src="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"><img alt="group_instance" src="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"  class="zoom-img"></a>
       </figure>
       <figcaption>"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."</figcaption>
     </td>
@@ -114,7 +114,7 @@ The expected linking for the flying angels would be "https://www.wikidata.org/wi
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="instances1" src="https://github.com/user-attachments/assets/459e7040-88bc-4b48-a371-d284543e9e46"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/459e7040-88bc-4b48-a371-d284543e9e46"><img alt="instances1" src="https://github.com/user-attachments/assets/459e7040-88bc-4b48-a371-d284543e9e46"  class="zoom-img"></a>
       </figure>
       <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. <i>Behind him is a damask cloth held by two angels</i> and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. In the foreground are four angels [...]."</figcaption>
     </td>
@@ -125,7 +125,7 @@ The expected linking for the flying angels would be "https://www.wikidata.org/wi
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="instances2" src="https://github.com/user-attachments/assets/ebc373fc-b989-4e15-80db-554919f1ed95"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/ebc373fc-b989-4e15-80db-554919f1ed95"><img alt="instances2" src="https://github.com/user-attachments/assets/ebc373fc-b989-4e15-80db-554919f1ed95"  class="zoom-img"></a>
       </figure>
       <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. <i>In the foreground are four angels</i> [...]."</figcaption>
     </td>
@@ -142,7 +142,7 @@ Also note that these are mostly relevant for the textual annotation rather than 
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="no_assisi" src="https://github.com/user-attachments/assets/eb01e490-acda-496c-85fa-f58b2820b842"  class="zoom-img">
+        <<a href="https://github.com/user-attachments/assets/eb01e490-acda-496c-85fa-f58b2820b842"><img alt="no_assisi" src="https://github.com/user-attachments/assets/eb01e490-acda-496c-85fa-f58b2820b842"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...]. The throne is similar to the <i>Maestà painted by Cimabue</i> in the Basilica of San Francesco di Assisi (1288–1292)."</figcaption>
     </td>
@@ -158,7 +158,7 @@ and no relations. While those pairs are not skip, the second figure shows a pair
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="skip" src="https://github.com/user-attachments/assets/5046dc1e-50b5-45f6-a752-0f3ef375f291"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/5046dc1e-50b5-45f6-a752-0f3ef375f291"><img alt="skip" src="https://github.com/user-attachments/assets/5046dc1e-50b5-45f6-a752-0f3ef375f291"  class="zoom-img"></a>
       </figure>
       <figcaption>"A Goldsmith in His Shop, Possibly Saint Eligius is a 1449 painting by Petrus Christus, now in the Metropolitan Museum of Art. The main figure in the painting <i>was long thought to be Saint Eligius</i>, the patron saint of goldsmiths, due to the presence of a halo."</figcaption>
     </td>
@@ -170,7 +170,7 @@ and no relations. While those pairs are not skip, the second figure shows a pair
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="no_skip" src="https://github.com/user-attachments/assets/91377c6c-1cae-405e-8ecf-f3f5c44f1dcd"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/91377c6c-1cae-405e-8ecf-f3f5c44f1dcd"><img alt="no_skip" src="https://github.com/user-attachments/assets/91377c6c-1cae-405e-8ecf-f3f5c44f1dcd"  class="zoom-img"></a>
       </figure>
       <figcaption>"[...] <i>The Madonna</i> was portrayed standing, alone, often with a closed book on her belly, an allusion to the Incarnate Word. The works were associated with the devotions of pregnant women, praying for a safe delivery. Here the Virgin wears the Girdle of Thomas, a belt of knotted cloth cord that was a relic held in Prato Cathedral, which many depictions wear."</figcaption>
     </td>
@@ -190,7 +190,7 @@ The figure below shows the blessed and the damned on the left and right side of 
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="when_group" src="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d"><img alt="when_group" src="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...] Rising up the left hand side of the painting (at Jesus' right hand) are the <i>blessed</i>, whilst the <i>damned</i> fall into hell on the right hand side [...]."</figcaption>
     </td>
@@ -204,7 +204,7 @@ If there are groups with distinguishable individuals, like in the below figure, 
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="part_of" src="https://github.com/user-attachments/assets/e0a3a60f-fdbf-4fbc-96e0-80dae6825822"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/e0a3a60f-fdbf-4fbc-96e0-80dae6825822"><img alt="part_of" src="https://github.com/user-attachments/assets/e0a3a60f-fdbf-4fbc-96e0-80dae6825822"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."</figcaption>
     </td>
@@ -219,7 +219,7 @@ In the below figure, in order to capture the three archangels within the paintin
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="big_box" src="https://github.com/user-attachments/assets/a606a077-728c-4fbd-af65-151e041823b9"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/a606a077-728c-4fbd-af65-151e041823b9"><img alt="big_box" src="https://github.com/user-attachments/assets/a606a077-728c-4fbd-af65-151e041823b9"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."</figcaption>
     </td>
@@ -236,7 +236,7 @@ The figure below shows the person on left wearing a _vestment_. This _vestment_ 
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="cope" src="https://github.com/user-attachments/assets/81635172-89bd-473d-bad0-3c7e12e9059f"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/81635172-89bd-473d-bad0-3c7e12e9059f"><img alt="cope" src="https://github.com/user-attachments/assets/81635172-89bd-473d-bad0-3c7e12e9059f"  class="zoom-img"></a>
       </figure>
       <figcaption>"[...] Saint Donatian, dressed in brightly coloured <i>vestments</i>, stands to the left. [...] The precision of the detail achieved is especially noticeable in the rendering of threads of St. Donatian's blue and golden embroidered <i>cope and mitre</i>, in the weave of the oriental carpet, and in the stubble and <i>veins on van der Paele's aging face</i>."</figcaption>
     </td>
@@ -254,7 +254,7 @@ The figure below shows the same example image as before with different annotatio
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="lap" src="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974" class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974"><img alt="lap" src="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974" class="zoom-img"></a>
       </figure>
       <figcaption>"[...] The Virgin Mary is enthroned at the centre of the semicircular space, which most likely represents a church interior, with the <i>Christ Child on her lap</i>.[...]."</figcaption>
     </td>
@@ -269,7 +269,7 @@ Background entities are of equal importance as foreground entities, however, bac
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="background1" src="https://github.com/user-attachments/assets/c2859c1f-2d7e-4e3d-8136-5d41491720ba"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/c2859c1f-2d7e-4e3d-8136-5d41491720ba"><img alt="background1" src="https://github.com/user-attachments/assets/c2859c1f-2d7e-4e3d-8136-5d41491720ba"  class="zoom-img"></a>
       </figure>
       <figcaption>"[...] The landscape background is typical of Perugino, <i>with mountains and hills in deep perspective</i>. To the left of the cross stand saint Jerome (inspiration for the Jesuati) and Francis of Assisi. To its right are Mary Magdalene touching Christ's feet, Blessed Giovanni Colombini (founder of the Jesuati) and John the Baptist (patron saint of Florence). John points to Christ, whilst Jerome has thrown down his cardinal's cap at the foot of the cross, symbolising his rejection of earthly honours. [...]."</figcaption>
     </td>
@@ -292,7 +292,7 @@ Furthermore, the phrase *story of Saint George and the dragon* in the same examp
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="dragon" src="https://github.com/user-attachments/assets/947e31e3-5c81-44ea-a27e-f1517b0d84c0"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/947e31e3-5c81-44ea-a27e-f1517b0d84c0"><img alt="dragon" src="https://github.com/user-attachments/assets/947e31e3-5c81-44ea-a27e-f1517b0d84c0"  class="zoom-img"></a>
       </figure>
       <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
     </td>
@@ -309,7 +309,7 @@ The figure below shows an example of this. Note the highlighted entities on the 
   <tr>
     <td>
       <figure class="zoom-container">
-        <img alt="maybe" src="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"  class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"><img alt="maybe" src="https://github.com/user-attachments/assets/665e600a-3560-44a9-b261-479d713d15c5"  class="zoom-img">
       </figure>
       <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
     </td>
@@ -329,7 +329,7 @@ For example in the figure below with and excerpt of its description in the capti
 <table>
   <tr>
     <td>
-        <img alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" class="zoom-img">
+        <a href="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d"><img alt="txt+img" src="https://github.com/user-attachments/assets/934cf0e4-ce13-427f-b789-6a3c5659b20d" class="zoom-img"></a>
       <figcaption>"It is also stylistically earlier to that work, being painted without pseudo-perspective, and having the <i>angels around the Virgin</i>[...]."</figcaption>
     </td>
   </tr>
