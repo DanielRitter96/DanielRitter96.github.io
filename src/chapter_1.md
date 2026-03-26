@@ -444,7 +444,7 @@ As earlier described, Events that take place currently are annotated however tho
 
 
 #### Addition to inferred relations
-If relations are inferred, it may be possible and logical to infer the respective most applicable relation for both of entities. For example the  figure in [More specific relations](#More specific relations) shows that for the left child, it could be possible for it to sit on his mother, while it could also be possible for the mother to hold the child. Therefore all possibilities have to be inferred. However, only the active form i.e. child;  held_b; mother is not inferred.
+If relations are inferred, it may be possible and logical to infer the respective most applicable relation for both of entities. For example the  figure in [More specific relations](#more-specific-relations) shows that for the left child, it could be possible for it to sit on his mother, while it could also be possible for the mother to hold the child. Therefore all possibilities have to be inferred. However, only the active form i.e. child;  held_b; mother is not inferred.
 
 
 
