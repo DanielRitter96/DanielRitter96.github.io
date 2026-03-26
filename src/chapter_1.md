@@ -449,6 +449,9 @@ If relations are inferred, it may be possible and logical to infer the respectiv
 #### Re-describptions 
 In rare cases, descriptions describe a entity with a specific relation and at a later re-describe said entity with a different relation. In such cases, to ensure that all information is kept, annotate all relations.
 
+#### Relations between objects and body parts
+According to the [Body parts](#body-parts) section, relations such as, *earring; in; ear* have to be formed to *earring; in; woman*. However, this relation describes the situation to inaccuratly and is thererfor not annotated. This does not, however, bans it from inferences.
+
 
 
 
