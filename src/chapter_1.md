@@ -25,7 +25,9 @@ How to proceed in regular but also in special cases are described in more detail
 </table>
 
 ## Annotation tool setup
-lorem ipsum
+To access to the tool used for the annotations please follow this link: https://labelstudio.open-develop.org/ and log in with your log in credetials.
+
+After you have successfully logged in, please 
 ### Open text annotation tool 
 lorem ipsum
 ### Open image annotation tool
@@ -36,21 +38,36 @@ lorem ipsum
 ### Creating relations between entities
 Relations are always directed, that means that every relation has a source and a target. To create a relation between the two, the highlighted button in the figure below has to be pressed and after htat the target entity has to be selected. Afterwards, the image ... 
 
+<!-------
+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------->
 
-
-## Guidelines for Entity extraction
+## Guidelines for entity extraction
 As already described above, the task is to mark the entities in both the text and the image at the same time. The entities that are marked in the image have to be present in the description as well. The first image shows an example with the tool label-studio.
 The steps to follow are described below. The example images here are fully annotated once, therefore they might already have the relations annotated. For this "Entities" section, please focus only on the boxes itself.
+
 ### Annotating the text
-lorem ipsum
+The text is annotated together with the image using the same tool. The only information needed are the entities. Since the descriptions are generally less information rich, there are less annotations which makes it the easier part.
 
 #### Assigning the span 
-The textual annotations are trivial, just mark the whole word and nothing but the word
+For the textual annotations, drawing the spans is trivial, just mark the whole word and nothing but the word. That means no whitepaces or any form of punctuation words. The only exceaption is if the entity cosists of multiple words, e.g. in event entities or entities like _iron brigde_.
+The left part of the figure in [task definitions](#relation-extraction) shows an example. There is only one field to choos from called _entity_. 
+The other field called _relation_ is only to take notes and will be ignored.
+
+Note that the annotation of the id at the beginning of each description is not required. Those ids are not part of the actual descriptions.
 #### Assigning the Wikidata link
+As also described in a [later chapter](#adding-a-wikidata-link) each entity needs to link as accurately as possible to the correct wikidata link of the entity. Assign it by pressing on the marked entity, press the "+" sysmbol and paste the previuosly found wikidata link. 
+
+<!---
+#### Adding a group size number
+Some of the described entities appear in a group rather than alone. The descision is made using the image with the conditions discussed in [this chapter](#group-annotations). For the textual annotations, the groups are not specifically counted
+--->
 
 
 #### Assigning instance numbers
-Taking this information into account, the instance counts in the linkings for the text needs to fit those in the painting. 
+The instances are annotated with a '#' after the wikidata link followed by the instances that are referred to.
+Like later described in the [instance count chapter](#adding-instance-counters),    
+the linkings for the text needs to fit those in the painting. Consider the same example as in the said chapter. 
 The expected linking for the flying angels would be "https://www.wikidata.org/wiki/Q235113\#1-2" and for the foreground angels it would be www.wikidata.org/wiki/Q235113\#3-6. Both would be for the corresponding *angels* term. 
 
 
@@ -71,11 +88,12 @@ Also note that these are mostly relevant for the textual annotation rather than 
 </table>
 
 
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
 
-## Annotating the image
-### Bounding Boxes
+### Annotating the image
+#### Bounding Boxes
 Bounding boxes are used to mark point-of-interests within the image. The guidlines below describe how to draw them into the images.
-#### General
+##### General
 In general, the image annotations need to be as accurate as possible. While for the [textual annotation](#assigning-the-span) that task is trivial, the box annotations within the images are more tricky. They need to be as accurate as possible, which means that the entirety of the body has to be in the box. This includes halos as much as it includes clothings, even if different objects would be partially annotated as well.  Few exceptions are made if body parts are partially obstructed by other objects and, e.g. in group scenes, hard to assign to the correct person.
 The first image in the figure below shows a simple case to assign obstructed body parts whereas the second shows a hard one. Since this particular example shows a small crowd close together they are annotated in a group. More on that on the [group annotation](#group-annotations) section.
 
@@ -100,8 +118,6 @@ The first image in the figure below shows a simple case to assign obstructed bod
     </td>
   </tr>
 </table>
-
-Note that the annotation of the id at the beginning of each description is not required. Those ids are not part of the actual descriptions.
 
 
 #### Big bounding boxes
@@ -490,7 +506,7 @@ As earlier described, Events that take place currently are annotated however tho
 
 
 ### Addition to inferred relations
-If relations are inferred, it may be possible and logical to infer the respective most applicable relation for both of entities. For example the  figure in [More specific relations](#more-specific-relations) shows that for the left child, it could be possible for it to sit on his mother, while it could also be possible for the mother to hold the child. Therefore all possibilities have to be inferred. However, only the active form i.e. child;  held_b; mother is not inferred.
+If relations are inferred, it may be possible and logical to infer the respective most applicable relation for both of entities. For example the  figure in [More specific relations](#more-specific-relations) shows that for the left child, it could be possible for it to sit on his mother, while it could also be possible for the mother to hold the child. Therefore all possibilities have to be inferred. However, only the active forms. That means, that  child;  held_by; mother is not inferred.
 
 
 
