@@ -247,7 +247,6 @@ The figure below shows how it is done in the base case of being the only instanc
 </table>
 
 
-
 #### Fitting the instances to the correct textual entities
 For every entity given in the text, there might be more than just one in the image. If it is clear that all of the present entities in the image are described, then annotations need to specifically count each instance of the entity. This ensures the correctness and completeness.
 Using the same example from [instances within text](#instances-within-text), in the first figure below, the instance count for the selected angel is displayed as 2 since it is the second angel. (see at the right part the thrid "Text: 1" filed has a "2" denoting that particular angel as the second one.) There is no particular rule regarding the orders or where to start counting. However, the instances have to match those described in the text. 
@@ -284,7 +283,7 @@ the size of a group entity is written in the fourth text area and is capped at 1
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/7a4f2775-0a2d-4204-9358-d3926d349163"><img alt="https://github.com/user-attachments/assets/7a4f2775-0a2d-4204-9358-d3926d349163"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/7a4f2775-0a2d-4204-9358-d3926d349163"><img alt=group_instance3 src="https://github.com/user-attachments/assets/7a4f2775-0a2d-4204-9358-d3926d349163"  class="zoom-img"></a>
       </figure>
       <figcaption>"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."</figcaption>
     </td>
@@ -292,21 +291,50 @@ the size of a group entity is written in the fourth text area and is capped at 1
 </table>
 
 #### Synonyms
-Often times the description uses synonyms to describe the same entity in different ways. Such synonyms are annotated by writting  them in the _synonym_ text field. The synonyms have to be separated by commas. Note, only the written synonyms are desired not once that people know about. That means that if Jesus is shown and descibed as jesus only, there are no synonyms. Since this does not happen everytime, this field is also not mandatory for every entity
- The figure with the dragon [further down](#implications) is an example. It shows saint George spearing a dragon. The description of the image also mentions a beast and refers to the dragon introducing a synonym.
+Often times the description uses synonyms to describe the same entity in different ways. 
+we differentiate between 
+- synonyms that refer to the same object e.g. the Virgin instead Mary or Christ instead of Jesus
+- synonyms that describe a entitiy with different wordings. e.g. beast instead or dragon.
+  
+ Synonyms are annotated by writting  them in the _synonym_ text field. Note, that for the second type of synonyms, we needto put the wikidata link behind the synonym separated by a comma. Every synonym (possibly with their wikidata link) have to be separated by a semi-colon. 
+ Note, only the written synonyms are wanted not once that people know about. That means that if Jesus is shown and described as jesus only, there are no synonyms. Since this does not happen everytime, this field is not mandatory for every entity
+ The figure with the dragon below is an example. It shows saint George spearing a dragon. The description of the image also mentions a beast and refers to the dragon introducing a synonym.
+
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"><img alt="dragon1" src="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
+    </td>
+  </tr>
+</table>
 
 #### Symbolize
-Similarly, to the synonymy case, in the [same example](#implications) figure, the belt is described to symbolize a leash. The annotation in such cases is done by filling them in the last textbox. This field is not mandatory as it does not always occur.
+Similarly, to the synonymy case, in the below figure, the belt is described to symbolize a leash. The annotation in such cases is done by filling them in the last textbox. This field is not mandatory as it does not always occur.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"><img alt="dragon2" src="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
+    </td>
+  </tr>
+</table>
 
 #### Implications
-as already described, some entities are events or actions. The figure below contains the phrase *story of Saint George and the dragon*, which in itself is treated as a entity. However, it also implies the existence other  of other entities. Those are *Saint George* together with *dragon*. This leads to three annotations instead of just one. However, it is not an implication if the said entities appear in the description specifically and outside from meta information.
+As already described, some entities are events or actions. The figure below contains the phrase *story of Saint George and the dragon*, which in itself is treated as a entity. However, it also implies the existence of other entities. Those are *Saint George* together with *dragon*. This leads to three annotations instead of just one. However, it is not an implication if the said entities appear in the description specifically and outside from meta-information.
 To annotate this correctly there is a button that needs to be pressed if and only if such a implication is made. The vast majority will not be implications therefore, most of the times the button is not pressed.
 
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/947e31e3-5c81-44ea-a27e-f1517b0d84c0"><img alt="dragon" src="https://github.com/user-attachments/assets/947e31e3-5c81-44ea-a27e-f1517b0d84c0"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/fb59d5d9-6e90-4469-9db9-e4c56eafdd29"><img alt="dragon3" src="https://github.com/user-attachments/assets/fb59d5d9-6e90-4469-9db9-e4c56eafdd29"  class="zoom-img"></a>
       </figure>
       <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
     </td>
@@ -316,17 +344,17 @@ To annotate this correctly there is a button that needs to be pressed if and onl
 
 #### Uncertainty in entities
 In some cases, the description is not giving certain information about e.g. people present in the image. In those cases, we use the _uncertain?_ button at the end. 
-Similarly to uncertainity abuot a entity there could be uncertainty about relations. That is described in [Uncertainty in relations](#uncertainty-in-relations) 
+Similarly to uncertainity about an entity there could be uncertainty about relations. That is described in [Uncertainty in relations](#uncertainty-in-relations) 
 if the image-text pair consists of only uncertain entities, said pair is skipped. 
---> anderes Beispiel
-The figure below shows an example of this. Note the highlighted entities on the right side of the image. The saint with the 8 refers to the old woman on the right. Again, this follows the same approach as in the synonym and symbolize cases. Therefore, the boxes are exactly on top of each other. In this case the relations are also directly on top of each other making it seem like there is only one other box for the old woman when there are in fact two.
 
+The figure below shows an example of this. Note the right hand side of the image next to "Choices:" it says "uncertain?". This marks the synonym and the symbolization as uncertain. 
+In this example, the marked saint is noted to be "anne" or "elizabeth" however this is uncertain information about the entity.
 
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/9fea82b2-5a66-4c06-85eb-4b68babd7d90" ><img alt="maybe" src="https://github.com/user-attachments/assets/9fea82b2-5a66-4c06-85eb-4b68babd7d90"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/900adaad-2f0c-4681-86d9-c2d4dbe1698d" ><img alt="maybe" src="https://github.com/user-attachments/assets/900adaad-2f0c-4681-86d9-c2d4dbe1698d"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
     </td>
@@ -336,8 +364,17 @@ The figure below shows an example of this. Note the highlighted entities on the 
 
 
 #### Background objects further annotations
-Background objects are not instantiated. The figure in the previous [background](#background-objects-boxes) chapter shows how the mountains in the background are annotated and how the in the previuous chapters made annotations are done. The only difference to the regular cases are the missing instance counters. 
-
+Background objects are not instantiated. The figure below shows that contrary to the regular case, these background entities of landscape entities are not instantiated.
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/59b30f38-0cb6-4ed0-8110-b44a7e25f43a"><img alt="background2" src="https://github.com/user-attachments/assets/59b30f38-0cb6-4ed0-8110-b44a7e25f43a"  class="zoom-img"></a>
+      </figure>
+      <figcaption>"[...] The landscape background is typical of Perugino, <i>with mountains and hills in deep perspective</i>. To the left of the cross stand saint Jerome (inspiration for the Jesuati) and Francis of Assisi. To its right are Mary Magdalene touching Christ's feet, Blessed Giovanni Colombini (founder of the Jesuati) and John the Baptist (patron saint of Florence). John points to Christ, whilst Jerome has thrown down his cardinal's cap at the foot of the cross, symbolising his rejection of earthly honours. [...]."</figcaption>
+    </td>
+  </tr>
+</table>
 
 
 #### At least one entity
@@ -403,7 +440,7 @@ That also means once again that *only* relations can be inferred.
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531"><img alt="inf" src=<img width="670" height="1091" alt="inf" src="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531" class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531"><img alt="inf" src="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531" class="zoom-img"></a>
       </figure>
       <figcaption> "[...] having the <i>angels</i> around the Virgin simply placed one above the other, rather than being spatially arranged. The <i>throne</i> [...]."</figcaption>
     </td>
@@ -426,7 +463,7 @@ The figure below shows the person on the left wearing a _vestment_. This _vestme
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/095394aa-bb66-4a5a-ba32-861ccdcd9dd8"><img alt="cope" src="https://github.com/user-attachments/assets/095394aa-bb66-4a5a-ba32-861ccdcd9dd8" class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/9b532771-036f-462b-9491-7bf307d12a1b"><img alt="cope" src="https://github.com/user-attachments/assets/9b532771-036f-462b-9491-7bf307d12a1b" class="zoom-img"></a>
       </figure>
       <figcaption>"[...] Saint Donatian, dressed in brightly coloured <i>vestments</i>, stands to the left. [...] The precision of the detail achieved is especially noticeable in the rendering of threads of St. Donatian's blue and golden embroidered <i>cope and mitre</i>, in the weave of the oriental carpet, and in the stubble and <i>veins on van der Paele's aging face</i>."</figcaption>
     </td>
@@ -444,7 +481,7 @@ If there are groups with distinguishable individuals, like in the below figure, 
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/e0a3a60f-fdbf-4fbc-96e0-80dae6825822"><img alt="part_of" src="https://github.com/user-attachments/assets/e0a3a60f-fdbf-4fbc-96e0-80dae6825822"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/9eaced69-f1c7-4a8d-aba8-e5cc70cbe2ab"><img alt="part_of" src="https://github.com/user-attachments/assets/9eaced69-f1c7-4a8d-aba8-e5cc70cbe2ab"  class="zoom-img"></a>
       </figure>
       <figcaption> "[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."</figcaption>
     </td>
@@ -454,16 +491,13 @@ If there are groups with distinguishable individuals, like in the below figure, 
 #### More specific relations
 Similar to the *img_inf* prefix that infers relations, there are cases where the relations are described with very little detail i.e. words like *with* are used when for example *holds* would be more fitting. If the image contains such more detailed information then also include those with the *img_inf* prefixes. 
 
---> hier am besten eine bessere Lösung finden
-For that the entity annotation box has to be copied and marked their linking has to be marked with an underscore "\_".  
-The figure below shows an example. Both babies have the *with* relation with the respective adult, but also at the same time the adults have the more detailed holds relation inferred. Pay close attention to the linking on the right. The entities with the inferred relation end with the underscore.
-
+The figure below shows how such annotations are made. The description describes the two adults as being _with_ the respective child. Since the _with_ relation is not informative enough, the relation is given together with the relation _hold_. Finally, since the hold relation is inferred, the _img_inf_ prefix is also given. 
 
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/55bd74f8-2d30-4b4f-8e75-d416e15ca9c8"><img alt="with_or_hold" src="https://github.com/user-attachments/assets/55bd74f8-2d30-4b4f-8e75-d416e15ca9c8"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/98f38f04-eac7-438f-b964-24da795e7a8d"><img alt="with_or_hold" src="https://github.com/user-attachments/assets/98f38f04-eac7-438f-b964-24da795e7a8d"  class="zoom-img"></a>
       </figure>
       <figcaption> "It shows mainly Elisabeth <i>with</i> baby John the Baptist, Joseph and Mary <i>with</i> infant baby Jesus (l.t.r.).These figures of the New Testament maintain eye contact."</figcaption>
     </td>
@@ -503,8 +537,9 @@ The figure below shows, in the top panel, Christ with two cherubs. The relation 
 
 
 #### No spatial relations
-Spatial annotations are not annotated since they harbour little information and can be inferred by the location of the boxes. Additionally, relations such as _together with_ are treated as spatial information. An exception for that is discussed later. The below figure with the emphasis on the caption shows that those relations are left out.
+Spatial annotations are not annotated since they harbour little information and can be inferred by the location of the boxes. Additionally, relations such as _together with_ are treated as spatial information. An exception for that is discussed later. 
 
+<!----------
 <table>
   <tr>
     <td>
@@ -515,7 +550,7 @@ Spatial annotations are not annotated since they harbour little information and 
     </td>
   </tr>
 </table>
-
+---------->
 
 ## Miscellaneous 
 
