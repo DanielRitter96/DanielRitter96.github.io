@@ -158,8 +158,7 @@ In the below figure, to capture the three archangels within the painting, a box 
   <tr>
     <td>
       <figure class="zoom-container">
-
-        <a href="https://github.com/user-attachments/assets/3f5d6f83-b2b3-4e60-9bd0-9a36eb34fa7e"><img width="1672" height="782" alt="big_box" src="https://github.com/user-attachments/assets/3f5d6f83-b2b3-4e60-9bd0-9a36eb34fa7e" class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/3f5d6f83-b2b3-4e60-9bd0-9a36eb34fa7e"><img alt="big_box" src="https://github.com/user-attachments/assets/3f5d6f83-b2b3-4e60-9bd0-9a36eb34fa7e" class="zoom-img"></a>
       </figure>
       <figcaption> "[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."</figcaption>
     </td>
