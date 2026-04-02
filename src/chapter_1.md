@@ -14,11 +14,10 @@ The followup task after the entities are annotated is to annotate the relations 
 The following figure shows both annotation modalities: the textual and the image one. The tool that is used for the annotations is called label studio. You can see that only the entities are marked for the textual descriptions. For that only the subject field is necessary. The Qid at the beginning is not important and is not annotated. At the right, the image annotation shows boxes for every named entity and the relations between them with prefixes. 
 How to proceed in regular but also in special cases are described in more detail in the guidelines below.  
 <table>
-
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/0b98c71a-4e2c-4c39-a22f-1101ddad6479"><img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/0b98c71a-4e2c-4c39-a22f-1101ddad6479" class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/b1685ad4-94db-4182-9a0b-438f9bc8694d"><img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/b1685ad4-94db-4182-9a0b-438f9bc8694d" class="zoom-img"></a>
       </figure>
       <figcaption>This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations</figcaption>
     </td>
@@ -45,15 +44,15 @@ Relations are always directed, that means that every relation has a source and a
 ------->
 
 ## Guidelines for entity extraction
-As already described above, the task is to mark the entities in both the text and the image at the same time. The entities that are marked in the image have to be present in the description as well. The first image shows an example with the tool label-studio.
-The steps to follow are described below. The example images here are fully annotated once, therefore they might already have the relations annotated. For this "Entities" section, please focus only on the boxes itself.
+As already described [above](#task), the task is to mark the entities in both the text and the image at the same time. The entities that are marked in the image have to be present in the description as well. The first image shows an example with the tool _label-studio_.
+The steps to follow are described below. The example images here are fully annotated once, therefore they might already have the relations annotated. For this "entities" section, please focus only on the boxes itself.
 
 ### Annotating the text
-The text is annotated together with the image using the same tool. The only information needed are the entities. Since the descriptions are generally less information rich, there are less annotations which makes it the easier part.
+The text is annotated together with the image using the same tool. The only information needed are the entities, which means that there is no need to draw relations within the description. Since the descriptions are generally less information rich, there are less annotations which makes it the easier part.
 
 #### Assigning the span 
-For the textual annotations, drawing the spans is trivial, just mark the whole word and nothing but the word. That means no whitepaces or any form of punctuation words. The only exceaption is if the entity cosists of multiple words, e.g. in event entities or entities like _iron brigde_.
-The left part of the figure in [task definitions](#relation-extraction) shows an example. There is only one field to choos from called _entity_. 
+For the textual annotations, drawing the spans is trivial, just mark the whole word and nothing but the word. That means no whitepaces or any form of punctuation words. The only exception is if the entity consists of multiple words, e.g. in event entities or entities like _iron brigde_.
+The left part of the figure in [task definitions](#example) shows an example. There is only one field to choose from called _entity_. 
 The other field called _relation_ is only to take notes and will be ignored.
 
 Note that the annotation of the id at the beginning of each description is not required. Those ids are not part of the actual descriptions.
