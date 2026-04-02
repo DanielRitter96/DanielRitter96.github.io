@@ -315,8 +315,9 @@ The figure below shows Mary with infant Jesus and the annotation box is drawn ov
 
 
 ##### Adding a Wikidata link
+<!----- -[Assigning the Wikidata link](#assigning-the-wikidata-link) ---->
 Every entity has to be linked as closely as possible to the correct Wikidata page. 
-The figure below shows how linking looks like for the same example. It is given in the text-field just below the name and also mandatory. 
+The figure below shows how linking looks like for the same example. It is given in the text-field just below the name and is mandatory to be given. 
 
 <table> 
   <tr>
