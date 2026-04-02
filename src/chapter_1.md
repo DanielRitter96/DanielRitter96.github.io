@@ -17,7 +17,7 @@ How to proceed in regular but also in special cases are described in more detail
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/b1685ad4-94db-4182-9a0b-438f9bc8694d"><img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/b1685ad4-94db-4182-9a0b-438f9bc8694d" class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/cd5bef89-acf9-4188-80f6-5f6a3d5f406a"><img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/cd5bef89-acf9-4188-80f6-5f6a3d5f406a" class="zoom-img"></a>
       </figure>
       <figcaption>This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations</figcaption>
     </td>
@@ -55,10 +55,20 @@ For the textual annotations, drawing the spans is trivial, just mark the whole w
 The left part of the figure in [task definitions](#example) shows an example. There is only one field to choose from called _entity_. 
 The other field called _relation_ is only to take notes and will be ignored.
 
-Note that the annotation of the id at the beginning of each description is not required. Those ids are not part of the actual descriptions.
-#### Assigning the Wikidata link
-As also described in a [later chapter](#adding-a-wikidata-link) each entity needs to link as accurately as possible to the correct wikidata link of the entity. Assign it by pressing on the marked entity, press the "+" sysmbol and paste the previuosly found wikidata link. 
+Note that the id at the beginning of the description is not part of the actual description an has to be ignored!
 
+#### Assigning the Wikidata link
+As also described in a [later chapter](#adding-a-wikidata-link) each entity needs to link as accurately as possible to the correct wikidata link of the entity. Assign it by pressing on the marked entity, press the "+" symbol and paste the previuosly found wikidata link. 
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084"><img alt="txtwiki" src="https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084"  class="zoom-img"></a>
+      </figure>
+      <figcaption>The wikidata link is on the right hand side of the image</figcaption>
+    </td>
+  </tr>
+</table>
 <!---
 #### Adding a group size number
 Some of the described entities appear in a group rather than alone. The descision is made using the image with the conditions discussed in [this chapter](#group-annotations). For the textual annotations, the groups are not specifically counted
@@ -66,24 +76,23 @@ Some of the described entities appear in a group rather than alone. The descisio
 
 
 #### Assigning instance numbers
-The instances are annotated with a '#' after the wikidata link followed by the instances that are referred to.
+The example image in the [above](#assigning-the-wikidata-link) chapter also contains the instance number right after the Wikidata link. They are denoted with a "#" to differentiate them clearly fro the link.
 Like later described in the [instance count chapter](#adding-instance-counters),    
-the linkings for the text needs to fit those in the painting. Consider the same example as in the said chapter. 
-The expected linking for the flying angels would be "https://www.wikidata.org/wiki/Q235113\#1-2" and for the foreground angels it would be www.wikidata.org/wiki/Q235113\#3-6. Both would be for the corresponding *angels* term. 
+the instances for the text needs to fit those in the painting. Consider the same example as in the said chapter. 
+The expected instances for the flying angels would be "https://www.wikidata.org/wiki/Q235113\_#1-2_" and for the foreground angels it would be www.wikidata.org/wiki/Q235113\_#3-6_. Both would be for the corresponding *angels* term. 
 
 
 #### No meta information entities
-Entities that come from meta-information, i.e, not present in the image, are not annotated within the text. This focuses mainly on information such as the painter, the name of the painting, etc. It does not however include entities that are meant to be e.g. named groups. So if people belong to certain classes, groups or occupations, those annotations are made if it is distinctly matchable. 
- The figure below has no annotations with neither maesà nor with Cimabue or the Basilica of San Francesco di Assisi.
-Also note that these are mostly relevant for the textual annotation rather than the image one. To see how the text annotation looks like, please see the left part of the first figure.
+Entities that come from meta-information, i.e, not present in the image, are not annotated within the text. This focuses mainly on information such as the painter, the name of the painting, etc. It does not, however, include entities that are e.g. named groups. So if people belong to certain classes, groups or occupations, those annotations are made _if_ it is distinctly matchable. 
+ The figure below has no annotations with neither maesà nor with Cimabue or the Basilica of San Francesco di Assisi. 
 
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/040d6a3d-7f68-4007-b919-3a396034eb55"><img alt="no_assisi" src="https://github.com/user-attachments/assets/040d6a3d-7f68-4007-b919-3a396034eb55"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/75195fa1-f38e-4c39-8d16-1f27940af101"><img alt="no_assisi" src="https://github.com/user-attachments/assets/75195fa1-f38e-4c39-8d16-1f27940af101"  class="zoom-img"></a>
       </figure>
-      <figcaption> "[...]. The throne is similar to the <i>Maestà painted by Cimabue</i> in the Basilica of San Francesco di Assisi (1288–1292)."</figcaption>
+      <figcaption> "Textual description with meta information present. The annotations show that there is no such meta information annotated."</figcaption>
     </td>
   </tr>
 </table>
@@ -96,7 +105,7 @@ Also note that these are mostly relevant for the textual annotation rather than 
 Bounding boxes are used to mark point-of-interests within the image. The guidlines below describe how to draw them into the images.
 ##### General
 In general, the image annotations need to be as accurate as possible. While for the [textual annotation](#assigning-the-span) that task is trivial, the box annotations within the images are more tricky. They need to be as accurate as possible, which means that the entirety of the body has to be in the box. This includes halos as much as it includes clothings, even if different objects would be partially annotated as well.  Few exceptions are made if body parts are partially obstructed by other objects and, e.g. in group scenes, hard to assign to the correct person.
-The first image in the figure below shows a simple case to assign obstructed body parts whereas the second shows a hard one. Since this particular example shows a small crowd close together they are annotated in a group. More on that on the [group annotation](#group-annotations) section.
+The first image in the figure below shows how the boxes have to be drawn over the entities that are clearly visible but also those that have their body parts partially obstructed. While the first figure shows easily drawn boxes, the second shows a harder one. The table obstructs their bodies and due to them being colse togther, assigning the body parts correctly is close to impossible. Additionally,  since this particular example shows a small crowd close together they are annotated in a group. More on that on the [group annotation](#group-annotations) section.
 
 <table>
   <tr>
