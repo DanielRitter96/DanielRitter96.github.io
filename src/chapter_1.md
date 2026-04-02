@@ -26,15 +26,112 @@ How to proceed in regular but also in special cases are described in more detail
 
 ## Annotation tool setup
 To access to the tool used for the annotations please follow this link: https://labelstudio.open-develop.org/ and log in with your log in credetials.
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/275b9dd3-2a59-44bb-a44a-b675dec5c2e5" class="zoom-img"><img alt=login src="https://github.com/user-attachments/assets/275b9dd3-2a59-44bb-a44a-b675dec5c2e5" class="zoom-img"></a>
+      </figure>
+      <figcaption>Login screen</figcaption>
+    </td>
+  </tr>
+</table>
+After you have successfully logged in, please select the _text annotation_ project and open it in a new tab by either presssing the right mouse wheel button or the right button and select the "open in a new tab" option. Afterwards open the other project _image annotation_ normally.
 
-After you have successfully logged in, please select the _image annotation_ project and open it in a new tab by either presssing the right mouse wheel button or the right button and select the "open in a new tab" option. Afterwards open the other project _text annotation_ normally.
-It is recommended to have both of them open at the same time side by side. Either use a second monitor or drag both tabs in the right and left corner of the monitor respectively.    
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/2aa8ecdf-62b6-4967-893c-c9038b690236" class="zoom-img"><img alt=login src="https://github.com/user-attachments/assets/2aa8ecdf-62b6-4967-893c-c9038b690236" class="zoom-img"></a>
+      </figure>
+      <figcaption>Home screen</figcaption>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/9fa4d70a-67b3-4ba1-9bc6-1d78b116f0e3" class="zoom-img"><img alt=right src="https://github.com/user-attachments/assets/9fa4d70a-67b3-4ba1-9bc6-1d78b116f0e3" class="zoom-img"></a>
+      </figure>
+      <figcaption>Right click on the text annotation task</figcaption>
+    </td>
+  </tr>
+</table>
+
+It is recommended to have both of them open at the same time side by side. Either use a second monitor or drag both tabs in the right and left corner of the monitor respectively.  
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/32b26763-35b7-4fc9-a15e-70efdda1021c" class="zoom-img"><img alt=open src="https://github.com/user-attachments/assets/32b26763-35b7-4fc9-a15e-70efdda1021c" class="zoom-img"></a>
+      </figure>
+      <figcaption>Both tasks open at the same time</figcaption>
+    </td>
+  </tr>
+</table>
+
 ### Open image for annotation 
 Opening the image in the file is done by simply pressing one of them. The list of the images is put in the left side and the image is opened in the center. Now you are ready to annotate the image following the guidlines below. 
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/d298760a-a62e-4deb-a44b-788b91245c06" class="zoom-img"><img alt=imageloaded src="https://github.com/user-attachments/assets/d298760a-a62e-4deb-a44b-788b91245c06" class="zoom-img"></a>
+      </figure>
+      <figcaption>Image is loaded at the right side</figcaption>
+    </td>
+  </tr>
+</table>
+
 ### Open text annotation tool
-To open the respective description of the image, the id of the image needs to be filtered in the text annotation tool. The id is found by pressing the "<>" button next to the image in the image annotation file. It is the last part of the of the ______ that starts with "Q" followed by some numbers and ends with ".jpg". Copy that name and paste it in the search bar of the textual annotation tool. Only one match is expected to show up. Selecting it opens the description to the image and you can start annotating the image according to the guidelines below.
-### Open image-text pair
-lorem ipsum
+To open the respective description of the image, the id of the image needs to be filtered in the text annotation tool. The id is found by pressing the "<>" button next to the image in the image annotation file. It is the last part of the of this "/data/upload/24/600334d8-Q568847.jpg" string and highlighted below. Copy that name and paste it in the search bar of the textual annotation tool. Only one match is expected to show up. Selecting it opens the description to the image and you can start annotating the image according to the guidelines below.
+
+  
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/ca32f32f-6117-4642-8233-be80f1370bbe" class="zoom-img"><img alt=imageloaded src="https://github.com/user-attachments/assets/ca32f32f-6117-4642-8233-be80f1370bbe" class="zoom-img"></a>
+      </figure>
+      <figcaption>Press the "show task source" button</figcaption>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/ed8e113d-e022-4b2d-91e1-8fcf4b6d9572" class="zoom-img"><img alt=showbutton src="https://github.com/user-attachments/assets/ed8e113d-e022-4b2d-91e1-8fcf4b6d9572" class="zoom-img"></a>
+      </figure>
+      <figcaption>Locate the id of the image</figcaption>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/6a504ecc-6f80-416b-85b4-a05d8216e615" class="zoom-img"><img alt=showbutton src="https://github.com/user-attachments/assets/6a504ecc-6f80-416b-85b4-a05d8216e615" class="zoom-img"></a>
+      </figure>
+      <figcaption>Copy&Paste the name in the search bar</figcaption>
+    </td>
+  </tr>
+</table>
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/c7e9683d-11a6-43ab-bd66-9a2e64a2eae8" class="zoom-img"><img alt=showbutton src="https://github.com/user-attachments/assets/c7e9683d-11a6-43ab-bd66-9a2e64a2eae8" class="zoom-img"></a>
+      </figure>
+      <figcaption>Start annotating both tasks at the same time</figcaption>
+    </td>
+  </tr>
+</table>
 
 ### Creating relations between entities
 Relations are always directed, that means that every relation has a source and a target. To create a relation between the two, the highlighted button in the figure below has to be pressed and after that the target entity has to be selected. Afterwards, a unnamed arrow from the source entity to the target entity will show up in the image. To give the relation a name, you have to navigate to the "relation" tab in the bottom right. That tab lists all the relations and by pressing the "..." button that shows up after hovering over a relation. A list of relations is opened and selectable by a drop down menu. These relations however, are not fixed ones, they are a list of given relations. To add relations into the pool, you need to open the settings->label interface->code and input the relaion by first copying an already existing relation tag marked with e.g. "< Relation holds >" and paste it one row below it to make another one.  After saving and refreshing the annotation page, you can input the new relation.
@@ -59,6 +156,7 @@ Note that the id at the beginning of the description is not part of the actual d
 
 #### Assigning the Wikidata link
 As also described in a [later chapter](#adding-a-wikidata-link) each entity needs to link as accurately as possible to the correct wikidata link of the entity. Assign it by pressing on the marked entity, press the "+" symbol and paste the previuosly found wikidata link. 
+
 <table>
   <tr>
     <td>
@@ -69,6 +167,7 @@ As also described in a [later chapter](#adding-a-wikidata-link) each entity need
     </td>
   </tr>
 </table>
+
 <!---
 #### Adding a group size number
 Some of the described entities appear in a group rather than alone. The descision is made using the image with the conditions discussed in [this chapter](#group-annotations). For the textual annotations, the groups are not specifically counted
