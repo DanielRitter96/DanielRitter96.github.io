@@ -130,23 +130,7 @@ The first image in the figure below shows how the boxes have to be drawn over th
 </table>
 
 
-#### Big bounding boxes
-Big bounding boxes that are drawn all over the image are allowed if a entity is a scene or if a group of people need to be annotated.
-In the below figure, in order to capture the three archangels within the painting, a box that spans over the entire image is needed.  The fact that the box is barely visible but still marked as such, as indicated one the right list of highlighted entities, shows that the box spans over the entire image.
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/a606a077-728c-4fbd-af65-151e041823b9"><img alt="big_box" src="https://github.com/user-attachments/assets/a606a077-728c-4fbd-af65-151e041823b9"  class="zoom-img"></a>
-      </figure>
-      <figcaption> "[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."</figcaption>
-    </td>
-  </tr>
-</table>
-
-
-#### Group annotations
+##### Group annotations
 Entities have to be annotated as a group if
 -  They are not specifically named
 -  The number of relevant entities start overlapping and reach 5 overlapped entities
@@ -166,7 +150,23 @@ The figure below shows the blessed and the damned on the left and right side of 
 </table>
 
 
-#### Body parts 
+##### Big bounding boxes
+Big bounding boxes that are drawn all over the image are allowed if a entity is a scene or if a group of people need to be annotated.
+In the below figure, to capture the three archangels within the painting, a box that spans over the entire image is needed.  The fact that the box is barely visible but still marked as such, as indicated one the right list of highlighted entities, shows that the box spans over the entire image.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+
+        <a href="https://github.com/user-attachments/assets/3f5d6f83-b2b3-4e60-9bd0-9a36eb34fa7e"><img width="1672" height="782" alt="big_box" src="https://github.com/user-attachments/assets/3f5d6f83-b2b3-4e60-9bd0-9a36eb34fa7e" class="zoom-img"></a>
+      </figure>
+      <figcaption> "[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."</figcaption>
+    </td>
+  </tr>
+</table>
+
+##### Body parts 
 Body parts are not treated as their own entity and therefore can also not be part of a relation. Those body parts will be treated as the whole person. E.g. _child sits in her lap_ will be treated as child sits on mother. Therefore, there is no bounding box that spans over specific body part of a Person.
 The figure below shows Mary and the Christ child. While the descriptions describes Christ siting on her lap, the bounding box is drawn over Mary as a whole.
 
@@ -183,7 +183,7 @@ The figure below shows Mary and the Christ child. While the descriptions describ
 </table>
 
 
-#### Background objects boxes
+##### Background objects boxes
 Background entities are of equal importance as foreground entities. The boxes are drawn in one complete box instead of multiple small ones. This needs to be followed even if major foreground scences would be part of the background bounding box.
 
 <table>
