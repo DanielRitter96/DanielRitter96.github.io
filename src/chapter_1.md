@@ -200,18 +200,18 @@ Background entities are of equal importance as foreground entities. The boxes ar
 ### Annotations of the boxes
 Once a box is drawn over a entity, multiple textboxes appear beneath the image. If they are not visible at first you have to scroll down. The following information have to be added. 
 #### Adding a name
-All the boxes are simply called _box_, so in order to give them the proper name, a label has tp be added. That label s the name of the box and describes the object that is annotated. The very first textbox is responsible for that annotation. This annotation is manadtory and saving is impossible until a name has been added. The system tells you which field in which box misses annotations.
+All the boxes are simply called _box_, so in order to give them the proper name, a label has to be added. That label is the name of the box and describes the object that is annotated. The very first textbox is responsible for that annotation. This annotation is mandatory and saving is impossible until a name has been added. The system tells you which field in which box misses annotations.
 Only ever use one single name per box and feel free to just use the name that is used in the description. 
 
-The figure below shows Mary with infant Jesus and the annotation box is drawn over her. At the right, the name of the box can be seen as "Virgin" which is a usual alias for her. --> anderes Beispiel! 
+The figure below shows Mary with infant Jesus and the annotation box is drawn over her. At the bottom, the name of the box can be seen as "Mary". 
 
 <table>
   <tr>
     <td> 
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/45a50694-009d-4edd-b73c-ec28460adffc"><img alt="named_box" src="https://github.com/user-attachments/assets/45a50694-009d-4edd-b73c-ec28460adffc" /></a>
+        <a href="https://github.com/user-attachments/assets/e4416fd0-6ae5-4892-b6e6-004e53e8ea52"><img alt="named_box" src="https://github.com/user-attachments/assets/e4416fd0-6ae5-4892-b6e6-004e53e8ea52" /></a>
       </figure>
-      <figcaption>"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."</figcaption>
+      <figcaption>"The central and centered motif is the young Virgin Mary seated with Baby Jesus on her lap.Depicted in precious clothes and jewellery, with her left hand Mary holds a carnation [...]."</figcaption>
     </td>
   </tr>
 </table>
@@ -219,16 +219,15 @@ The figure below shows Mary with infant Jesus and the annotation box is drawn ov
 
 #### Adding a Wikidata link
 Every entity has to be linked as closely as possible to the correct Wikidata page. 
---> anderes Beispiel
-The figure below shows how such a linking looks like for a simple example. It is given in the text-field just below the name and also mandatory. 
+The figure below shows how linking looks like for the same example. It is given in the text-field just below the name and also mandatory. 
 
 <table> 
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"><img alt="group_instance" src="https://github.com/user-attachments/assets/b9712462-6351-4fa0-823b-feb2bfdec355"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/50b3bb8a-3bba-4fb6-af23-d4d0eb61cbc0"><img alt="group_instance" src="https://github.com/user-attachments/assets/50b3bb8a-3bba-4fb6-af23-d4d0eb61cbc0"  class="zoom-img"></a>
       </figure>
-      <figcaption>"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."</figcaption>
+      <figcaption>"The central and centered motif is the young Virgin Mary seated with Baby Jesus on her lap.Depicted in precious clothes and jewellery, with her left hand Mary holds a carnation [...].</figcaption>
     </td>
   </tr>
 </table>
