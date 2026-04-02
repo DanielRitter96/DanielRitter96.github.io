@@ -1,15 +1,16 @@
 # Annotation guidelines
 ## Task
 ### Entity extraction
-Given a Text image pair, 
-the goal of the annotations process is to annotate a scene graph based both on the text and the image. That means we annotate all the named entities within the text description. These include specific people such as Jesus Christ, John the Baptist or Zeus but also animals of any kind. Objects such tools, weapons  or buildings  are also annotated.
-For the images, annotations are done through bounding boxes that span the entire entity, even if it includes other entities. 
+Given a text-image pair, 
+the goal of the annotation process is to annotate a scene graph based both on the text and the image. That means we annotate all the named entities within the text description. These include specific people such as Jesus Christ, John the Baptist or Zeus but also animals of any kind. Objects such tools, weapons  or buildings  are also annotated. 
+For the images, annotations are done through bounding boxes that span the entire entity, even if it includes other entities.
+For  textual ones, the spans are limited to the exact phrase. More details are described in the following guidelines.
 
 ### Relation extraction
 The followup task after the entities are annotated is to annotate the relations that two entites share between each oher. Those relation annotations are limited to the images. That means no relation annotation are made for the descriptions.
 
 
-
+### Example
 The following figure shows both annotation modalities: the textual and the image one. The tool that is used for the annotations is called label studio. You can see that only the entities are marked for the textual descriptions. For that only the subject field is necessary. The Qid at the beginning is not important and is not annotated. At the right, the image annotation shows boxes for every named entity and the relations between them with prefixes. 
 How to proceed in regular but also in special cases are described in more detail in the guidelines below.  
 <table>
@@ -27,16 +28,17 @@ How to proceed in regular but also in special cases are described in more detail
 ## Annotation tool setup
 To access to the tool used for the annotations please follow this link: https://labelstudio.open-develop.org/ and log in with your log in credetials.
 
-After you have successfully logged in, please 
-### Open text annotation tool 
-lorem ipsum
-### Open image annotation tool
-lorem ipsum
+After you have successfully logged in, please select the _image annotation_ project and open it in a new tab by either presssing the right mouse wheel button or the right button and select the "open in a new tab" option. Afterwards open the other project _text annotation_ normally.
+It is recommended to have both of them open at the same time side by side. Either use a second monitor or drag both tabs in the right and left corner of the monitor respectively.    
+### Open image for annotation 
+Opening the image in the file is done by simply pressing one of them. The list of the images is put in the left side and the image is opened in the center. Now you are ready to annotate the image following the guidlines below. 
+### Open text annotation tool
+To open the respective description of the image, the id of the image needs to be filtered in the text annotation tool. The id is found by pressing the "<>" button next to the image in the image annotation file. It is the last part of the of the ______ that starts with "Q" followed by some numbers and ends with ".jpg". Copy that name and paste it in the search bar of the textual annotation tool. Only one match is expected to show up. Selecting it opens the description to the image and you can start annotating the image according to the guidelines below.
 ### Open image-text pair
 lorem ipsum
 
 ### Creating relations between entities
-Relations are always directed, that means that every relation has a source and a target. To create a relation between the two, the highlighted button in the figure below has to be pressed and after htat the target entity has to be selected. Afterwards, the image ... 
+Relations are always directed, that means that every relation has a source and a target. To create a relation between the two, the highlighted button in the figure below has to be pressed and after that the target entity has to be selected. Afterwards, a unnamed arrow from the source entity to the target entity will show up in the image. To give the relation a name, you have to navigate to the "relation" tab in the bottom right. That tab lists all the relations and by pressing the "..." button that shows up after hovering over a relation. A list of relations is opened and selectable by a drop down menu. These relations however, are not fixed ones, they are a list of given relations. To add relations into the pool, you need to open the settings->label interface->code and input the relaion by first copying an already existing relation tag marked with e.g. "< Relation holds >" and paste it one row below it to make another one.  After saving and refreshing the annotation page, you can input the new relation.
 
 <!-------
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -103,7 +105,7 @@ The first image in the figure below shows a simple case to assign obstructed bod
       <figure class="zoom-container">
         <a href="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6"><img alt="span1" src="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6"  class="zoom-img"></a>
       </figure>
-      <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
+      <figcaption> "The crucified Christ is lowered from the cross, his lifeless body held by Joseph of Arimathea and Nicodemus."</figcaption>
     </td>
   </tr>
 </table>
