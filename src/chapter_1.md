@@ -407,12 +407,11 @@ and no relations. While those pairs are not skip, the second figure shows a pair
 
 
 
-### Relations
+## Guidelines for relation extraction
 As mentioned in the beginning, the second task is to mark the relations between two entities, *only* in the image. The relations that are marked do not necessarily have to be present in the description. However the corresponding entities have to. Again, The first image's right side shows an example.
 The steps to follow are described below. 
 
-
-#### Textual and image annotations
+### Textual and image annotations
 Since the information richness between text and image are not always the same i.e. the image may show more than the description describes or vice versa. To deal with this disparity there is the option to use either no prefix before the relation or to select the *img_inf* relation. If a relation is present both in the description and image then no prefix is used. That implies, that using no prefix means the relation is present in image and description rather than in none of them.
 For example, in the figure below with and excerpt of its description in the caption shows the triplet: "Venus; *arrive*; shore". Since the descriptions describes this and it is visible in the image no prefix is used.
 
@@ -428,7 +427,7 @@ For example, in the figure below with and excerpt of its description in the capt
 </table>
 
 
-#### Inferences
+### Inferences
 There are cases where the information of the image is richer than the description. 
 The figure below shows the same example as before but with the *img_inf* prefix and the relation *touch*. That shows that the *touch* relation between the angel and the throne is inferred from the image.
 The condition that needs to be met for such inferred relations is that both entities, in this case the angel and the throne, are present in the description.
@@ -448,13 +447,13 @@ That also means once again that *only* relations can be inferred.
 </table>
 
 
-#### No unseen relations
+### No unseen relations
 Just like the entities that are not present in the image, the relations that are not visible in the image are also not annotated. The figure in [the first example](#textual-and-image-annotations)
 shows that the goddess Venus *has arrived* at the shore. It does not, however, show that Venus emerged from the sea. She is depicted on a clam at the shore. The described event has already taken place and is therefore not present in the image. 
 Inferring this relation would mean the relation is inferred based on the description and not from the image. Infereations are only allowed based on the images.
 
 
-#### Entities with further information
+### Entities with further information
 Some descriptions describe a entity at some point and then at a later point give more details. For example, the text may say a person wears some sort of clothes. Later it describes those clothes in more detail naming particular parts like hats. Those entities would be annotated follwoing the [entity](#annotating-the-image) guidlines.
 Furthermore, those more detailed parts need to be marked with the _part\_of_ relation
 The figure below shows the person on the left wearing a _vestment_. This _vestment_ is later described as _cope_ and _mitre_, leading to him also wearing a _cope_ and a _mitre_. Finally, _Mitre_ and _cope_ are also _part\_of_ the _vestment_. 
@@ -470,11 +469,11 @@ The figure below shows the person on the left wearing a _vestment_. This _vestme
   </tr>
 </table>
 
-#### Not to detailed
+### Not to detailed
 Descriptions can describe the visuals too detailed. Neither the relations nor entities are annotated. The same example shown in above figure describes the face of the kneeling person in too much detail describing the veins on his face. This relation is not annotated.
 
 
-#### Individuals are _part\_of_ a group
+### Individuals are _part\_of_ a group
 If there are groups with distinguishable individuals, like in the below figure, then they have to have the _part\_of_ relation to the group with the *img_inf* prefix. Keep in mind that groups can have other relations as well.
 
 <table>
@@ -488,7 +487,7 @@ If there are groups with distinguishable individuals, like in the below figure, 
   </tr>
 </table>
 
-#### More specific relations
+### More specific relations
 Similar to the *img_inf* prefix that infers relations, there are cases where the relations are described with very little detail i.e. words like *with* are used when for example *holds* would be more fitting. If the image contains such more detailed information then also include those with the *img_inf* prefixes. 
 
 The figure below shows how such annotations are made. The description describes the two adults as being _with_ the respective child. Since the _with_ relation is not informative enough, the relation is given together with the relation _hold_. Finally, since the hold relation is inferred, the _img_inf_ prefix is also given. 
@@ -505,7 +504,7 @@ The figure below shows how such annotations are made. The description describes 
 </table>
 
 
-#### Transitive relations 
+### Transitive relations 
 Sometimes descriptions  describe an entity doing something to another entity for the sake or goal of yet another entity. The figure below shows Mary presenting the Christ child to Rolin. To express this in the annotations, it is annotated that Mary presents Christ child and Chrits child is presented to Rolin.
 
 <table>
@@ -520,7 +519,7 @@ Sometimes descriptions  describe an entity doing something to another entity for
 </table>
 
 
-#### Only binary relations
+### Only binary relations
 Since every relation is defined to be between a subject and an object, they have to be binary. Any relations that have more entities such as *between* are not allowed. Furthermore, there will be no inferences made to substitute these relations.
 The figure below shows, in the top panel, Christ with two cherubs. The relation would be *between* for both cherubs and Christ. Since it is impossible for a entity to be between just one other entity, this relation is left out.  
 
@@ -536,7 +535,7 @@ The figure below shows, in the top panel, Christ with two cherubs. The relation 
 </table>
 
 
-#### No spatial relations
+### No spatial relations
 Spatial annotations are not annotated since they harbour little information and can be inferred by the location of the boxes. Additionally, relations such as _together with_ are treated as spatial information. An exception for that is discussed later. 
 
 <!----------
