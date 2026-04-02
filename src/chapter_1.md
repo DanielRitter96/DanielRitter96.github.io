@@ -225,7 +225,7 @@ The figure below shows how linking looks like for the same example. It is given 
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/50b3bb8a-3bba-4fb6-af23-d4d0eb61cbc0"><img alt="group_instance" src="https://github.com/user-attachments/assets/50b3bb8a-3bba-4fb6-af23-d4d0eb61cbc0"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/83541d1b-be87-486f-a5f0-d20be015fba8"><img alt="group_instance" src="https://github.com/user-attachments/assets/83541d1b-be87-486f-a5f0-d20be015fba8"  class="zoom-img"></a>
       </figure>
       <figcaption>"The central and centered motif is the young Virgin Mary seated with Baby Jesus on her lap.Depicted in precious clothes and jewellery, with her left hand Mary holds a carnation [...].</figcaption>
     </td>
@@ -233,17 +233,31 @@ The figure below shows how linking looks like for the same example. It is given 
 </table>
 
 #### Adding instance counters
-For every entity given in the text, there might be more than just one in the image. If it is clear that all of the present entities in the image are described, then annotations need to specifically count each instance of the entity. This ensures that the correctness and completeness.
-They are given as simple numbers in the _instance_ field. This field is not mandatory, since some entities are not instatiated [as described here](#background-objects-further-annotations).
-Using the same example from [instances within text](#instances-within-text) 
-In the first figure below, the instance count for the selected angel is displayed as 2 since it is the second angel. There is no particular rule regarding the orders or where to start counting. However, the instances have to match those described in the text. 
-The second figure highlights a second group of angels in the foreground. Those angels refer to the ones standing next to Jesus.
+While not mandatory, most entities have to be instatiated by typing the specific instance of a entity in the  _instance_ field right below the wikidata link.
+The figure below shows how it is done in the base case of being the only instance of a entity.
+<table> 
+  <tr>
+    <td>
+      <figure class="zoom-container"><img width="1020" height="783" alt="group_instance2" src="https://github.com/user-attachments/assets/e903bc47-d7d1-4dbd-bb37-4960cecdcc9e" />
+        <a href="https://github.com/user-attachments/assets/e903bc47-d7d1-4dbd-bb37-4960cecdcc9e"><img alt="group_instance2" src="https://github.com/user-attachments/assets/e903bc47-d7d1-4dbd-bb37-4960cecdcc9e"  class="zoom-img"></a>
+      </figure>
+      <figcaption>"The central and centered motif is the young Virgin Mary seated with Baby Jesus on her lap.Depicted in precious clothes and jewellery, with her left hand Mary holds a carnation [...].</figcaption>
+    </td>
+  </tr>
+</table>
+
+
+
+#### Fitting the instances to the correct textual entities
+For every entity given in the text, there might be more than just one in the image. If it is clear that all of the present entities in the image are described, then annotations need to specifically count each instance of the entity. This ensures the correctness and completeness.
+Using the same example from [instances within text](#instances-within-text), in the first figure below, the instance count for the selected angel is displayed as 2 since it is the second angel. (see at the right part the thrid "Text: 1" filed has a "2" denoting that particular angel as the second one.) There is no particular rule regarding the orders or where to start counting. However, the instances have to match those described in the text. 
+The second figure highlights a second group of angels in the foreground. Those angels refer to the ones standing next to Jesus. Again, pay attention to the right part.
 
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/459e7040-88bc-4b48-a371-d284543e9e46"><img alt="instances1" src="https://github.com/user-attachments/assets/459e7040-88bc-4b48-a371-d284543e9e46"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/fa7abe0f-bbdb-4878-aa97-846da871ace9"><img alt="instances1" src="https://github.com/user-attachments/assets/fa7abe0f-bbdb-4878-aa97-846da871ace9""  class="zoom-img"></a>
       </figure>
       <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. <i>Behind him is a damask cloth held by two angels</i> and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. In the foreground are four angels [...]."</figcaption>
     </td>
@@ -254,7 +268,7 @@ The second figure highlights a second group of angels in the foreground. Those a
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/ebc373fc-b989-4e15-80db-554919f1ed95"><img alt="instances2" src="https://github.com/user-attachments/assets/ebc373fc-b989-4e15-80db-554919f1ed95"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/5e22e9ac-79a1-4bbb-8236-836c9c379c66"><img alt="instances2" src="https://github.com/user-attachments/assets/5e22e9ac-79a1-4bbb-8236-836c9c379c66"  class="zoom-img"></a>
       </figure>
       <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. <i>In the foreground are four angels</i> [...]."</figcaption>
     </td>
@@ -264,14 +278,13 @@ The second figure highlights a second group of angels in the foreground. Those a
 
 #### Adding group size number
 The figure below shows how the group size is given for the group of "blessed", which in this image are more than 10 people. 
---> Beschreibung am Bild anpassen The n denotion  is only used in groups and since this group is unique the instance count denoted with the '\#' is 1. More on instances is in the next point.  
-For a *n* that is smaller than 10, please count the individuals and from 10 onwards just mark 10+. Also, please do not use any whitespaces " ". 
+the size of a group entity is written in the fourth text area and is capped at 10. After 10, we simply denote the size as 10+. Since this group is unique the instance count is 1 which is written in the field above. 
 
 <table> 
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/bbb5768d-e9ce-46ea-a3e6-0b0cef2bbb39"><img alt="group_instance" src="https://github.com/user-attachments/assets/b9712462-6351-4fa0-823b-feb2bfdec355"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/7a4f2775-0a2d-4204-9358-d3926d349163"><img alt="https://github.com/user-attachments/assets/7a4f2775-0a2d-4204-9358-d3926d349163"  class="zoom-img"></a>
       </figure>
       <figcaption>"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."</figcaption>
     </td>
