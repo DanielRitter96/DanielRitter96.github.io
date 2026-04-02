@@ -197,9 +197,9 @@ Background entities are of equal importance as foreground entities. The boxes ar
 </table>
 
 
-### Annotations of the boxes
+#### Annotations of the boxes
 Once a box is drawn over a entity, multiple textboxes appear beneath the image. If they are not visible at first you have to scroll down. The following information have to be added. 
-#### Adding a name
+##### Adding a name
 All the boxes are simply called _box_, so in order to give them the proper name, a label has to be added. That label is the name of the box and describes the object that is annotated. The very first textbox is responsible for that annotation. This annotation is mandatory and saving is impossible until a name has been added. The system tells you which field in which box misses annotations.
 Only ever use one single name per box and feel free to just use the name that is used in the description. 
 
@@ -217,7 +217,7 @@ The figure below shows Mary with infant Jesus and the annotation box is drawn ov
 </table>
 
 
-#### Adding a Wikidata link
+##### Adding a Wikidata link
 Every entity has to be linked as closely as possible to the correct Wikidata page. 
 The figure below shows how linking looks like for the same example. It is given in the text-field just below the name and also mandatory. 
 
@@ -232,7 +232,7 @@ The figure below shows how linking looks like for the same example. It is given 
   </tr>
 </table>
 
-#### Adding instance counters
+##### Adding instance counters
 While not mandatory, most entities have to be instatiated by typing the specific instance of a entity in the  _instance_ field right below the wikidata link.
 The figure below shows how it is done in the base case of being the only instance of a entity.
 <table> 
@@ -247,7 +247,7 @@ The figure below shows how it is done in the base case of being the only instanc
 </table>
 
 
-#### Fitting the instances to the correct textual entities
+##### Fitting the instances to the correct textual entities
 For every entity given in the text, there might be more than just one in the image. If it is clear that all of the present entities in the image are described, then annotations need to specifically count each instance of the entity. This ensures the correctness and completeness.
 Using the same example from [instances within text](#instances-within-text), in the first figure below, the instance count for the selected angel is displayed as 2 since it is the second angel. (see at the right part the thrid "Text: 1" filed has a "2" denoting that particular angel as the second one.) There is no particular rule regarding the orders or where to start counting. However, the instances have to match those described in the text. 
 The second figure highlights a second group of angels in the foreground. Those angels refer to the ones standing next to Jesus. Again, pay attention to the right part.
@@ -275,7 +275,7 @@ The second figure highlights a second group of angels in the foreground. Those a
 </table>
 
 
-#### Adding group size number
+##### Adding group size number
 The figure below shows how the group size is given for the group of "blessed", which in this image are more than 10 people. 
 the size of a group entity is written in the fourth text area and is capped at 10. After 10, we simply denote the size as 10+. Since this group is unique the instance count is 1 which is written in the field above. 
 
@@ -290,7 +290,7 @@ the size of a group entity is written in the fourth text area and is capped at 1
   </tr>
 </table>
 
-#### Synonyms
+##### Synonyms
 Often times the description uses synonyms to describe the same entity in different ways. 
 we differentiate between 
 - synonyms that refer to the same object e.g. the Virgin instead Mary or Christ instead of Jesus
@@ -312,7 +312,7 @@ we differentiate between
   </tr>
 </table>
 
-#### Symbolize
+##### Symbolize
 Similarly, to the synonymy case, in the below figure, the belt is described to symbolize a leash. The annotation in such cases is done by filling them in the last textbox. This field is not mandatory as it does not always occur.
 
 <table>
@@ -326,7 +326,7 @@ Similarly, to the synonymy case, in the below figure, the belt is described to s
   </tr>
 </table>
 
-#### Implications
+##### Implications
 As already described, some entities are events or actions. The figure below contains the phrase *story of Saint George and the dragon*, which in itself is treated as a entity. However, it also implies the existence of other entities. Those are *Saint George* together with *dragon*. This leads to three annotations instead of just one. However, it is not an implication if the said entities appear in the description specifically and outside from meta-information.
 To annotate this correctly there is a button that needs to be pressed if and only if such a implication is made. The vast majority will not be implications therefore, most of the times the button is not pressed.
 
@@ -342,7 +342,7 @@ To annotate this correctly there is a button that needs to be pressed if and onl
 </table>
 
 
-#### Uncertainty in entities
+##### Uncertainty in entities
 In some cases, the description is not giving certain information about e.g. people present in the image. In those cases, we use the _uncertain?_ button at the end. 
 Similarly to uncertainity about an entity there could be uncertainty about relations. That is described in [Uncertainty in relations](#uncertainty-in-relations) 
 if the image-text pair consists of only uncertain entities, said pair is skipped. 
@@ -363,7 +363,7 @@ In this example, the marked saint is noted to be "anne" or "elizabeth" however t
 
 
 
-#### Background objects further annotations
+##### Background objects further annotations
 Background objects are not instantiated. The figure below shows that contrary to the regular case, these background entities of landscape entities are not instantiated.
 <table>
   <tr>
@@ -377,7 +377,7 @@ Background objects are not instantiated. The figure below shows that contrary to
 </table>
 
 
-#### At least one entity
+##### At least one entity
 As long as there is at least one [certain](#uncertainty-in-entities) entity  given, the pair is not skipped. 
 The first figure below shows an example with only one valid entity annotation
 and no relations. While those pairs are not skip, the second figure shows a pair that has no valid entity due to the uncertainty expressed in the description.
