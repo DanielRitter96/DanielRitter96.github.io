@@ -133,8 +133,6 @@ To open the respective description of the image, the id of the image needs to be
   </tr>
 </table>
 
-### Creating relations between entities
-Relations are always directed, that means that every relation has a source and a target. To create a relation between the two, the highlighted button in the figure below has to be pressed and after that the target entity has to be selected. Afterwards, a unnamed arrow from the source entity to the target entity will show up in the image. To give the relation a name, you have to navigate to the "relation" tab in the bottom right. That tab lists all the relations and by pressing the "..." button that shows up after hovering over a relation. A list of relations is opened and selectable by a drop down menu. These relations however, are not fixed ones, they are a list of given relations. To add relations into the pool, you need to open the settings->label interface->code and input the relaion by first copying an already existing relation tag marked with e.g. "< Relation holds >" and paste it one row below it to make another one.  After saving and refreshing the annotation page, you can input the new relation.
 
 <!-------
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
@@ -509,6 +507,47 @@ and no relations. While those pairs are not skip, the second figure shows a pair
 ## Guidelines for relation extraction
 As mentioned in the beginning, the second task is to mark the relations between two entities, *only* in the image. The relations that are marked do not necessarily have to be present in the description. However the corresponding entities have to. Again, The first image's right side shows an example.
 The steps to follow are described below. 
+
+### Creating relations between entities
+Relations are always directed, that means that every relation has a source and a target. To create a relation between the two, the source entity has to be selected and the highlighted button in the figure below has to be pressed. After that the target entity has to be selected. 
+Entities be selected by pressing a bounding box directly on the image or by selecting the correct entity in the region list on the bottom right.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/c3b60aa5-6238-46dc-82f2-0091dbda6915" class="zoom-img"><img alt=showbutton src="https://github.com/user-attachments/assets/c3b60aa5-6238-46dc-82f2-0091dbda6915" class="zoom-img"></a>
+      </figure>
+      <figcaption>Press the relation button on the right and select another entity to draw a relation between those</figcaption>
+    </td>
+  </tr>
+</table>
+
+Afterwards, an unnamed arrow from the source entity to the target entity will show up in the image. To give the relation a name, you have to navigate to the "relation" tab in the bottom right.
+That tab lists all the relations and by pressing the "..." button that shows up after hovering over a relation. 
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/8edcfb29-e3fc-4cb1-95d6-23b166567da2" class="zoom-img"><img alt=showbutton src="https://github.com/user-attachments/assets/8edcfb29-e3fc-4cb1-95d6-23b166567da2" class="zoom-img"></a>
+      </figure>
+      <figcaption>Press the relation button on the right and select another entity to draw a relation between those</figcaption>
+    </td>
+  </tr>
+</table>
+
+A list of relations is opened and selectable by a drop down menu. These relations are a fixed number of relations that are enough to annotate every possible relation between two entities.
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/03d60141-bd0f-4b20-8f4c-fe766ef2fb81" class="zoom-img"><img alt=showbutton src="https://github.com/user-attachments/assets/03d60141-bd0f-4b20-8f4c-fe766ef2fb81" class="zoom-img"></a>
+      </figure>
+      <figcaption>Press the relation button on the right and select another entity to draw a relation between those</figcaption>
+    </td>
+  </tr>
+</table>
+
 
 ### Textual and image annotations
 Since the information richness between text and image are not always the same i.e. the image may show more than the description describes or vice versa. To deal with this disparity there is the option to use either no prefix before the relation or to select the *img_inf* relation. If a relation is present both in the description and image then no prefix is used. That implies, that using no prefix means the relation is present in image and description rather than in none of them.
