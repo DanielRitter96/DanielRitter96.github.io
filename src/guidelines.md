@@ -8,7 +8,7 @@ Given an image of an artwork and corresponding description, the goal of this ann
   <a 
     class="zoom-img"
     href="https://github.com/user-attachments/assets/cd5bef89-acf9-4188-80f6-5f6a3d5f406a">
-    <img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/cd5bef89-acf9-4188-80f6-5f6a3d5f406a">
+    <img src="https://github.com/user-attachments/assets/cd5bef89-acf9-4188-80f6-5f6a3d5f406a">
   </a>
 
   <div class="zoom-caption">
@@ -34,15 +34,17 @@ Once you identified a relation, please annotate it by drawing and naming a conne
 
 ## Annotation Tool Setup
 
-To access the annotation tools please open *Label Studio* using the following link: [https://labelstudio.open-develop.org/](https://labelstudio.open-develop.org/). Then, please log in with the credentials sent to you.
+### Setup Workspaces 
 
-For an optimal workflow, we recommend opening the projects for _text annotation_ and _image annotation_ side-by-side in two separate browser windows. You can do so by right-clicking on a project and selecting the option to open it in a new window as shown below.  
+1. Open *Label Studio* using the following link: [https://labelstudio.open-develop.org/](https://labelstudio.open-develop.org/). 
+2. Log in with the credentials sent to you.
+3. For an optimal workflow, we recommend opening the projects for _text annotation_ and _image annotation_ side-by-side in two separate browser windows. You can do so by right-clicking on a project and selecting the option to open it in a new window as shown below.  
 
 <div class="zoom-container">
   <a 
     class="zoom-img"
     href="https://github.com/user-attachments/assets/9fa4d70a-67b3-4ba1-9bc6-1d78b116f0e3">
-    <img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/9fa4d70a-67b3-4ba1-9bc6-1d78b116f0e3">
+    <img src="https://github.com/user-attachments/assets/9fa4d70a-67b3-4ba1-9bc6-1d78b116f0e3">
   </a>
 
   <div class="zoom-caption">
@@ -50,13 +52,13 @@ For an optimal workflow, we recommend opening the projects for _text annotation_
   </div>
 </div>
 
-Your annotation workspace should look similar to this. 
+After completion, the annotation workspace should look similar to this example. 
 
 <div class="zoom-container">
   <a 
     class="zoom-img"
     href="https://github.com/user-attachments/assets/32b26763-35b7-4fc9-a15e-70efdda1021c">
-    <img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/32b26763-35b7-4fc9-a15e-70efdda1021c">
+    <img src="https://github.com/user-attachments/assets/32b26763-35b7-4fc9-a15e-70efdda1021c">
   </a>
 
   <div class="zoom-caption">
@@ -64,71 +66,49 @@ Your annotation workspace should look similar to this.
   </div>
 </div>
 
-### Open image for annotation 
-Opening the image in the file is done by simply pressing one of them. The list of the images is put in the left side and the image is opened in the center. Now you are ready to annotate the image following the guidlines below. 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/d298760a-a62e-4deb-a44b-788b91245c06" class="zoom-img"><img alt=imageloaded src="https://github.com/user-attachments/assets/d298760a-a62e-4deb-a44b-788b91245c06" class="zoom-img"></a>
-      </figure>
-      <figcaption>Image is loaded at the right side</figcaption>
-    </td>
-  </tr>
-</table>
+### Opening an Image-Text Pair 
 
-### Open text annotation tool
-To open the respective description of the image, the id of the image needs to be filtered in the text annotation tool. The id is found by pressing the "<>" button next to the image in the image annotation file. It is the last part of the of this "/data/upload/24/600334d8-Q568847.jpg" string and highlighted below. Copy that name and paste it in the search bar of the textual annotation tool. Only one match is expected to show up. Selecting it opens the description to the image and you can start annotating the image according to the guidelines below.
+1. Select an artwork for annotation from the list in the _image annotation tool_. 
+2. Click on the ```<>``` button next to the image to open the image details. 
 
-  
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/ca32f32f-6117-4642-8233-be80f1370bbe" class="zoom-img"><img alt=imageloaded src="https://github.com/user-attachments/assets/ca32f32f-6117-4642-8233-be80f1370bbe" class="zoom-img"></a>
-      </figure>
-      <figcaption>Press the "show task source" button</figcaption>
-    </td>
-  </tr>
-</table>
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/ca32f32f-6117-4642-8233-be80f1370bbe">
+    <img src="https://github.com/user-attachments/assets/ca32f32f-6117-4642-8233-be80f1370bbe">
+  </a>
+</div>
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/ed8e113d-e022-4b2d-91e1-8fcf4b6d9572" class="zoom-img"><img alt=showbutton src="https://github.com/user-attachments/assets/ed8e113d-e022-4b2d-91e1-8fcf4b6d9572" class="zoom-img"></a>
-      </figure>
-      <figcaption>Locate the id of the image</figcaption>
-    </td>
-  </tr>
-</table>
+3. Locate the _Wikidata id_ of the image starting with ```Q``` at the end of the filename.
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/6a504ecc-6f80-416b-85b4-a05d8216e615" class="zoom-img"><img alt=showbutton src="https://github.com/user-attachments/assets/6a504ecc-6f80-416b-85b4-a05d8216e615" class="zoom-img"></a>
-      </figure>
-      <figcaption>Copy&Paste the name in the search bar</figcaption>
-    </td>
-  </tr>
-</table>
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/ed8e113d-e022-4b2d-91e1-8fcf4b6d9572">
+    <img src="https://github.com/user-attachments/assets/ed8e113d-e022-4b2d-91e1-8fcf4b6d9572">
+  </a>
+</div>
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/c7e9683d-11a6-43ab-bd66-9a2e64a2eae8" class="zoom-img"><img alt=showbutton src="https://github.com/user-attachments/assets/c7e9683d-11a6-43ab-bd66-9a2e64a2eae8" class="zoom-img"></a>
-      </figure>
-      <figcaption>Start annotating both tasks at the same time</figcaption>
-    </td>
-  </tr>
-</table>
+4. Copy the _Wikidata id_ and paste it into the search bar of the textual annotation tool.
 
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/6a504ecc-6f80-416b-85b4-a05d8216e615">
+    <img src="https://github.com/user-attachments/assets/6a504ecc-6f80-416b-85b4-a05d8216e615">
+  </a>
+</div>
 
-<!-------
----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-------->
+5. The image-text pair is successfully opened and can be annotated using the guidelines below.
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/c7e9683d-11a6-43ab-bd66-9a2e64a2eae8">
+    <img src="https://github.com/user-attachments/assets/c7e9683d-11a6-43ab-bd66-9a2e64a2eae8">
+  </a>
+</div>
+
 
 ## Guidelines for entity extraction
 As already described [above](#task), the task is to mark the entities in both the text and the image at the same time. The entities that are marked in the image have to be present in the description as well. The first image shows an example with the tool _label-studio_.
