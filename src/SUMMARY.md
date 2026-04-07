@@ -1,6 +1,6 @@
 # Summary
 
-- [Guidelines](./chapter_1.md)
+- [Annotation Guidelines](./chapter_1.md)
 
 
 
