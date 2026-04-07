@@ -1,76 +1,68 @@
-# Annotation guidelines
-## Task
-### Entity extraction
-Given a text-image pair, 
-the goal of the annotation process is to annotate a scene graph based both on the text and the image. That means we annotate all the named entities within the text description. These include specific people such as Jesus Christ, John the Baptist or Zeus but also animals of any kind. Objects such tools, weapons  or buildings  are also annotated. 
-For the images, annotations are done through bounding boxes that span the entire entity, even if it includes other entities.
-For  textual ones, the spans are limited to the exact phrase. More details are described in the following guidelines.
+# Annotation Guidelines
 
-### Relation extraction
-The followup task after the entities are annotated is to annotate the relations that two entites share between each oher. Those relation annotations are limited to the images. That means no relation annotation are made for the descriptions.
+## Task Overview
+
+Given an image of an artwork and corresponding description, the goal of this annotation study is to [identify art-historical entities](#entity-extraction) and their [interactions](#relation-extraction) that are represented in **both** textual and visual information. An example annotation for text and image within the [annotation tool](#annotation-tool-setup) is shown below. 
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/cd5bef89-acf9-4188-80f6-5f6a3d5f406a">
+    <img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/cd5bef89-acf9-4188-80f6-5f6a3d5f406a">
+  </a>
+
+  <div class="zoom-caption">
+    Annotations for named entities within the description (left) and image (right) 
+  </div>
+</div>
+
+### Entity Extraction
+
+Please first carefully read the text and look at the artwork to identify all art-historical entities represented in **both** modalities. Such entities can include (groups of) art-historical figures (e.g., Jesus Christ, John the Baptist, Zeus), objects (e.g., tools, weapons), animals, scenes, landmarks, buildings etc. 
+
+After identifying all entities, annotations can be created with a pre-configured instance of [Label Studio](https://labelstudio.open-develop.org/) ([https://labelstudio.open-develop.org/](https://labelstudio.open-develop.org/)). The setup of the annotation enviroment is explained [here](#annotation-tool-setup). 
+
+The text annotations are provided by marking spans that mention art-historical entities. The image annotations are provided through corresponding bounding boxes around these mentioned entities. Detailed guidelines on the annotations are provided in [here](guidelines-for-entity-extraction). 
 
 
-### Example
-The following figure shows both annotation modalities: the textual and the image one. The tool that is used for the annotations is called label studio. You can see that only the entities are marked for the textual descriptions. For that only the subject field is necessary. The Qid at the beginning is not important and is not annotated. At the right, the image annotation shows boxes for every named entity and the relations between them with prefixes. 
-How to proceed in regular but also in special cases are described in more detail in the guidelines below.  
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/cd5bef89-acf9-4188-80f6-5f6a3d5f406a"><img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/cd5bef89-acf9-4188-80f6-5f6a3d5f406a" class="zoom-img"></a>
-      </figure>
-      <figcaption>This figures shows both annotation types. The textual named entity annotation is on the left, while the scene graph annotations</figcaption>
-    </td>
-  </tr>
-</table>
+### Relation Extraction
 
-## Annotation tool setup
-To access to the tool used for the annotations please follow this link: https://labelstudio.open-develop.org/ and log in with your log in credetials.
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/275b9dd3-2a59-44bb-a44a-b675dec5c2e5" class="zoom-img"><img alt=login src="https://github.com/user-attachments/assets/275b9dd3-2a59-44bb-a44a-b675dec5c2e5" class="zoom-img"></a>
-      </figure>
-      <figcaption>Login screen</figcaption>
-    </td>
-  </tr>
-</table>
-After you have successfully logged in, please select the _text annotation_ project and open it in a new tab by either presssing the right mouse wheel button or the right button and select the "open in a new tab" option. Afterwards open the other project _image annotation_ normally.
+After extracting all entities, please carefully look at the text and artwork again to identify interactions between them. Please note that we focus on interactions since details on the image composition can be automatically infered by the bounding boxes drawn in the previous step. 
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/2aa8ecdf-62b6-4967-893c-c9038b690236" class="zoom-img"><img alt=login src="https://github.com/user-attachments/assets/2aa8ecdf-62b6-4967-893c-c9038b690236" class="zoom-img"></a>
-      </figure>
-      <figcaption>Home screen</figcaption>
-    </td>
-  </tr>
-</table>
+Once you identified a relation, please annotate it by drawing and naming a connection between the two corresponding entities using the image annotation tool. Detailed guidelines are provided [here](guidelines-for-relation-extraction). 
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/9fa4d70a-67b3-4ba1-9bc6-1d78b116f0e3" class="zoom-img"><img alt=right src="https://github.com/user-attachments/assets/9fa4d70a-67b3-4ba1-9bc6-1d78b116f0e3" class="zoom-img"></a>
-      </figure>
-      <figcaption>Right click on the text annotation task</figcaption>
-    </td>
-  </tr>
-</table>
 
-It is recommended to have both of them open at the same time side by side. Either use a second monitor or drag both tabs in the right and left corner of the monitor respectively.  
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/32b26763-35b7-4fc9-a15e-70efdda1021c" class="zoom-img"><img alt=open src="https://github.com/user-attachments/assets/32b26763-35b7-4fc9-a15e-70efdda1021c" class="zoom-img"></a>
-      </figure>
-      <figcaption>Both tasks open at the same time</figcaption>
-    </td>
-  </tr>
-</table>
+## Annotation Tool Setup
+
+To access the annotation tools please open *Label Studio* using the following link: [https://labelstudio.open-develop.org/](https://labelstudio.open-develop.org/). Then, please log in with the credentials sent to you.
+
+For an optimal workflow, we recommend opening the projects for _text annotation_ and _image annotation_ side-by-side in two separate browser windows. You can do so by right-clicking on a project and selecting the option to open it in a new window as shown below.  
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/9fa4d70a-67b3-4ba1-9bc6-1d78b116f0e3">
+    <img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/9fa4d70a-67b3-4ba1-9bc6-1d78b116f0e3">
+  </a>
+
+  <div class="zoom-caption">
+    Home screen of Label Studio
+  </div>
+</div>
+
+Your annotation workspace should look similar to this. 
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/32b26763-35b7-4fc9-a15e-70efdda1021c">
+    <img alt="Screenshot 2026-03-18 102952" src="https://github.com/user-attachments/assets/32b26763-35b7-4fc9-a15e-70efdda1021c">
+  </a>
+
+  <div class="zoom-caption">
+    Side-by-side annotation workspaces for text and image
+  </div>
+</div>
 
 ### Open image for annotation 
 Opening the image in the file is done by simply pressing one of them. The list of the images is put in the left side and the image is opened in the center. Now you are ready to annotate the image following the guidlines below. 
@@ -354,7 +346,7 @@ The second figure highlights a second group of angels in the foreground. Those a
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/fa7abe0f-bbdb-4878-aa97-846da871ace9"><img alt="instances1" src="https://github.com/user-attachments/assets/fa7abe0f-bbdb-4878-aa97-846da871ace9""  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/fa7abe0f-bbdb-4878-aa97-846da871ace9"><img alt="instances1" src="https://github.com/user-attachments/assets/fa7abe0f-bbdb-4878-aa97-846da871ace9" class="zoom-img"></a>
       </figure>
       <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. <i>Behind him is a damask cloth held by two angels</i> and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. In the foreground are four angels [...]."</figcaption>
     </td>
