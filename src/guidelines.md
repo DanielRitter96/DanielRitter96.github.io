@@ -110,66 +110,82 @@ After completion, the annotation workspace should look similar to this example.
 </div>
 
 
-## Guidelines for entity extraction
-As already described [above](#task), the task is to mark the entities in both the text and the image at the same time. The entities that are marked in the image have to be present in the description as well. The first image shows an example with the tool _label-studio_.
-The steps to follow are described below. The example images here are fully annotated once, therefore they might already have the relations annotated. For this "entities" section, please focus only on the boxes itself.
+## Guidelines for Entity Extraction
 
-### Annotating the text
-The text is annotated together with the image using the same tool. The only information needed are the entities, which means that there is no need to draw relations within the description. Since the descriptions are generally less information rich, there are less annotations which makes it the easier part.
+The goal of the entity extraction task is to identify all entities represented in **both** the textual description and the corresponding artwork image. 
+For this purpose, we kindly ask to annotate the entities in [text](#annotating-entities-in-text) and [images](#annotating-entities-in-images) according to the guidelines provided below. 
 
-#### Assigning the span 
-For the textual annotations, drawing the spans is trivial, just mark the whole word and nothing but the word. That means no whitepaces or any form of punctuation words. The only exception is if the entity consists of multiple words, e.g. in event entities or entities like _iron brigde_.
-The left part of the figure in [task definitions](#example) shows an example. There is only one field to choose from called _entity_. 
-The other field called _relation_ is only to take notes and will be ignored.
+> [!NOTE]
+> Some examples already include [entity relations](#guidelines-for-relation-extraction) shown as lines between the bounding boxes in the image annotation tool. 
+> For this task, please disregard these relations as they are annotated for the next task.
 
-Note that the id at the beginning of the description is not part of the actual description an has to be ignored!
+### 1. Identify Art-historical Entities
 
-#### Assigning the Wikidata link
-As also described in a [later chapter](#adding-a-wikidata-link) each entity needs to link as accurately as possible to the correct wikidata link of the entity. Assign it by pressing on the marked entity, press the "+" symbol and paste the previuosly found wikidata link. 
+In the first step, please carefully read the textual description and try to find the mentioned entities within the artwork. If you have identified a valid entity represented in both modalities, follow the steps below to annotate it within the text and image. 
+We recommend to carry out all subsequent steps before annotating the the next entity. 
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084"><img alt="txtwiki" src="https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084"  class="zoom-img"></a>
-      </figure>
-      <figcaption>The wikidata link is on the right hand side of the image</figcaption>
-    </td>
-  </tr>
-</table>
-
-<!---
-#### Adding a group size number
-Some of the described entities appear in a group rather than alone. The descision is made using the image with the conditions discussed in [this chapter](#group-annotations). For the textual annotations, the groups are not specifically counted
---->
+> [!IMPORTANT]
+> **Please only consider entities for annotation that are mentioned in the text and clearly shown in the image!**
+> Do not annotate metainformation (e.g., painters, name of the painting, inception year) or contexual information from the text that are not cleary depicted in the image, e.g., events that may have led to the scene in the artwork. 
 
 
-#### Assigning instance numbers
-The example image in the [above](#assigning-the-wikidata-link) chapter also contains the instance number right after the Wikidata link. They are denoted with a "#" to differentiate them clearly fro the link.
-Like later described in the [instance count chapter](#adding-instance-counters),    
-the instances for the text needs to fit those in the painting. Consider the same example as in the said chapter. 
-The expected instances for the flying angels would be "https://www.wikidata.org/wiki/Q235113\_#1-2_" and for the foreground angels it would be www.wikidata.org/wiki/Q235113\_#3-6_. Both would be for the corresponding *angels* term. 
+### 2. Annotating Entities in Text
+
+The text annotation involves two steps carried out in the _text annotation view_
+- [marking all spans](#21-annotate-text-spans) representing an entity identified in step 1 
+- [assigning the most suitable Wikidata identifier](#22-assigning-a-wikidata-id)
+- [assigning an instance number](#23-assigning-instance-numbers)
+
+#### 2.1 Annotate Text Spans
+
+For each entity identified in step 1, please mark all text spans representing this entity in the artwork description.
+This also includes synonyms, as explained [here](Synonyms). 
+
+Some so called *long-tail entities* like *Episodes of the lives of St. Benedict* or *Throne of Jesus and Madonna* also comprise multiple words or even entities. 
+As shown below, please make sure to mark the whole phrase, e.g., _Joseph of Arimathea_, entailing the entity and **do not** annotate potential sub-entities within these spans (e.g., *St. Benedict*, *Jesus*, *Madonna*, *Joseph*, or *Arimathea*).
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084">
+    <img src="https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084">
+  </a>
+</div>
+
+#### 2.2 Assigning a Wikidata ID
+
+For each annotated span, we kindly ask to provide a unique _Wikidata identifier_ to:
+- (i) ensure that different surface forms including synonyms can be mapped to an entity without ambiguity, and 
+- (ii) allow for unambiguos mapping of entities annotated in text and images (see [image annotation](#3-annotating-the-image))
+
+For this purpose, please first search for the most suitable Wikidata entry as follows: 
+- TODO
+- TODO
+- TODO
+
+> [!CAUTION]
+> TODO: integrate steps here
+
+> [!TIP]
+> To find the most suitable Wikidata identifier, you can use the textual description, artwork, and (if necessary) eother xternal resources. 
+
+As also described in a [later chapter](#adding-a-wikidata-link) each entity needs to link as accurately as possible to the correct wikidata link of the entity. 
+
+After identifying the most suitable Wikidata id, please assign to the each span by clicking on it and pressing the ```+``` symbol as shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084).
 
 
-#### No meta information entities
-Entities that come from meta-information, i.e, not present in the image, are not annotated within the text. This focuses mainly on information such as the painter, the name of the painting, etc. It does not, however, include entities that are e.g. named groups. So if people belong to certain classes, groups or occupations, those annotations are made _if_ it is distinctly matchable. 
- The figure below has no annotations with neither maesà nor with Cimabue or the Basilica of San Francesco di Assisi. 
+#### 2.3 Assigning Instance Numbers
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/75195fa1-f38e-4c39-8d16-1f27940af101"><img alt="no_assisi" src="https://github.com/user-attachments/assets/75195fa1-f38e-4c39-8d16-1f27940af101"  class="zoom-img"></a>
-      </figure>
-      <figcaption> "Textual description with meta information present. The annotations show that there is no such meta information annotated."</figcaption>
-    </td>
-  </tr>
-</table>
+In some cases, entities (e.g., angels, apostels) can refer to a group of individuals. 
+However, an individual of this entity group might be mentioned specifically in the text, for example, because it interacts with another entitie. 
+Thus, we kindly ask you to provide an *instance number* (e.g., ```id = 1, 2, 3```) for this entity by adding ```#<id>``` behind the Wikidata identifer added in the previous steps. An example is shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084). 
 
 
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+> [!CAUTION]
+> TODO: integrate a clear example here
 
-### Annotating the image
+
+### 3. Annotating the Image
 #### Bounding Boxes
 Bounding boxes are used to mark point-of-interests within the image. The guidlines below describe how to draw them into the images.
 ##### General
