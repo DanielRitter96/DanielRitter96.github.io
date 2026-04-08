@@ -69,7 +69,7 @@ After completion, the annotation workspace should look similar to this example.
 ### Opening an Image-Text Pair 
 
 1. Select an artwork for annotation from the list in the _image annotation tool_. 
-2. Click on the ```<>``` button next to the image to open the image details. 
+2. Click on the `<>` button next to the image to open the image details. 
 
 <div class="zoom-container">
   <a 
@@ -79,7 +79,7 @@ After completion, the annotation workspace should look similar to this example.
   </a>
 </div>
 
-3. Locate and copy the _Wikidata id_ of the image starting with ```Q``` at the end of the filename (right) and paste it in the search bar of the text annotation tool (left).
+3. Locate and copy the _Wikidata id_ of the image starting with `Q` at the end of the filename (right) and paste it in the search bar of the text annotation tool (left).
 
 <div class="zoom-container">
   <a 
@@ -130,20 +130,21 @@ We recommend to carry out all subsequent steps before annotating the next entity
 ### 2. Annotating Entities in Text
 
 The text annotation involves three steps carried out in the _text annotation workspace_
-- [marking all spans](#21-annotate-text-spans) representing an entity identified in [Step 1](#1-identify-art-historical-entities) 
+- [marking all spans](#21-mark-text-spans) representing an entity identified in [Step 1](#1-identify-art-historical-entities) 
 - [assigning the most suitable and precise Wikidata identifier](#22-assigning-a-wikidata-identifier) for the entity
 - [assigning an instance number](#23-assigning-instance-numbers) for unnamed individuals in entity groups (e.g., group of angels)
+- [adding synonyms and symbolisms](#23-assigning-instance-numbers) to the entity
 
-#### 2.1 Annotate Text Spans
+#### 2.1 Mark Text Spans
 
-For each entity identified in [Step 1](#1-identify-art-historical-entities), **annotate every text span** in the artwork description **that refers to that entity**—whether it appears as a synonym, an alternate surface form, a metaphor, or any other symbolic representation. 
+For each entity identified in [Step 1](#1-identify-art-historical-entities), **mark every unique text span** (it is not necessary to annotate the same span multiple times) in the artwork description **that refers to that entity**—whether it appears as an alternate surface form, a synonym, or symbolic representation. 
 For example:
-- ```Jesus Christ```, ```Christ child```, ```Christ```, ```Jesus```
-- ```Mary```, ```Virgin```, ```mother of Jesus```
-- ```beast```, ```dragon```
-- a ```belt``` that is used as a ```leash```
+- `Jesus Christ`, `Christ child`, `Christ`, `Jesus`
+- `Mary`, `Virgin`, `mother of Jesus`
+- `beast`, `dragon`
+- `Jupyter` in form of a `swan`
 
-These synonyms and symbolic representation will be added as metadata for the entity in [Step 2.4](#24-synonyms-and-symbolic-representations)
+These synonyms and symbolic representations will be added as metadata for the entity in [Step 2.4](#24-synonyms-and-symbolic-representations)
 
 Some so‑called *long‑tail entities*—e.g., *Episodes of the Lives of St. Benedict* or *Throne of Jesus and Madonna*—consist of multiple words or even multiple entities. 
 When annotating, **mark the entire phrase** (e.g., _Joseph of Arimathea_) as a single entity and **do not** create separate annotations for any potential sub‑entities inside that span (such as *St. Benedict*, *Jesus*, *Madonna*, *Joseph*, or *Arimathea*).
@@ -158,41 +159,77 @@ When annotating, **mark the entire phrase** (e.g., _Joseph of Arimathea_) as a s
 
 #### 2.2 Assigning a Wikidata Identifier
 
-For every annotated span, supply a unique **Wikidata identifier** so that:  
-- **(i)** all surface forms, synonyms, and symbolic references can be unambiguously linked to the same entity within the text;  
+This step aims at assigning a unique **Wikidata identifier** to the entity, so that:  
+- **(i)** all surface forms, synonyms, and symbolic references can be unambiguously linked to the same entity within the text (see [Step 2.4](#24-synonyms-and-symbolic-representations)); 
 - **(ii)** the entity can be consistently matched between text and image annotations (see [image annotation](#3-annotating-the-image)).
 
 For this purpose, please first search for the most suitable Wikidata entry by following these steps: 
 1. Choose the span that best represents the entity and use it as a search term on [https://www.wikidata.org/](https://www.wikidata.org).
 2. Assess the search results and to find the matching Wikidata entry of the entity. 
-3. Click on the Wikidata entry to verify whether it accurately reflects the searched entity. 
+3. Click on the Wikidata entry to verify whether it accurately reflects the searched entity.
+4. Assign the Wikidata identifier to the span chosen in (1) by clicking on it and pressing the `+` symbol as shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084).
+
+As a result, **only** the _most representative span_ is annotated with the corresponding Wikidata identifier. 
+It is not required, to add the Wikidata identifier to the other spans representing that entity. 
+Instead, these representations are added as synonyms according to [Step 2.4](#24-synonyms-and-symbolic-representations).
 
 > [!WARNING]
 > _I cannot find a suitable Wikidata entry. How should I proceed?_
 
-Sometimes Wikidata might not cover a specific entity. In such cases, please choose the next most suitable span, synonym, or parent class of the entity and repeat the steps above. For example, if you cannot find an entity like ```beast```, you could assign the Wikidata identifier of its parent class ```mythical creature``` [(```Q2239243```)](https://www.wikidata.org/wiki/Q2239243). 
+Sometimes Wikidata might not cover a specific entity. In such cases, please choose the next most suitable span, synonym, or parent class of the entity and repeat the steps above. For example, if you cannot find an entity like `beast`, you could assign the Wikidata identifier of its parent class `mythical creature` [(`Q2239243`)](https://www.wikidata.org/wiki/Q2239243). 
 
 > [!TIP]
 > To find the most suitable Wikidata identifier, you can use the textual description, artwork, and (if necessary) other external resources.
-
-After identifying the most suitable Wikidata identifier, please assign it to the span representing the entity by clicking on it and pressing the ```+``` symbol as shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084).
 
 
 #### 2.3 Assigning Instance Numbers
 
 Sometimes an entity (e.g., *angels*, *apostles*) denotes a **group** of individuals, while a particular member of that group is singled out in the text (e.g., because it interacts with another entity).
-When this occurs, add an **instance number** to the Wikidata identifier you supplied in the previous step. Use the syntax  
+In such cases, add an **instance number** to the Wikidata identifier you supplied in the previous step using this syntax  
 
 ```
 <WikidataID>#<id>
-```  
+```
 
-where `<id>` is a simple integer (e.g., 1, 2, 3, ...) that uniquely identifies the specific individual within the group.  
+where `<id>` is a simple integer (e.g., 1, 2, 3, ...) that uniquely denotes the specific individual within the group.  
 
 An example of the final annotation format is shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084).
 
 > [!CAUTION]
 > TODO Daniel: Machen wir das wirklich immer auch wenn es nicht nötig ist wie in dem Beispiel oben? Ich würde vorschlagen, dass nur zu tun wenn es notwendig ist. Bitte ergänze auch ein konkretes Beispiel wo man den Sinn hinter dem Schritt eindeutig sieht. 
+
+
+#### 2.4 Synonyms and Symbolic Representations 
+
+As mentioned in [Step 2.1](#21-annotate-text-spans), description might refer to the same entity using different surface forms (e.g., `Jesus` vs. `Jesus Christ`), synonyms (`Mary` vs. `mother of Jesus`), symbolisms (e.g., `Jupyter` in form of a `swan`), etc. 
+  
+To add these representations to the most representative span annotated in [Step 2.2](#22-assigning-a-wikidata-identifier), please follow these steps: 
+1. Click on the span comprising another repsentation of the entity/
+2. Click on the button "create relation between regions" (as highlighted in the image below).
+3. Click on the representative span annotated with a unique identifier according to [Step 2.2](#22-assigning-a-wikidata-identifier). 
+
+This adds a relation between the two spans. To determine the relation type please proceed as follows: 
+
+4. Click on the tab "Relations" in the bottom right of the _text annotation workspace_.
+5. Assign a suitable relation from the drop-down list, e.g., `same as`, `symbolizes` 
+
+> [!CAUTION]
+> TODO Daniel: Add good example for the process described above
+
+> [!NOTE]
+> If the relation is uncertain, please also pick `uncertain` from the drop-down list. 
+> An example is shown below.
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/900adaad-2f0c-4681-86d9-c2d4dbe1698d">
+    <img src="https://github.com/user-attachments/assets/900adaad-2f0c-4681-86d9-c2d4dbe1698d">
+  </a>
+  <div class="zoom-caption">
+    The text mentions an uncertain relation "[...] an old female saint (Anne or Elisabeth)" 
+  </div>
+</div>
 
 
 ### 3. Annotating the Image
@@ -501,46 +538,6 @@ and no relations. While those pairs are not skip, the second figure shows a pair
     </td>
   </tr>
 </table>
-
-
-#### 4 Synonyms and Symbolic Representations 
-
-As mentioned in [Step 2.1](#21-annotate-text-spans), description might refer to the same entity using different surface forms, synonyms, symbolisms, etc. For example: 
-- ```Jesus Christ```, ```Christ child```, ```Christ```, ```Jesus```
-- ```Mary```, ```Virgin```, ```mother of Jesus```
-- ```beast```, ```dragon```
-- a ```belt``` that is used as a ```leash```
-  
-To add these synonyms and symbolic representations as metadata to the entities, please use the _synonym_ field in the _image annotation workspace_. 
-The Wikidata links are added after the synonym separated by a comma. 
-If there is more than one synonym, create another entry that is separated by a semi-colon. 
-
-Note, only the written synonyms are wanted not once that people know about. That means that if Jesus is shown and described as jesus only, there are no synonyms. Since this does not happen everytime, this field is not mandatory for every entity
-The figure with the dragon below is an example. It shows saint George spearing a dragon. The description of the image also mentions a beast and refers to the dragon introducing a synonym.
-
-
-
-<figure class="zoom-container">
-  <a href="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"><img alt="dragon1" src="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"  class="zoom-img"></a>
-</figure>
-<figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
-
-##### Symbolize
-Similarly, to the synonymy case, in the below figure, the belt is described to symbolize a leash. The annotation in such cases is done by filling them in the last textbox. This field is not mandatory as it does not always occur.
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"><img alt="dragon2" src="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"  class="zoom-img"></a>
-      </figure>
-      <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
-    </td>
-  </tr>
-</table>
-
-
-
 
 ## Guidelines for relation extraction
 As mentioned in the beginning, the second task is to mark the relations between two entities, *only* in the image. The relations that are marked do not necessarily have to be present in the description. However the corresponding entities have to. Again, The first image's right side shows an example.
