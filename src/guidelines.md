@@ -97,42 +97,56 @@ After completion, the annotation workspace should look similar to this example.
     href="https://github.com/user-attachments/assets/c7e9683d-11a6-43ab-bd66-9a2e64a2eae8">
     <img src="https://github.com/user-attachments/assets/c7e9683d-11a6-43ab-bd66-9a2e64a2eae8">
   </a>
+  <div class="zoom-caption">
+    Recommended setup of workspaces for text (left) and image annotation (right)
+  </div>
 </div>
 
 
 ## Guidelines for Entity Extraction
 
-The goal of the entity extraction task is to identify all entities represented in **both** the textual description and the corresponding artwork image. 
-For this purpose, we kindly ask to annotate the entities in a pair comprising a [textual description](#annotating-entities-in-text) and [image](#annotating-entities-in-images) of an artwork according to the guidelines provided below. 
+The goal of the entity extraction tasks is to identify and annotate entities represented in both image and text. The task comprises four steps that are systematically repeated for each entity.
+
+1. [Identification of entities](#1-identify-art-historical-entities) represented in **both** the textual description and the corresponding artwork image, 
+2. [Text annotation](#2-annotating-entities-in-text) of each entity, 
+3. [Image annotation](#3-annotating-the-image) of each entity, and 
+4. [Add synonyms and symbolisms](#4-synonyms-and-symbolic-representations) as metadata to each entity
 
 > [!NOTE]
-> Some examples already include [entity relations](#guidelines-for-relation-extraction) shown as connections between the bounding boxes in the image annotation tool. 
+> Some example images may already include [entity relations](#guidelines-for-relation-extraction) shown as connections between the bounding boxes in the image annotation tool. 
 > For this task, you can disregard these relations as they are annotated in the next task for [relation extraction](#guidelines-for-relation-extraction).
 
 ### 1. Identify Art-historical Entities
 
-In the first step, please carefully read the textual description and try to find the mentioned entities within the image of the artwork. If you have identified an **entity represented in both modalities**, follow the steps below to annotate it within the text and image. 
+In the first step, please carefully read the textual description and identify the mentioned entities within the image of the artwork. 
+If you have identified an **entity represented in both modalities**, follow the steps below to annotate it within the [text](#annotating-entities-in-text) and [image](#annotating-entities-in-images). 
 We recommend to carry out all subsequent steps before annotating the next entity. 
 
 > [!IMPORTANT]
 > **Please only consider entities for annotation that are mentioned in the text and that are clearly depicted in the image!**
-> Do not annotate metainformation (e.g., painters, name of the painting, inception year) or contexual information from the text that are not cleary visible in the image, e.g., events that may have led to the scene in the artwork. 
+> Do not annotate metainformation (e.g., painters, name of the painting, inception year) or contexual information from the text that is not cleary visible in the image, e.g., events that may have led to the scene in the artwork. 
 
 
 ### 2. Annotating Entities in Text
 
-The text annotation involves two steps carried out in the _text annotation view_
-- [marking all spans](#21-annotate-text-spans) representing an entity identified in [step 1](#1-identify-art-historical-entities) 
-- [assigning the most suitable Wikidata identifier](#22-assigning-a-wikidata-id)
-- [assigning an instance number](#23-assigning-instance-numbers)
+The text annotation involves three steps carried out in the _text annotation workspace_
+- [marking all spans](#21-annotate-text-spans) representing an entity identified in [Step 1](#1-identify-art-historical-entities) 
+- [assigning the most suitable and precise Wikidata identifier](#22-assigning-a-wikidata-identifier) for the entity
+- [assigning an instance number](#23-assigning-instance-numbers) for unnamed individuals in entity groups (e.g., group of angels)
 
 #### 2.1 Annotate Text Spans
 
-For each entity identified in step 1, please mark all text spans representing this entity in the artwork description.
-This also includes synonyms, as explained [here](Synonyms). 
+For each entity identified in [Step 1](#1-identify-art-historical-entities), **annotate every text span** in the artwork description **that refers to that entity**—whether it appears as a synonym, an alternate surface form, a metaphor, or any other symbolic representation. 
+For example:
+- ```Jesus Christ```, ```Christ child```, ```Christ```, ```Jesus```
+- ```Mary```, ```Virgin```, ```mother of Jesus```
+- ```beast```, ```dragon```
+- a ```belt``` that is used as a ```leash```
 
-Some so called *long-tail entities* like *Episodes of the lives of St. Benedict* or *Throne of Jesus and Madonna* comprise multiple words or even entities. 
-As shown below, please make sure to mark the whole phrase, e.g., _Joseph of Arimathea_, entailing the entity and **do not** annotate potential sub-entities within these spans (e.g., *St. Benedict*, *Jesus*, *Madonna*, *Joseph*, or *Arimathea*).
+These synonyms and symbolic representation will be added as metadata for the entity in [Step 2.4](#24-synonyms-and-symbolic-representations)
+
+Some so‑called *long‑tail entities*—e.g., *Episodes of the Lives of St. Benedict* or *Throne of Jesus and Madonna*—consist of multiple words or even multiple entities. 
+When annotating, **mark the entire phrase** (e.g., _Joseph of Arimathea_) as a single entity and **do not** create separate annotations for any potential sub‑entities inside that span (such as *St. Benedict*, *Jesus*, *Madonna*, *Joseph*, or *Arimathea*).
 
 <div class="zoom-container">
   <a 
@@ -142,40 +156,47 @@ As shown below, please make sure to mark the whole phrase, e.g., _Joseph of Arim
   </a>
 </div>
 
-#### 2.2 Assigning a Wikidata ID
+#### 2.2 Assigning a Wikidata Identifier
 
-For each annotated span, we kindly ask to provide a unique _Wikidata identifier_ to:
-- (i) ensure that different surface forms including synonyms can be mapped to an entity without ambiguity, and 
-- (ii) allow for an unambiguos mapping of entities annotated in text and images (see [image annotation](#3-annotating-the-image))
+For every annotated span, supply a unique **Wikidata identifier** so that:  
+- **(i)** all surface forms, synonyms, and symbolic references can be unambiguously linked to the same entity within the text;  
+- **(ii)** the entity can be consistently matched between text and image annotations (see [image annotation](#3-annotating-the-image)).
 
-For this purpose, please first search for the most suitable Wikidata entry as follows: 
-- TODO
-- TODO
-- TODO
+For this purpose, please first search for the most suitable Wikidata entry by following these steps: 
+1. Choose the span that best represents the entity and use it as a search term on [https://www.wikidata.org/](https://www.wikidata.org).
+2. Assess the search results and to find the matching Wikidata entry of the entity. 
+3. Click on the Wikidata entry to verify whether it accurately reflects the searched entity. 
 
-> [!CAUTION]
-> TODO: integrate steps here
+> [!WARNING]
+> _I cannot find a suitable Wikidata entry. How should I proceed?_
+
+Sometimes Wikidata might not cover a specific entity. In such cases, please choose the next most suitable span, synonym, or parent class of the entity and repeat the steps above. For example, if you cannot find an entity like ```beast```, you could assign the Wikidata identifier of its parent class ```mythical creature``` [(```Q2239243```)](https://www.wikidata.org/wiki/Q2239243). 
 
 > [!TIP]
-> To find the most suitable Wikidata identifier, you can use the textual description, artwork, and (if necessary) eother xternal resources. 
+> To find the most suitable Wikidata identifier, you can use the textual description, artwork, and (if necessary) other external resources.
 
-As also described in a [later chapter](#adding-a-wikidata-link) each entity needs to link as accurately as possible to the correct wikidata link of the entity. 
-
-After identifying the most suitable Wikidata id, please assign to the each span by clicking on it and pressing the ```+``` symbol as shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084).
+After identifying the most suitable Wikidata identifier, please assign it to the span representing the entity by clicking on it and pressing the ```+``` symbol as shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084).
 
 
 #### 2.3 Assigning Instance Numbers
 
-In some cases, entities (e.g., angels, apostels) can refer to a group of individuals. 
-However, an individual of this entity group might be mentioned specifically in the text, for example, because it interacts with another entitie. 
-Thus, we kindly ask you to provide an *instance number* (e.g., ```id = 1, 2, 3```) for this entity by adding ```#<id>``` behind the Wikidata identifer added in the previous steps. An example is shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084). 
+Sometimes an entity (e.g., *angels*, *apostles*) denotes a **group** of individuals, while a particular member of that group is singled out in the text (e.g., because it interacts with another entity).
+When this occurs, add an **instance number** to the Wikidata identifier you supplied in the previous step. Use the syntax  
 
+```
+<WikidataID>#<id>
+```  
+
+where `<id>` is a simple integer (e.g., 1, 2, 3, ...) that uniquely identifies the specific individual within the group.  
+
+An example of the final annotation format is shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084).
 
 > [!CAUTION]
-> TODO: integrate a clear example here
+> TODO Daniel: Machen wir das wirklich immer auch wenn es nicht nötig ist wie in dem Beispiel oben? Ich würde vorschlagen, dass nur zu tun wenn es notwendig ist. Bitte ergänze auch ein konkretes Beispiel wo man den Sinn hinter dem Schritt eindeutig sieht. 
 
 
 ### 3. Annotating the Image
+
 #### Bounding Boxes
 Bounding boxes are used to mark point-of-interests within the image. The guidlines below describe how to draw them into the images.
 ##### General
@@ -480,6 +501,44 @@ and no relations. While those pairs are not skip, the second figure shows a pair
     </td>
   </tr>
 </table>
+
+
+#### 4 Synonyms and Symbolic Representations 
+
+As mentioned in [Step 2.1](#21-annotate-text-spans), description might refer to the same entity using different surface forms, synonyms, symbolisms, etc. For example: 
+- ```Jesus Christ```, ```Christ child```, ```Christ```, ```Jesus```
+- ```Mary```, ```Virgin```, ```mother of Jesus```
+- ```beast```, ```dragon```
+- a ```belt``` that is used as a ```leash```
+  
+To add these synonyms and symbolic representations as metadata to the entities, please use the _synonym_ field in the _image annotation workspace_. 
+The Wikidata links are added after the synonym separated by a comma. 
+If there is more than one synonym, create another entry that is separated by a semi-colon. 
+
+Note, only the written synonyms are wanted not once that people know about. That means that if Jesus is shown and described as jesus only, there are no synonyms. Since this does not happen everytime, this field is not mandatory for every entity
+The figure with the dragon below is an example. It shows saint George spearing a dragon. The description of the image also mentions a beast and refers to the dragon introducing a synonym.
+
+
+
+<figure class="zoom-container">
+  <a href="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"><img alt="dragon1" src="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"  class="zoom-img"></a>
+</figure>
+<figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
+
+##### Symbolize
+Similarly, to the synonymy case, in the below figure, the belt is described to symbolize a leash. The annotation in such cases is done by filling them in the last textbox. This field is not mandatory as it does not always occur.
+
+<table>
+  <tr>
+    <td>
+      <figure class="zoom-container">
+        <a href="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"><img alt="dragon2" src="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"  class="zoom-img"></a>
+      </figure>
+      <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
+    </td>
+  </tr>
+</table>
+
 
 
 
