@@ -108,9 +108,8 @@ After completion, the annotation workspace should look similar to this example.
 The goal of the entity extraction tasks is to identify and annotate entities represented in both image and text. The task comprises four steps that are systematically repeated for each entity.
 
 1. [Identification of entities](#1-identify-art-historical-entities) represented in **both** the textual description and the corresponding artwork image, 
-2. [Text annotation](#2-annotating-entities-in-text) of each entity, 
-3. [Image annotation](#3-annotating-the-image) of each entity, and 
-4. [Add synonyms and symbolisms](#4-synonyms-and-symbolic-representations) as metadata to each entity
+2. [Text annotation](#2-annotating-entities-in-text) of each entity, and
+3. [Image annotation](#3-annotating-the-image) of each entity.
 
 > [!NOTE]
 > Some example images may already include [entity relations](#guidelines-for-relation-extraction) shown as connections between the bounding boxes in the image annotation tool. 
@@ -120,11 +119,16 @@ The goal of the entity extraction tasks is to identify and annotate entities rep
 
 In the first step, please carefully read the textual description and identify the mentioned entities within the image of the artwork. 
 If you have identified an **entity represented in both modalities**, follow the steps below to annotate it within the [text](#annotating-entities-in-text) and [image](#annotating-entities-in-images). 
-We recommend to carry out all subsequent steps before annotating the next entity. 
 
 > [!IMPORTANT]
 > **Please only consider entities for annotation that are mentioned in the text and that are clearly depicted in the image!**
 > Do not annotate metainformation (e.g., painters, name of the painting, inception year) or contexual information from the text that is not cleary visible in the image, e.g., events that may have led to the scene in the artwork. 
+
+> [!IMPORTANT]
+> **Please consider group of entities, subgroups of these entities, and individuals within these groups as individual entities for the subsequence steps!**
+> An example is shown below
+
+We recommend to carry out all subsequent steps before annotating the next entity. 
 
 
 ### 2. Annotating Entities in Text
@@ -134,6 +138,8 @@ The text annotation involves three steps carried out in the _text annotation wor
 - [assigning the most suitable and precise Wikidata identifier](#22-assigning-a-wikidata-identifier) for the entity
 - [assigning an instance number](#23-assigning-instance-numbers) for unnamed individuals in entity groups (e.g., group of angels)
 - [adding synonyms and symbolisms](#23-assigning-instance-numbers) to the entity
+
+
 
 #### 2.1 Mark Text Spans
 
@@ -185,13 +191,13 @@ Sometimes Wikidata might not cover a specific entity. In such cases, please choo
 #### 2.3 Assigning Instance Numbers
 
 Sometimes an entity (e.g., *angels*, *apostles*) denotes a **group** of individuals, while a particular member of that group is singled out in the text (e.g., because it interacts with another entity).
-In such cases, add an **instance number** to the Wikidata identifier you supplied in the previous step using this syntax  
+To differentiate between individuals and groups, an **instance number** is attached to the Wikidata identifier from the previous step using this syntax  
 
 ```
 <WikidataID>#<id>
 ```
 
-where `<id>` is a simple integer (e.g., 1, 2, 3, ...) that uniquely denotes the specific individual within the group.  
+where `<id>` is a simple integer (e.g., 1, 2, 3, ...) that uniquely 
 
 An example of the final annotation format is shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084).
 
@@ -233,6 +239,10 @@ This adds a relation between the two spans. To determine the relation type pleas
 
 
 ### 3. Annotating the Image
+
+After annotating the entities in the artwork description, this steps aims at annotation the entities in the artwork image. 
+For this purpose, a bounding box entailing the entity is drawn and subsequently annotated with the unique identifier and 
+
 
 #### Bounding Boxes
 Bounding boxes are used to mark point-of-interests within the image. The guidlines below describe how to draw them into the images.
