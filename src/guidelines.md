@@ -22,14 +22,14 @@ Please first carefully read the text and look at the artwork to identify all art
 
 After identifying all entities, annotations can be created with a pre-configured instance of [Label Studio](https://labelstudio.open-develop.org/) ([https://labelstudio.open-develop.org/](https://labelstudio.open-develop.org/)). The setup of the annotation enviroment is explained [here](#annotation-tool-setup). 
 
-The text annotations are provided by marking spans that mention art-historical entities. The image annotations are provided through corresponding bounding boxes around these mentioned entities. Detailed guidelines on the annotations are provided in [here](guidelines-for-entity-extraction). 
+The text annotations are provided by marking spans that mention art-historical entities. The image annotations are provided through corresponding bounding boxes around these mentioned entities. Detailed guidelines to annotate the entity extraction task are provided [here](guidelines-for-entity-extraction). 
 
 
 ### Relation Extraction
 
-After extracting all entities, please carefully look at the text and artwork again to identify interactions between them. Please note that we focus on interactions since details on the image composition can be automatically infered by the bounding boxes drawn in the previous step. 
+After extracting all entities, please carefully look at the text and artwork again to identify interactions between them. Please note that we focus on visible interactions since details on the image composition can be automatically infered by the bounding boxes drawn in the previous step. 
 
-Once you identified a relation, please annotate it by drawing and naming a connection between the two corresponding entities using the image annotation tool. Detailed guidelines are provided [here](guidelines-for-relation-extraction). 
+Once you identified a relation, please annotate it by drawing and naming a connection between the two bounding boxes of the corresponding entities using the image annotation tool. Detailed guidelines for relation extraction are provided [here](guidelines-for-relation-extraction). 
 
 
 ## Annotation Tool Setup
@@ -79,17 +79,7 @@ After completion, the annotation workspace should look similar to this example.
   </a>
 </div>
 
-3. Locate the _Wikidata id_ of the image starting with ```Q``` at the end of the filename.
-
-<div class="zoom-container">
-  <a 
-    class="zoom-img"
-    href="https://github.com/user-attachments/assets/ed8e113d-e022-4b2d-91e1-8fcf4b6d9572">
-    <img src="https://github.com/user-attachments/assets/ed8e113d-e022-4b2d-91e1-8fcf4b6d9572">
-  </a>
-</div>
-
-4. Copy the _Wikidata id_ and paste it into the search bar of the textual annotation tool.
+3. Locate and copy the _Wikidata id_ of the image starting with ```Q``` at the end of the filename (right) and paste it in the search bar of the text annotation tool (left).
 
 <div class="zoom-container">
   <a 
@@ -99,7 +89,7 @@ After completion, the annotation workspace should look similar to this example.
   </a>
 </div>
 
-5. The image-text pair is successfully opened and can be annotated using the guidelines below.
+4. The image-text pair is successfully opened and can be annotated using the guidelines below.
 
 <div class="zoom-container">
   <a 
@@ -113,26 +103,26 @@ After completion, the annotation workspace should look similar to this example.
 ## Guidelines for Entity Extraction
 
 The goal of the entity extraction task is to identify all entities represented in **both** the textual description and the corresponding artwork image. 
-For this purpose, we kindly ask to annotate the entities in [text](#annotating-entities-in-text) and [images](#annotating-entities-in-images) according to the guidelines provided below. 
+For this purpose, we kindly ask to annotate the entities in a pair comprising a [textual description](#annotating-entities-in-text) and [image](#annotating-entities-in-images) of an artwork according to the guidelines provided below. 
 
 > [!NOTE]
-> Some examples already include [entity relations](#guidelines-for-relation-extraction) shown as lines between the bounding boxes in the image annotation tool. 
-> For this task, please disregard these relations as they are annotated for the next task.
+> Some examples already include [entity relations](#guidelines-for-relation-extraction) shown as connections between the bounding boxes in the image annotation tool. 
+> For this task, you can disregard these relations as they are annotated in the next task for [relation extraction](#guidelines-for-relation-extraction).
 
 ### 1. Identify Art-historical Entities
 
-In the first step, please carefully read the textual description and try to find the mentioned entities within the artwork. If you have identified a valid entity represented in both modalities, follow the steps below to annotate it within the text and image. 
-We recommend to carry out all subsequent steps before annotating the the next entity. 
+In the first step, please carefully read the textual description and try to find the mentioned entities within the image of the artwork. If you have identified an **entity represented in both modalities**, follow the steps below to annotate it within the text and image. 
+We recommend to carry out all subsequent steps before annotating the next entity. 
 
 > [!IMPORTANT]
-> **Please only consider entities for annotation that are mentioned in the text and clearly shown in the image!**
-> Do not annotate metainformation (e.g., painters, name of the painting, inception year) or contexual information from the text that are not cleary depicted in the image, e.g., events that may have led to the scene in the artwork. 
+> **Please only consider entities for annotation that are mentioned in the text and that are clearly depicted in the image!**
+> Do not annotate metainformation (e.g., painters, name of the painting, inception year) or contexual information from the text that are not cleary visible in the image, e.g., events that may have led to the scene in the artwork. 
 
 
 ### 2. Annotating Entities in Text
 
 The text annotation involves two steps carried out in the _text annotation view_
-- [marking all spans](#21-annotate-text-spans) representing an entity identified in step 1 
+- [marking all spans](#21-annotate-text-spans) representing an entity identified in [step 1](#1-identify-art-historical-entities) 
 - [assigning the most suitable Wikidata identifier](#22-assigning-a-wikidata-id)
 - [assigning an instance number](#23-assigning-instance-numbers)
 
@@ -141,7 +131,7 @@ The text annotation involves two steps carried out in the _text annotation view_
 For each entity identified in step 1, please mark all text spans representing this entity in the artwork description.
 This also includes synonyms, as explained [here](Synonyms). 
 
-Some so called *long-tail entities* like *Episodes of the lives of St. Benedict* or *Throne of Jesus and Madonna* also comprise multiple words or even entities. 
+Some so called *long-tail entities* like *Episodes of the lives of St. Benedict* or *Throne of Jesus and Madonna* comprise multiple words or even entities. 
 As shown below, please make sure to mark the whole phrase, e.g., _Joseph of Arimathea_, entailing the entity and **do not** annotate potential sub-entities within these spans (e.g., *St. Benedict*, *Jesus*, *Madonna*, *Joseph*, or *Arimathea*).
 
 <div class="zoom-container">
@@ -156,7 +146,7 @@ As shown below, please make sure to mark the whole phrase, e.g., _Joseph of Arim
 
 For each annotated span, we kindly ask to provide a unique _Wikidata identifier_ to:
 - (i) ensure that different surface forms including synonyms can be mapped to an entity without ambiguity, and 
-- (ii) allow for unambiguos mapping of entities annotated in text and images (see [image annotation](#3-annotating-the-image))
+- (ii) allow for an unambiguos mapping of entities annotated in text and images (see [image annotation](#3-annotating-the-image))
 
 For this purpose, please first search for the most suitable Wikidata entry as follows: 
 - TODO
