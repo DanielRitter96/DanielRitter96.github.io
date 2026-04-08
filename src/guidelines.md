@@ -105,9 +105,14 @@ After completion, the annotation workspace should look similar to this example.
 
 ## Guidelines for Entity Extraction
 
-The goal of the entity extraction tasks is to identify and annotate entities represented in both image and text. The task comprises four steps that are systematically repeated for each entity.
+The goal of the entity extraction tasks is to identify and annotate (groups of) entities represented in both image and text. 
 
-1. [Identification of entities](#1-identify-art-historical-entities) represented in **both** the textual description and the corresponding artwork image, 
+Every entity mentioned in the text that maps to a unique image region is treated as a separate entity.
+Thus, a collective entity (e.g., `the apostles`) is annotated independently from its individual members (e.g., `Peter`, `John`), allowing both the group and its constituents to be captured distinctly.
+
+For each distinct entity the aannotation workflow comprises three systematic steps: 
+
+1. [Identification of entities](#step-1-identify-art-historical-entities) represented in **both** the textual description and the corresponding artwork image, 
 2. [Text annotation](#2-annotating-entities-in-text) of each entity, and
 3. [Image annotation](#3-annotating-the-image) of each entity.
 
@@ -115,45 +120,46 @@ The goal of the entity extraction tasks is to identify and annotate entities rep
 > Some example images may already include [entity relations](#guidelines-for-relation-extraction) shown as connections between the bounding boxes in the image annotation tool. 
 > For this task, you can disregard these relations as they are annotated in the next task for [relation extraction](#guidelines-for-relation-extraction).
 
-### 1. Identify Art-historical Entities
+### Step 1: Identify Art-historical Entities
 
-In the first step, please carefully read the textual description and identify the mentioned entities within the image of the artwork. 
-If you have identified an **entity represented in both modalities**, follow the steps below to annotate it within the [text](#annotating-entities-in-text) and [image](#annotating-entities-in-images). 
+Please read the artwork description carefully and locate every entity that is also clearly visible in the image.
+
+Only annotate entities that satisfy these two conditions:
+- They are named or described in the text.
+- They are clearly depicted in a single, identifiable region of the image.
+
+Do **not** annotate
+- metadata such as the painter’s name, title of the work, creation date, etc.
+- Contextual information that is mentioned in the text but not visually present (e.g., historical events that led to the scene).
 
 > [!IMPORTANT]
-> **Please only consider entities for annotation that are mentioned in the text and that are clearly depicted in the image!**
-> Do not annotate metainformation (e.g., painters, name of the painting, inception year) or contexual information from the text that is not cleary visible in the image, e.g., events that may have led to the scene in the artwork. 
+> If a group (e.g., `angels`, `apostles`) and specific members (e.g., `Peter`) mentioned in the text refer to different image regions, they should be annotated individually.
 
-> [!IMPORTANT]
-> **Please consider group of entities, subgroups of these entities, and individuals within these groups as individual entities for the subsequence steps!**
-> An example is shown below
+If you have identified an **entity in the text that clearly corresponds to a distinct image region**, follow the steps below to annotate it within the [text](#annotating-entities-in-text) and [image](#annotating-entities-in-images). 
 
-We recommend to carry out all subsequent steps before annotating the next entity. 
+We recommend to carry out all subsequent steps for a single entity before annotating the next one. 
 
 
 ### 2. Annotating Entities in Text
 
 The text annotation involves three steps carried out in the _text annotation workspace_
-- [marking all spans](#21-mark-text-spans) representing an entity identified in [Step 1](#1-identify-art-historical-entities) 
+- [marking all spans](#21-mark-text-spans) representing a unique entity identified in [Step 1](#1-identify-art-historical-entities) 
 - [assigning the most suitable and precise Wikidata identifier](#22-assigning-a-wikidata-identifier) for the entity
-- [assigning an instance number](#23-assigning-instance-numbers) for unnamed individuals in entity groups (e.g., group of angels)
+- [assigning an instance number](#23-assigning-instance-numbers) for individuals and subgroups within entity groups (e.g., group of angels)
 - [adding synonyms and symbolisms](#23-assigning-instance-numbers) to the entity
-
 
 
 #### 2.1 Mark Text Spans
 
-For each entity identified in [Step 1](#1-identify-art-historical-entities), **mark every unique text span** (it is not necessary to annotate the same span multiple times) in the artwork description **that refers to that entity**—whether it appears as an alternate surface form, a synonym, or symbolic representation. 
+For an entity identified according to [Step 1](#1-identify-art-historical-entities), **mark every unique text span** (it is not necessary to annotate the same span multiple times) representing it in the artwork description—whether it appears as an alternate surface form, a synonym, or symbolic representation. 
 For example:
 - `Jesus Christ`, `Christ child`, `Christ`, `Jesus`
 - `Mary`, `Virgin`, `mother of Jesus`
 - `beast`, `dragon`
 - `Jupyter` in form of a `swan`
 
-These synonyms and symbolic representations will be added as metadata for the entity in [Step 2.4](#24-synonyms-and-symbolic-representations)
-
 Some so‑called *long‑tail entities*—e.g., *Episodes of the Lives of St. Benedict* or *Throne of Jesus and Madonna*—consist of multiple words or even multiple entities. 
-When annotating, **mark the entire phrase** (e.g., _Joseph of Arimathea_) as a single entity and **do not** create separate annotations for any potential sub‑entities inside that span (such as *St. Benedict*, *Jesus*, *Madonna*, *Joseph*, or *Arimathea*).
+When annotating, **mark the entire phrase** (e.g., _Joseph of Arimathea_) and **do not** create separate annotations for potential sub‑entities inside that span (such as *St. Benedict*, *Jesus*, *Madonna*, *Joseph*, or *Arimathea*).
 
 <div class="zoom-container">
   <a 
@@ -165,19 +171,18 @@ When annotating, **mark the entire phrase** (e.g., _Joseph of Arimathea_) as a s
 
 #### 2.2 Assigning a Wikidata Identifier
 
-This step aims at assigning a unique **Wikidata identifier** to the entity, so that:  
+This step aims at assigning a unique **Wikidata identifier** to the entity, so that: 
 - **(i)** all surface forms, synonyms, and symbolic references can be unambiguously linked to the same entity within the text (see [Step 2.4](#24-synonyms-and-symbolic-representations)); 
-- **(ii)** the entity can be consistently matched between text and image annotations (see [image annotation](#3-annotating-the-image)).
+- **(ii)** the entity can be matched between text and image annotations (see [image annotation](#3-annotating-the-image)).
 
-For this purpose, please first search for the most suitable Wikidata entry by following these steps: 
-1. Choose the span that best represents the entity and use it as a search term on [https://www.wikidata.org/](https://www.wikidata.org).
+For this purpose, please find the most suitable Wikidata entry by following these steps: 
+1. Choose the text span that best represents the entity and use it as a search term on [https://www.wikidata.org/](https://www.wikidata.org).
 2. Assess the search results and to find the matching Wikidata entry of the entity. 
-3. Click on the Wikidata entry to verify whether it accurately reflects the searched entity.
+3. Click on the Wikidata entry to verify whether it accurately reflects the entity.
 4. Assign the Wikidata identifier to the span chosen in (1) by clicking on it and pressing the `+` symbol as shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084).
 
-As a result, **only** the _most representative span_ is annotated with the corresponding Wikidata identifier. 
-It is not required, to add the Wikidata identifier to the other spans representing that entity. 
-Instead, these representations are added as synonyms according to [Step 2.4](#24-synonyms-and-symbolic-representations).
+As a result, **only** the _most representative span_ of an entity is annotated with the corresponding Wikidata identifier. 
+The remaining spans are annotated as synonyms as described in [Step 2.4](#24-synonyms-and-symbolic-representations).
 
 > [!WARNING]
 > _I cannot find a suitable Wikidata entry. How should I proceed?_
@@ -190,29 +195,65 @@ Sometimes Wikidata might not cover a specific entity. In such cases, please choo
 
 #### 2.3 Assigning Instance Numbers
 
-Sometimes an entity (e.g., *angels*, *apostles*) denotes a **group** of individuals, while a particular member of that group is singled out in the text (e.g., because it interacts with another entity).
-To differentiate between individuals and groups, an **instance number** is attached to the Wikidata identifier from the previous step using this syntax  
+The entities identified in [Step 1](#1-identify-art-historical-entities) can not only refer to specific individuals, objects, or scenes but could also represent **entity groups** or **entity subgoups**,
+
+To differentiate between unique entities, groups, and subgroups please follow these steps. 
+
+##### Annotation of Unique Entities
+
+If the entity is a unique entity (e.g., a specific individual or object) that may or may not be part of the group, please add an **instance id** to the Wikidata identifier from the previous step using this syntax 
 
 ```
 <WikidataID>#<id>
 ```
 
-where `<id>` is a simple integer (e.g., 1, 2, 3, ...) that uniquely 
+where `<id>` is a simple integer (e.g., 1, 2, 3, ...) that allow for disambiguating the group members. 
 
-An example of the final annotation format is shown [here](https://github.com/user-attachments/assets/f0330a1a-11b9-4619-8bfe-c53a64b16084).
+These unique entities can be specific individuals or objects (e.g., [Jesus Christ](https://www.wikidata.org/wiki/Q302) as `Q302#1`) or an unnamed member of a group (e.g., a particular [angel](https://www.wikidata.org/wiki/Q235113) `Q235113#1`) as shown in the examples below. 
 
 > [!CAUTION]
-> TODO Daniel: Machen wir das wirklich immer auch wenn es nicht nötig ist wie in dem Beispiel oben? Ich würde vorschlagen, dass nur zu tun wenn es notwendig ist. Bitte ergänze auch ein konkretes Beispiel wo man den Sinn hinter dem Schritt eindeutig sieht. 
+> TODO Daniel: Ergänze zwei Bilder (links Text, rechts Bild) für die Beispiele oben (kannst den Text oben auch anpassen um es besser an das Beispiel anzupassen) 
+
+
+##### Annotation of Groups
+
+When annotating a group of entities (e.g., a group of angels), we differentiate between two cases. 
+
+**(1) For groups comprising five or less entities**, please follow this annotation scheme: 
+
+```
+<WikidataID>#<start id>-<end id>
+```
+
+For example, if the text refers to a group of three angels it is annotated with `Q235113#1-3` with `Q235113` being the Wikidata identifier for the concept `angel`.
+
+If a second group with three different angels is mentioned in the text, the count continues like this `Q235113#4-6`
+
+> [!CAUTION]
+> TODO Daniel: Beispiel ergänzen
+
+
+**(2) For groups comprising mmore than five entities**, please follow this annotation scheme: 
+
+```
+g:<WikidataID>
+```
+
+Sticking to the example above, but assuming that there are two different groups each with more than five members, the annotation would turn to `g:Q235113#1` and `g:Q235113#2` to differentiate between the two groups. 
+
+> [!CAUTION]
+> TODO Daniel: Beispiel ergänzen
+
 
 
 #### 2.4 Synonyms and Symbolic Representations 
 
-As mentioned in [Step 2.1](#21-annotate-text-spans), description might refer to the same entity using different surface forms (e.g., `Jesus` vs. `Jesus Christ`), synonyms (`Mary` vs. `mother of Jesus`), symbolisms (e.g., `Jupyter` in form of a `swan`), etc. 
-  
-To add these representations to the most representative span annotated in [Step 2.2](#22-assigning-a-wikidata-identifier), please follow these steps: 
-1. Click on the span comprising another repsentation of the entity/
+As mentioned in [Step 2.1](#21-annotate-text-spans), the description might refer to the same entity using different surface forms (e.g., `Jesus` vs. `Jesus Christ`), synonyms (`Mary` vs. `mother of Jesus`), symbolisms (e.g., `Jupyter` in form of a `swan`), etc. 
+
+Please add these alternative representations to the span annotated in [Step 2.2](#22-assigning-a-wikidata-identifier) following these steps: 
+1. Click on the span comprising another representation of the entity.
 2. Click on the button "create relation between regions" (as highlighted in the image below).
-3. Click on the representative span annotated with a unique identifier according to [Step 2.2](#22-assigning-a-wikidata-identifier). 
+3. Click on the span annotated with the unique identifier according to [Step 2.2](#22-assigning-a-wikidata-identifier). 
 
 This adds a relation between the two spans. To determine the relation type please proceed as follows: 
 
@@ -233,7 +274,7 @@ This adds a relation between the two spans. To determine the relation type pleas
     <img src="https://github.com/user-attachments/assets/900adaad-2f0c-4681-86d9-c2d4dbe1698d">
   </a>
   <div class="zoom-caption">
-    The text mentions an uncertain relation "[...] an old female saint (Anne or Elisabeth)" 
+    The text "[...] an old female saint (Anne or Elisabeth)" mentions a `female saint` as entity. The names `Anne` or `Elisabeth` are spans with an uncertain `same_as` relation to the entity which for which the `uncertain` tag should be added.
   </div>
 </div>
 
