@@ -112,7 +112,7 @@ Thus, a collective entity (e.g., `the apostles`) is annotated independently from
 
 For each distinct entity the aannotation workflow comprises three systematic steps: 
 
-1. [Identification of entities](#step-1-identify-art-historical-entities) represented in **both** the textual description and the corresponding artwork image, 
+1. [Identification of entities](#1-identify-art-historical-entities) represented in **both** the textual description and the corresponding artwork image, 
 2. [Text annotation](#2-annotating-entities-in-text) of each entity, and
 3. [Image annotation](#3-annotating-the-image) of each entity.
 
@@ -120,7 +120,7 @@ For each distinct entity the aannotation workflow comprises three systematic ste
 > Some example images may already include [entity relations](#guidelines-for-relation-extraction) shown as connections between the bounding boxes in the image annotation tool. 
 > For this task, you can disregard these relations as they are annotated in the next task for [relation extraction](#guidelines-for-relation-extraction).
 
-### Step 1: Identify Art-historical Entities
+### 1. Identify Art-historical Entities
 
 Please read the artwork description carefully and locate every entity that is also clearly visible in the image.
 
@@ -281,40 +281,58 @@ This adds a relation between the two spans. To determine the relation type pleas
 
 ### 3. Annotating the Image
 
-After annotating the entities in the artwork description, this steps aims at annotation the entities in the artwork image. 
-For this purpose, a bounding box entailing the entity is drawn and subsequently annotated with the unique identifier and 
+This steps aims at annotating the distinct image regions that depicts the entity. 
+For this purpose, two annotation steps are required. 
+
+1. [Drawing a bounding box](#31-draw-bounding-box) entailing the whole entity or entity group. 
+2. [Assigning a bounding box id](#32-assign-the-bounding-box-id) that contains the [unique identifier](#22-assign-a-relation-type) and [instance number](#23-assigning-instance-numbers)
 
 
-#### Bounding Boxes
-Bounding boxes are used to mark point-of-interests within the image. The guidlines below describe how to draw them into the images.
-##### General
-In general, the image annotations need to be as accurate as possible. While for the [textual annotation](#assigning-the-span) that task is trivial, the box annotations within the images are more tricky. They need to be as accurate as possible, which means that the entirety of the body has to be in the box. This includes halos as much as it includes clothings, even if different objects would be partially annotated as well.  Few exceptions are made if body parts are partially obstructed by other objects and, e.g. in group scenes, hard to assign to the correct person.
-The first image in the figure below shows how the boxes have to be drawn over the entities that are clearly visible but also those that have their body parts partially obstructed. While the first figure shows easily drawn boxes, the second shows a harder one. The table obstructs their bodies and due to them being colse togther, assigning the body parts correctly is close to impossible. Additionally,  since this particular example shows a small crowd close together they are annotated in a group. More on that on the [group annotation](#group-annotations) section.
+#### 3.1 Draw Bounding Boxes
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6"><img alt="span1" src="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6"  class="zoom-img"></a>
-      </figure>
-      <figcaption> "The crucified Christ is lowered from the cross, his lifeless body held by Joseph of Arimathea and Nicodemus."</figcaption>
-    </td>
-  </tr>
-</table>
+Bounding boxes are used to annotate the entity location within the image. The guidelines below describe how to draw them into the images.
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/ecb6ca93-d79d-4928-928e-55d0ced9538f"><img alt="span2" src="https://github.com/user-attachments/assets/ecb6ca93-d79d-4928-928e-55d0ced9538f"  class="zoom-img"></a>
-      </figure>
-      <figcaption> "The painting represents the scene of the Last Supper of Jesus with his apostles, as it is told in the Gospel of John, 13:21."</figcaption>
-    </td>
-  </tr>
-</table>
+Please select the bounding box tool in the _image annotation workspace_ and draw a bounding box by holding down the left mouse button. 
+Note that you can also refine the bounding box later by clicking on the edge and borders of the bounding box.
+
+The **bounding box should cover the entire entity (group)** in the image including clothings, accessoirs, halos, etc. as shown in the example below. 
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6">
+    <img src="https://github.com/user-attachments/assets/31243304-3c30-4006-9de6-89f0e617cea6">
+  </a>
+</div>
+
+While most entities are clearly visible and thus easy to locate in this example, drawing the bounding box can also be very challenging. 
+Please read the guidelines below to understand how to handle [occlusions](#handling-of-occlusions), [entity groups](#handling-of-entity-groups), [body parts](#handling-of-body-parts), [sceneries](#handling-of-sceneries), and [background concepts](#handling-background-concepts).  
 
 
-##### Group annotations
+##### Handling of Occlusions 
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/ecb6ca93-d79d-4928-928e-55d0ced9538f">
+    <img src="https://github.com/user-attachments/assets/ecb6ca93-d79d-4928-928e-55d0ced9538f">
+  </a>
+</div>
+
+This examples shows entities that are heavily occluded by the table they are sitting at. 
+In these cases, please try to estimate the correct position and dimension of the entity and draw the bounding box accordingly. 
+
+
+##### Handling of Entity Groups
+
+As described in [Step 1](#1-identify-art-historical-entities), every entity mentioned in the text that maps to a unique image region is treated as a separate entity. 
+This also includes larger groups of entities, such as large crowds. 
+These groups can be very difficult to locate in the image as it might be unclear which entities belong to group and which are not, for example. 
+
+> [!CAUTION]
+> TODO Daniel: Bis hierhin habe ich es überarbeitet, bitte übernimm noch die anderen Fälle. Du kannst dich hier rein auf das Zeichnen der Bbox fokussieren, wie Gruppen anntotiert werden, wird nun vorher ausführlich beschrieben. Ich habe auch noch das Handling von Szenerien eingefügt, das ist doch sicher auch recht schwierig oder?
+
+
 Entities have to be annotated as a group if
 -  They are not specifically named
 -  The number of relevant entities start overlapping and reach 5 overlapped entities
@@ -333,23 +351,7 @@ The figure below shows the blessed and the damned on the left and right side of 
   </tr>
 </table>
 
-
-##### Big bounding boxes
-Big bounding boxes that are drawn all over the image are allowed if a entity is a scene or if a group of people need to be annotated.
-In the below figure, to capture the three archangels within the painting, a box that spans over the entire image is needed.  The fact that the box is barely visible but still marked as such, as indicated one the right list of highlighted entities, shows that the box spans over the entire image.
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/3f5d6f83-b2b3-4e60-9bd0-9a36eb34fa7e"><img alt="big_box" src="https://github.com/user-attachments/assets/3f5d6f83-b2b3-4e60-9bd0-9a36eb34fa7e" class="zoom-img"></a>
-      </figure>
-      <figcaption> "[...] the picture represents the three archangels: Michael on the left, Raphael in the centre, and Gabriel holding a lily, together with a young Tobias, son of Tobit."</figcaption>
-    </td>
-  </tr>
-</table>
-
-##### Body parts 
+##### Handling of Body parts 
 Body parts are not treated as their own entity and therefore can also not be part of a relation. Those body parts will be treated as the whole person. E.g. _child sits in her lap_ will be treated as child sits on mother. Therefore, there is no bounding box that spans over specific body part of a Person.
 The figure below shows Mary and the Christ child. While the descriptions describes Christ siting on her lap, the bounding box is drawn over Mary as a whole.
 
@@ -365,8 +367,10 @@ The figure below shows Mary and the Christ child. While the descriptions describ
   </tr>
 </table>
 
+##### Handling of Sceneries
 
-##### Background-object boxes
+
+##### Handling Background Concepts 
 Background entities are of equal importance as foreground entities. The boxes are drawn in one complete box instead of multiple small ones. This needs to be followed even if major foreground scences would be part of the background bounding box.
 
 <table>
@@ -381,99 +385,26 @@ Background entities are of equal importance as foreground entities. The boxes ar
 </table>
 
 
-#### Annotations of the boxes
-Once a box is drawn over a entity, multiple textboxes appear beneath the image. If they are not visible at first you have to scroll down. The following information have to be added. 
-##### Adding a name
-All the boxes are simply called _box_, so in order to give them the proper name, a label has to be added. That label is the name of the box and describes the object that is annotated. The very first textbox is responsible for that annotation. This annotation is mandatory and saving is impossible until a name has been added. The system tells you which field in which box misses annotations.
-Only ever use one single name per box and feel free to just use the name that is used in the description. 
+#### 3.2 Assign the Bounding Box Id
 
-The figure below shows Mary with infant Jesus and the annotation box is drawn over her. At the bottom, the name of the box can be seen as "Mary". 
+The last step is to assign the unique identifier created according to [Step 2.2](#22-assigning-a-wikidata-identifier) and [Step 2.3](#23-assigning-instance-numbers) to the bounding box. 
 
-<table>
-  <tr>
-    <td> 
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/e4416fd0-6ae5-4892-b6e6-004e53e8ea52"><img alt="named_box" src="https://github.com/user-attachments/assets/e4416fd0-6ae5-4892-b6e6-004e53e8ea52" /></a>
-      </figure>
-      <figcaption>"The central and centered motif is the young Virgin Mary seated with Baby Jesus on her lap.Depicted in precious clothes and jewellery, with her left hand Mary holds a carnation [...]."</figcaption>
-    </td>
-  </tr>
-</table>
+> [!CAUTION]
+> TODO Daniel: Bitte beschreiben was man in Label Studio machen muss um die Annotation anzulegen.
 
+By pressing on the bounding box, you can open the annotation menu. 
+Use the `id` text field and insert the corresponding identifier of the entity from [Step 2.3](#23-assigning-instance-numbers). 
 
-##### Adding a Wikidata link
-<!----- -[Assigning the Wikidata link](#assigning-the-wikidata-link) ---->
-Every entity has to be linked as closely as possible to the correct Wikidata page. 
-The figure below shows how linking looks like for the same example. It is given in the text-field just below the name and is mandatory to be given. 
+This step concludes the annotation for the current entity, by linking it to the text annotation and the [synonyms](#24-synonyms-and-symbolic-representations).
+Repeat the annotation from [Step 1](#1-identify-art-historical-entities) to label the remaining entities in the artwork. 
 
-<table> 
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/83541d1b-be87-486f-a5f0-d20be015fba8"><img alt="group_instance" src="https://github.com/user-attachments/assets/83541d1b-be87-486f-a5f0-d20be015fba8"  class="zoom-img"></a>
-      </figure>
-      <figcaption>"The central and centered motif is the young Virgin Mary seated with Baby Jesus on her lap.Depicted in precious clothes and jewellery, with her left hand Mary holds a carnation [...].</figcaption>
-    </td>
-  </tr>
-</table>
-
-##### Adding instance counters
-While not mandatory, most entities have to be instatiated by typing the specific instance of a entity in the  _instance_ field right below the wikidata link.
-The figure below shows how it is done in the base case of being the only instance of a entity.
-<table> 
-  <tr>
-    <td>
-      <figure class="zoom-container"><img width="1020" height="783" alt="group_instance2" src="https://github.com/user-attachments/assets/e903bc47-d7d1-4dbd-bb37-4960cecdcc9e" />
-        <a href="https://github.com/user-attachments/assets/e903bc47-d7d1-4dbd-bb37-4960cecdcc9e"><img alt="group_instance2" src="https://github.com/user-attachments/assets/e903bc47-d7d1-4dbd-bb37-4960cecdcc9e"  class="zoom-img"></a>
-      </figure>
-      <figcaption>"The central and centered motif is the young Virgin Mary seated with Baby Jesus on her lap.Depicted in precious clothes and jewellery, with her left hand Mary holds a carnation [...].</figcaption>
-    </td>
-  </tr>
-</table>
+> [!CAUTION]
+> TODO Daniel: Ab hier habe ich alles auskommentiert. Ich bin mir nicht sicher ob davon jetzt alles durch die Guidelines abgedeckt ist. 
+> Falls nichts, ergänze es an der passenden Stelle
+> Die Beispiele kannst du evlt. noch in den neuen Guideline-Text integrieren. 
 
 
-##### Fitting the instances to the correct textual entities
-For every entity given in the text, there might be more than just one in the image. If it is clear that all of the present entities in the image are described, then annotations need to specifically count each instance of the entity. This ensures the correctness and completeness.
-Using the same example from [instances within text](#instances-within-text), in the first figure below, the instance count for the selected angel is displayed as 2 since it is the second angel. (see at the right part the thrid "Text: 1" filed has a "2" denoting that particular angel as the second one.) There is no particular rule regarding the orders or where to start counting. However, the instances have to match those described in the text. 
-The second figure highlights a second group of angels in the foreground. Those angels refer to the ones standing next to Jesus. Again, pay attention to the right part.
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/fa7abe0f-bbdb-4878-aa97-846da871ace9"><img alt="instances1" src="https://github.com/user-attachments/assets/fa7abe0f-bbdb-4878-aa97-846da871ace9" class="zoom-img"></a>
-      </figure>
-      <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. <i>Behind him is a damask cloth held by two angels</i> and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. In the foreground are four angels [...]."</figcaption>
-    </td>
-  </tr>
-</table>
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/5e22e9ac-79a1-4bbb-8236-836c9c379c66"><img alt="instances2" src="https://github.com/user-attachments/assets/5e22e9ac-79a1-4bbb-8236-836c9c379c66"  class="zoom-img"></a>
-      </figure>
-      <figcaption>"It depicts Christ standing on a double basement, keeping the Cross. Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine. <i>In the foreground are four angels</i> [...]."</figcaption>
-    </td>
-  </tr>
-</table>
-
-
-##### Adding group size number
-The figure below shows how the group size is given for the group of "blessed", which in this image are more than 10 people. 
-the size of a group entity is written in the fourth text area and is capped at 10. After 10, we simply denote the size as 10+. Since this group is unique the instance count is 1 which is written in the field above. 
-
-<table> 
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/7a4f2775-0a2d-4204-9358-d3926d349163"><img alt=group_instance3 src="https://github.com/user-attachments/assets/7a4f2775-0a2d-4204-9358-d3926d349163"  class="zoom-img"></a>
-      </figure>
-      <figcaption>"[...] Rising up the left hand side of the painting (at Jesus' right hand) are the blessed, whilst the damned fall into hell on the right hand side.[...]."</figcaption>
-    </td>
-  </tr>
-</table>
+<!----------
 
 ##### Synonyms
 Often times the description uses synonyms to describe the same entity in different ways. 
@@ -589,6 +520,7 @@ and no relations. While those pairs are not skip, the second figure shows a pair
     </td>
   </tr>
 </table>
+---------->
 
 ## Guidelines for Relation Extraction
 
@@ -684,12 +616,13 @@ The relations between the entities are governed by a specific set of rules, whic
 - **Annotate only relations that are *visually present* in the image.**  
   If an action is described in the text but **not shown**, it must **not** be annotated.  
   **Example:**  
+
   <div class="zoom-container">
-<a href="https://github.com/user-attachments/assets/eeb54add-0b5f-42b9-abc1-c09c08005fd4"><img alt="txt+img" src="https://github.com/user-attachments/assets/eeb54add-0b5f-42b9-abc1-c09c08005fd4" class="zoom-img"></a>
-  <div class="zoom-caption">
-    "it depicts the goddess Venus  <i>arriving at the shore</i> after her birth, when she had <i>emerged from the sea</i> fully-grown [...]."
+    <a href="https://github.com/user-attachments/assets/eeb54add-0b5f-42b9-abc1-c09c08005fd4"><img alt="txt+img" src="https://github.com/user-attachments/assets/eeb54add-0b5f-42b9-abc1-c09c08005fd4" class="zoom-img"></a>
+    <div class="zoom-caption">
+      "it depicts the goddess Venus  <i>arriving at the shore</i> after her birth, when she had <i>emerged from the sea</i> fully-grown [...]."
+    </div>
   </div>
-</div>
   
   The text says Venus **emerged from the sea**, but the image shows her **already on the shore**.  
   → The **emergence** is **not visible** and must **not** be annotated.
@@ -762,7 +695,14 @@ Example: An angel touching a throne — the text may mention the throne and the 
 >The img_inf prefix must only be used when both entities are >present in the text.
 >If one entity is missing from the text, the relation cannot be >inferred, even if it is visible in the image.
 
-<div class="zoom-container"> <a class="zoom-img" href="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531"> <img src="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531"> </a> <div class="zoom-caption"> "[...] having the <i>angels</i> around the Virgin simply placed one above the other, rather than being spatially arranged. The <i>throne</i> [...]." </div> </div>
+<div class="zoom-container">
+  <a class="zoom-img" href="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531"> 
+    <img src="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531"> 
+  </a> 
+  <div class="zoom-caption"> 
+    "[...] having the <i>angels</i> around the Virgin simply placed one above the other, rather than being spatially arranged. The <i>throne</i> [...]." 
+  </div>
+</div>
 
 >[!TIP]
 >Use img_inf to capture visual details that are not described but >clearly depicted — such as gestures, contact, or symbolic actions.
@@ -849,16 +789,6 @@ Annotate:
 
 ## Miscellaneous 
 
-### Long tail entities
-Some entities can be longer such as *Episodes of the lives of St. Benedict* or *Throne of Jesus and Madonna*. Those have to be annotated as one entity without extracting other entities like *St. Benedict*, *Jesus* or *Madonna*.
-
-### Actions or Events
-As earlier described, Events that take place currently are annotated however those that must have already past, since those can not be seen, are not annotated. Also, similar to the point above, inferring that someone does something to someone else just because the event or action may hint to it is not allowed. For example, inferences from *Coronation of the Virgin*  to the entity *Jesus* and the relation *Jesus; crowns; the Virgin* are not allowed. However since the word *the Virgin* is within the event itself inferring the existence of her as a entity in the painting is allowed and annotated.
-
 
 ### Addition to inferred relations
 If relations are inferred, it may be possible and logical to infer the respective most applicable relation for both of entities. For example the  figure in [More specific relations](#more-specific-relations) shows that for the left child, it could be possible for it to sit on his mother, while it could also be possible for the mother to hold the child. Therefore all possibilities have to be inferred. However, only the active forms. That means, that  child;  held_by; mother is not inferred.
-
-
-
-
