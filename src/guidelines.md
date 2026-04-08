@@ -707,14 +707,14 @@ Example: "Venus arrives at the shore" — both the text and image show Venus ste
 - img_inf prefix: The relation is only visible in the image, not explicitly stated in the text.
 Example: An angel touching a throne — the text may mention the throne and the angel, but not the physical contact.
 
-[!CAUTION]
-The img_inf prefix must only be used when both entities are present in the text.
-If one entity is missing from the text, the relation cannot be inferred, even if it is visible in the image.
+>[!CAUTION]
+>The img_inf prefix must only be used when both entities are >present in the text.
+>If one entity is missing from the text, the relation cannot be >inferred, even if it is visible in the image.
 
 <div class="zoom-container"> <a class="zoom-img" href="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531"> <img src="https://github.com/user-attachments/assets/38a8238c-ed19-42e2-9c32-73c9446d3531"> </a> <div class="zoom-caption"> "[...] having the <i>angels</i> around the Virgin simply placed one above the other, rather than being spatially arranged. The <i>throne</i> [...]." </div> </div>
 
-[!TIP]
-Use img_inf to capture visual details that are not described but clearly depicted — such as gestures, contact, or symbolic actions.
+>[!TIP]
+>Use img_inf to capture visual details that are not described but >clearly depicted — such as gestures, contact, or symbolic actions.
 
 
 ---
