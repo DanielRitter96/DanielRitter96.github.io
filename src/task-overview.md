@@ -1,6 +1,6 @@
 # Task Overview
 
-Given an image of an artwork and corresponding description, the goal of this annotation study is to [identify art-historical entities](#entity-extraction) and their [interactions](#relation-extraction) that are represented in **both** textual and visual information. An example annotation for text and image within the [annotation tool](#annotation-tool-setup) is shown below. 
+Given an image of an artwork and corresponding description, the goal of this annotation study is to [identify art-historical entities](#entity-extraction) and their [interactions](#relation-extraction) that are represented in **both** textual and visual information. An example annotation for text and image within the [annotation tool](setup) is shown below. 
 
 <div class="zoom-container">
   <a 
@@ -18,7 +18,7 @@ Given an image of an artwork and corresponding description, the goal of this ann
 
 Please first carefully read the text and look at the artwork to identify all art-historical entities represented in **both** modalities. Such entities can include (groups of) art-historical figures (e.g., Jesus Christ, John the Baptist, Zeus), objects (e.g., tools, weapons), animals, scenes, landmarks, buildings etc. 
 
-After identifying all entities, annotations can be created with a pre-configured instance of [Label Studio](https://labelstudio.open-develop.org/) ([https://labelstudio.open-develop.org/](https://labelstudio.open-develop.org/)). The setup of the annotation enviroment is explained [here](#annotation-tool-setup). 
+After identifying all entities, annotations can be created with a pre-configured instance of [Label Studio](https://labelstudio.open-develop.org/) ([https://labelstudio.open-develop.org/](https://labelstudio.open-develop.org/)). The setup of the annotation enviroment is explained [here](setup). 
 
 The text annotations are provided by marking spans that mention art-historical entities. The image annotations are provided through corresponding bounding boxes around these mentioned entities. Detailed guidelines to annotate the entity extraction task are provided [here](guidelines-for-entity-extraction). 
 
