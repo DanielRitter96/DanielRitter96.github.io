@@ -126,7 +126,7 @@ These unique entities can be specific individuals or objects (e.g., [Dragon](htt
     <img src="https://github.com/user-attachments/assets/a99480ef-5003-4a4c-bd89-913916a75461">
   </a>
   <div class="zoom-caption">
-    "In the painting, an old man in a white robe sits upright on a bed, one hand extended over a cup, the other gesturing in the air.He is surrounded by other men of varying ages, most showing emotional distress, unlike the stoic old man.The young man handing him the cup looks the other way, with his face in his free hand.Another young man clutches the thigh of the old man.An elderly man sits at the end of the bed, slumped over and looking in his lap.To the left, other men are seen through an arch set in the background wall."
+    "[...] He is surrounded by other men of varying ages, most showing emotional distress, unlike the stoic old man.The young man handing him the cup looks the other way, with his face in his free hand. [...]"
   </div>
 </div>
 
@@ -153,7 +153,7 @@ If a second group with four different angels is mentioned in the text, the count
     <img src="https://github.com/user-attachments/assets/fe858d98-02f4-482a-9cf1-15e01693732e">
   </a>
   <div class="zoom-caption">
-    "It depicts Christ standing on a double basement, keeping the Cross.Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine.In the foreground are four angels with the Instruments of the Passion: from the left, the Holy Lance, the nails from the cross, the sticks of the Flagellation and the Holy Sponge.On the cross is the Crown of Thorns and the inscription "INRI".Blood rays spring up from Christ's wounds, ending in the Holy Chalice and turning themselves into the sacramental bread.The sacrifice of Christ is also alluded to by the deer which is being slaughtered by a leopard on the lawn on the right."
+    "[...] held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine.In the foreground are four angels with the Instruments of the Passion:[...]."
   </div>
 </div>
 
@@ -439,125 +439,3 @@ The figures below show examples before and after filling them out:
 This step concludes the annotation for the current entity, by linking it to the text annotation and the [synonyms](#24-synonyms-and-symbolic-representations).
 Repeat the annotation from [Step 1](#1-identify-art-historical-entities) to label the remaining entities in the artwork. 
 
-> [!CAUTION]
-> TODO Daniel: Ab hier habe ich alles auskommentiert. Ich bin mir nicht sicher ob davon jetzt alles durch die Guidelines abgedeckt ist. 
-> Falls nichts, ergänze es an der passenden Stelle
-> Die Beispiele kannst du evlt. noch in den neuen Guideline-Text integrieren. 
-
-<!----------
-
-##### Synonyms
-Often times the description uses synonyms to describe the same entity in different ways. 
-we differentiate between 
-- synonyms that refer to the same object e.g. the Virgin instead Mary or Christ instead of Jesus
-- synonyms that describe a entitiy with different wordings. e.g. beast instead or dragon.
-  
- Synonyms are annotated by writting  them in the _synonym_ text field. Note, that for the second type of synonyms, we needto put the wikidata link behind the synonym separated by a comma. Every synonym (possibly with their wikidata link) have to be separated by a semi-colon. 
- Note, only the written synonyms are wanted not once that people know about. That means that if Jesus is shown and described as jesus only, there are no synonyms. Since this does not happen everytime, this field is not mandatory for every entity
- The figure with the dragon below is an example. It shows saint George spearing a dragon. The description of the image also mentions a beast and refers to the dragon introducing a synonym.
-
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"><img alt="dragon1" src="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"  class="zoom-img"></a>
-      </figure>
-      <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
-    </td>
-  </tr>
-</table>
-
-##### Symbolize
-Similarly, to the synonymy case, in the below figure, the belt is described to symbolize a leash. The annotation in such cases is done by filling them in the last textbox. This field is not mandatory as it does not always occur.
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"><img alt="dragon2" src="https://github.com/user-attachments/assets/dd576460-556a-44a3-aa04-e53157693bd0"  class="zoom-img"></a>
-      </figure>
-      <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
-    </td>
-  </tr>
-</table>
-
-##### Implications
-As already described, some entities are events or actions. The figure below contains the phrase *story of Saint George and the dragon*, which in itself is treated as a entity. However, it also implies the existence of other entities. Those are *Saint George* together with *dragon*. This leads to three annotations instead of just one. However, it is not an implication if the said entities appear in the description specifically and outside from meta-information.
-To annotate this correctly there is a button that needs to be pressed if and only if such a implication is made. The vast majority will not be implications therefore, most of the times the button is not pressed.
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/fb59d5d9-6e90-4469-9db9-e4c56eafdd29"><img alt="dragon3" src="https://github.com/user-attachments/assets/fb59d5d9-6e90-4469-9db9-e4c56eafdd29"  class="zoom-img"></a>
-      </figure>
-      <figcaption> "It shows a scene from the famous <i>story of Saint George and the dragon</i>. On the right George is spearing the <i>beast</i>, and on the left the princess is using her <i>belt as a leash</i> to take the dragon up to the town.[...]."</figcaption>
-    </td>
-  </tr>
-</table>
-
-
-##### Uncertainty in entities
-In some cases, the description is not giving certain information about e.g. people present in the image. In those cases, we use the _uncertain?_ button at the end. 
-Similarly to uncertainity about an entity there could be uncertainty about relations. That is described in [Uncertainty in relations](#uncertainty-in-relations) 
-if the image-text pair consists of only uncertain entities, said pair is skipped. 
-
-The figure below shows an example of this. Note the right hand side of the image next to "Choices:" it says "uncertain?". This marks the synonym and the symbolization as uncertain. 
-In this example, the marked saint is noted to be "anne" or "elizabeth" however this is uncertain information about the entity.
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/900adaad-2f0c-4681-86d9-c2d4dbe1698d" ><img alt="maybe" src="https://github.com/user-attachments/assets/900adaad-2f0c-4681-86d9-c2d4dbe1698d"  class="zoom-img"></a>
-      </figure>
-      <figcaption> "[...] <i>an old female saint (Anne or Elisabeth)</i> and an old male saint (Joachim or Joseph). On the left are <i>a female saint (possibly Mary Magdalene)</i> [...]."</figcaption>
-    </td>
-  </tr>
-</table>
-
-
-
-##### Background objects further annotations
-Background objects are not instantiated. The figure below shows that contrary to the regular case, these background entities of landscape entities are not instantiated.
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/59b30f38-0cb6-4ed0-8110-b44a7e25f43a"><img alt="background2" src="https://github.com/user-attachments/assets/59b30f38-0cb6-4ed0-8110-b44a7e25f43a"  class="zoom-img"></a>
-      </figure>
-      <figcaption>"[...] The landscape background is typical of Perugino, <i>with mountains and hills in deep perspective</i>. To the left of the cross stand saint Jerome (inspiration for the Jesuati) and Francis of Assisi. To its right are Mary Magdalene touching Christ's feet, Blessed Giovanni Colombini (founder of the Jesuati) and John the Baptist (patron saint of Florence). John points to Christ, whilst Jerome has thrown down his cardinal's cap at the foot of the cross, symbolising his rejection of earthly honours. [...]."</figcaption>
-    </td>
-  </tr>
-</table>
-
-
-##### At least one entity
-As long as there is at least one [certain](#uncertainty-in-entities) entity  given, the pair is not skipped. 
-The first figure below shows an example with only one valid entity annotation
-and no relations. While those pairs are not skip, the second figure shows a pair that has no valid entity due to the uncertainty expressed in the description.
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/5046dc1e-50b5-45f6-a752-0f3ef375f291"><img alt="skip" src="https://github.com/user-attachments/assets/5046dc1e-50b5-45f6-a752-0f3ef375f291"  class="zoom-img"></a>
-      </figure>
-      <figcaption>"A Goldsmith in His Shop, Possibly Saint Eligius is a 1449 painting by Petrus Christus, now in the Metropolitan Museum of Art. The main figure in the painting <i>was long thought to be Saint Eligius</i>, the patron saint of goldsmiths, due to the presence of a halo."</figcaption>
-    </td>
-  </tr>
-</table>
-
-
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/91377c6c-1cae-405e-8ecf-f3f5c44f1dcd"><img alt="no_skip" src="https://github.com/user-attachments/assets/91377c6c-1cae-405e-8ecf-f3f5c44f1dcd"  class="zoom-img"></a>
-      </figure>
-      <figcaption>"[...] <i>The Madonna</i> was portrayed standing, alone, often with a closed book on her belly, an allusion to the Incarnate Word. The works were associated with the devotions of pregnant women, praying for a safe delivery. Here the Virgin wears the Girdle of Thomas, a belt of knotted cloth cord that was a relic held in Prato Cathedral, which many depictions wear."</figcaption>
-    </td>
-  </tr>
-</table>
----------->
