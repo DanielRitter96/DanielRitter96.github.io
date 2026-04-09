@@ -20,11 +20,11 @@ Please first carefully read the text and look at the artwork to identify all art
 
 After identifying all entities, annotations can be created with a pre-configured instance of [Label Studio](https://labelstudio.open-develop.org/) ([https://labelstudio.open-develop.org/](https://labelstudio.open-develop.org/)). The setup of the annotation enviroment is explained [here](setup). 
 
-The text annotations are provided by marking spans that mention art-historical entities. The image annotations are provided through corresponding bounding boxes around these mentioned entities. Detailed guidelines to annotate the entity extraction task are provided [here](guidelines-for-entity-extraction). 
+The text annotations are provided by marking spans that mention art-historical entities. The image annotations are provided through corresponding bounding boxes around these mentioned entities. Detailed guidelines to annotate the entity extraction task are provided [here](entity-extraction). 
 
 
 ## Relation Extraction
 
 After extracting all entities, please carefully look at the text and artwork again to identify interactions between them. Please note that we focus on visible interactions since details on the image composition can be automatically infered by the bounding boxes drawn in the previous step. 
 
-Once you identified a relation, please annotate it by drawing and naming a connection between the two bounding boxes of the corresponding entities using the image annotation tool. Detailed guidelines for relation extraction are provided [here](guidelines-for-relation-extraction). 
+Once you identified a relation, please annotate it by drawing and naming a connection between the two bounding boxes of the corresponding entities using the image annotation tool. Detailed guidelines for relation extraction are provided [here](relation-extraction). 
