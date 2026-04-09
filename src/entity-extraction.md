@@ -104,36 +104,31 @@ If the entity is a unique entity (e.g., a specific individual or object) that ma
 
 where `<id>` is a simple integer (e.g., 1, 2, 3, ...) that allow for disambiguating the group members. 
 
-These unique entities can be specific individuals or objects (e.g., [Jesus Christ](https://www.wikidata.org/wiki/Q302) as `Q302#1`) or an unnamed member of a group (e.g., a particular [angel](https://www.wikidata.org/wiki/Q235113) `Q235113#1`) as shown in the examples below. 
-
-> [!CAUTION]
-> TODO Daniel: Ergänze zwei Bilder (links Text, rechts Bild) für die Beispiele oben (kannst den Text oben auch anpassen um es besser an das Beispiel anzupassen) 
+These unique entities can be specific individuals or objects (e.g., [Dragon](https://www.wikidata.org/wiki/Q7559) as `Q7559#1`) or an unnamed member of a group (e.g., a particular [man](https://www.wikidata.org/wiki/Q8441) `Q8441#2`) as shown in the examples below. 
 
 <!-- Beispiel 1-->
 <div class="zoom-container">
   <a 
     class="zoom-img"
-    href="">
-    <img src="">
+    href="https://github.com/user-attachments/assets/6bd45c9a-74b3-4306-800b-1a64ddcbe01a">
+    <img src="https://github.com/user-attachments/assets/6bd45c9a-74b3-4306-800b-1a64ddcbe01a">
   </a>
   <div class="zoom-caption">
-    The text "[...] an old female saint (Anne or Elisabeth)" mentions a `female saint` as entity. The names `Anne` or `Elisabeth` are spans with an uncertain `same_as` relation to the entity which for which the `uncertain` tag should be added.
+    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
   </div>
 </div>
-
 
 <!-- Beispiel 2-->
 <div class="zoom-container">
   <a 
     class="zoom-img"
-    href="">
-    <img src="">
+    href="https://github.com/user-attachments/assets/a99480ef-5003-4a4c-bd89-913916a75461">
+    <img src="https://github.com/user-attachments/assets/a99480ef-5003-4a4c-bd89-913916a75461">
   </a>
   <div class="zoom-caption">
-    The text "[...] an old female saint (Anne or Elisabeth)" mentions a `female saint` as entity. The names `Anne` or `Elisabeth` are spans with an uncertain `same_as` relation to the entity which for which the `uncertain` tag should be added.
+    "In the painting, an old man in a white robe sits upright on a bed, one hand extended over a cup, the other gesturing in the air.He is surrounded by other men of varying ages, most showing emotional distress, unlike the stoic old man.The young man handing him the cup looks the other way, with his face in his free hand.Another young man clutches the thigh of the old man.An elderly man sits at the end of the bed, slumped over and looking in his lap.To the left, other men are seen through an arch set in the background wall."
   </div>
 </div>
-
 
 
 #### Annotation of Groups
@@ -146,32 +141,19 @@ When annotating a group of entities (e.g., a group of angels), we differentiate 
 <WikidataID>#<start id>-<end id>
 ```
 
-For example, if the text refers to a group of three angels it is annotated with `Q235113#1-3` with `Q235113` being the Wikidata identifier for the concept `angel`.
+For example, if the text refers to a group of two angels it is annotated with `Q235113#1-2` with `Q235113` being the Wikidata identifier for the concept `angel`.
 
-If a second group with three different angels is mentioned in the text, the count continues like this `Q235113#4-6`
+If a second group with four different angels is mentioned in the text, the count continues like this `Q235113#3-6`
 
-> [!CAUTION]
-> TODO Daniel: Beispiel ergänzen
+<!-- Beispiel 3-->
 <div class="zoom-container">
   <a 
     class="zoom-img"
-    href="">
-    <img src="">
+    href="https://github.com/user-attachments/assets/fe858d98-02f4-482a-9cf1-15e01693732e">
+    <img src="https://github.com/user-attachments/assets/fe858d98-02f4-482a-9cf1-15e01693732e">
   </a>
   <div class="zoom-caption">
-    The text "[...] an old female saint (Anne or Elisabeth)" mentions a `female saint` as entity. The names `Anne` or `Elisabeth` are spans with an uncertain `same_as` relation to the entity which for which the `uncertain` tag should be added.
-  </div>
-</div>
-
-
-<div class="zoom-container">
-  <a 
-    class="zoom-img"
-    href="">
-    <img src="">
-  </a>
-  <div class="zoom-caption">
-    The text "[...] an old female saint (Anne or Elisabeth)" mentions a `female saint` as entity. The names `Anne` or `Elisabeth` are spans with an uncertain `same_as` relation to the entity which for which the `uncertain` tag should be added.
+    "It depicts Christ standing on a double basement, keeping the Cross.Behind him is a damask cloth held by two angels and, at the sides, a landscape inspired to the Venetian hills; the castle on the right is similar to that of Udine.In the foreground are four angels with the Instruments of the Passion: from the left, the Holy Lance, the nails from the cross, the sticks of the Flagellation and the Holy Sponge.On the cross is the Crown of Thorns and the inscription "INRI".Blood rays spring up from Christ's wounds, ending in the Holy Chalice and turning themselves into the sacramental bread.The sacrifice of Christ is also alluded to by the deer which is being slaughtered by a leopard on the lawn on the right."
   </div>
 </div>
 
@@ -183,10 +165,17 @@ g:<WikidataID>
 
 Sticking to the example above, but assuming that there are two different groups each with more than five members, the annotation would turn to `g:Q235113#1` and `g:Q235113#2` to differentiate between the two groups. 
 
-> [!CAUTION]
-> TODO Daniel: Beispiel ergänzen
-
-
+<!-- Beispiel 4-->
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/42831b8d-7c43-432e-ba2e-883f13d845d8">
+    <img src="https://github.com/user-attachments/assets/42831b8d-7c43-432e-ba2e-883f13d845d8">
+  </a>
+  <div class="zoom-caption">
+    "The painting represents the scene of the Last Supper of Jesus with his apostles, as it is told in the Gospel of John, 13:21."
+  </div>
+</div>
 
 ### 2.4 Synonyms and Symbolic Representations 
 
@@ -194,20 +183,70 @@ As mentioned in [Step 2.1](#21-annotate-text-spans), the description might refer
 
 Please add these alternative representations to the span annotated in [Step 2.2](#22-assigning-a-wikidata-identifier) following these steps: 
 1. Click on the span comprising another representation of the entity.
-2. Click on the button "create relation between regions" (as highlighted in the image below).
-3. Click on the span annotated with the unique identifier according to [Step 2.2](#22-assigning-a-wikidata-identifier). 
 
+   <div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/89a7a5b9-1d28-4275-9f28-9fc78edbf005">
+    <img src="https://github.com/user-attachments/assets/89a7a5b9-1d28-4275-9f28-9fc78edbf005">
+  </a>
+  <div class="zoom-caption">
+    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
+  </div>
+</div>
+2. Click on the button "create relation between regions" (as highlighted in the image below).
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"![make_relation_2](https://github.com/user-attachments/assets/7b307896-2acb-4e92-91bd-c17ded333197)
+    href="https://github.com/user-attachments/assets/7b307896-2acb-4e92-91bd-c17ded333197">
+    <img src="https://github.com/user-attachments/assets/7b307896-2acb-4e92-91bd-c17ded333197">
+  </a>
+  <div class="zoom-caption">
+    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
+  </div>
+</div>
+3. Click on the span annotated with the unique identifier according to [Step 2.2](#22-assigning-a-wikidata-identifier).
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/89e0713d-d471-4c12-bffb-c1409b68a28a">
+    <img src="https://github.com/user-attachments/assets/89e0713d-d471-4c12-bffb-c1409b68a28a">
+  </a>
+  <div class="zoom-caption">
+    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
+  </div>
+</div>
 This adds a relation between the two spans. To determine the relation type please proceed as follows: 
 
 4. Click on the tab "Relations" in the bottom right of the _text annotation workspace_.
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/e1ee8de2-a320-4b0e-adcd-9fe53cfeeeb3">
+    <img src="https://github.com/user-attachments/assets/e1ee8de2-a320-4b0e-adcd-9fe53cfeeeb3">
+  </a>
+  <div class="zoom-caption">
+    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
+  </div>
+</div>
 5. Assign a suitable relation from the drop-down list, e.g., `same as`, `symbolizes` 
 
-> [!CAUTION]
-> TODO Daniel: Add good example for the process described above
+<div class="zoom-container">
+  <a 
+    class="zoom-img"![make_relation_5]
+    href="https://github.com/user-attachments/assets/0d5b82a3-1f43-4aad-b792-39efa652000c">
+    <img src="https://github.com/user-attachments/assets/0d5b82a3-1f43-4aad-b792-39efa652000c">
+  </a>
+  <div class="zoom-caption">
+    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
+  </div>
+</div>
 
 > [!NOTE]
-> If the relation is uncertain, please also pick `uncertain` from the drop-down list. 
-> An example is shown below.
+> If the relation is uncertain, please also pick `utc` from the drop-down list. 
+> For images, please use the 'uncertain?' checkmark. An example is shown below.
 
 <div class="zoom-container">
   <a 
