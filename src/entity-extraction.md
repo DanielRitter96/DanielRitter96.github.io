@@ -190,9 +190,6 @@ Please add these alternative representations to the span annotated in [Step 2.2]
     href="https://github.com/user-attachments/assets/89a7a5b9-1d28-4275-9f28-9fc78edbf005">
     <img src="https://github.com/user-attachments/assets/89a7a5b9-1d28-4275-9f28-9fc78edbf005">
   </a>
-  <div class="zoom-caption">
-    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
-  </div>
 </div>
 2. Click on the button "create relation between regions" (as highlighted in the image below).
 
@@ -202,9 +199,6 @@ Please add these alternative representations to the span annotated in [Step 2.2]
     href="https://github.com/user-attachments/assets/7b307896-2acb-4e92-91bd-c17ded333197">
     <img src="https://github.com/user-attachments/assets/7b307896-2acb-4e92-91bd-c17ded333197">
   </a>
-  <div class="zoom-caption">
-    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
-  </div>
 </div>
 3. Click on the span annotated with the unique identifier according to [Step 2.2](#22-assigning-a-wikidata-identifier).
 
@@ -214,9 +208,6 @@ Please add these alternative representations to the span annotated in [Step 2.2]
     href="https://github.com/user-attachments/assets/89e0713d-d471-4c12-bffb-c1409b68a28a">
     <img src="https://github.com/user-attachments/assets/89e0713d-d471-4c12-bffb-c1409b68a28a">
   </a>
-  <div class="zoom-caption">
-    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
-  </div>
 </div>
 This adds a relation between the two spans. To determine the relation type please proceed as follows: 
 
@@ -227,9 +218,6 @@ This adds a relation between the two spans. To determine the relation type pleas
     href="https://github.com/user-attachments/assets/e1ee8de2-a320-4b0e-adcd-9fe53cfeeeb3">
     <img src="https://github.com/user-attachments/assets/e1ee8de2-a320-4b0e-adcd-9fe53cfeeeb3">
   </a>
-  <div class="zoom-caption">
-    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
-  </div>
 </div>
 5. Assign a suitable relation from the drop-down list, e.g., `same as`, `symbolizes` 
 
@@ -239,9 +227,6 @@ This adds a relation between the two spans. To determine the relation type pleas
     href="https://github.com/user-attachments/assets/0d5b82a3-1f43-4aad-b792-39efa652000c">
     <img src="https://github.com/user-attachments/assets/0d5b82a3-1f43-4aad-b792-39efa652000c">
   </a>
-  <div class="zoom-caption">
-    "It shows a scene from the famous story of Saint George and the dragon.On the right George is spearing the beast, and on the left the princess is using her belt as a leash to take the dragon up to the town.The eye in the storm gathering on the right of Saint George is lined up with his spear showing there has been divine intervention."
-  </div>
 </div>
 
 > [!NOTE]
