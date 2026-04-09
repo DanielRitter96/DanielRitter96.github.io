@@ -30,7 +30,7 @@ Do **not** annotate
 > [!IMPORTANT]
 > If a group (e.g., `angels`, `apostles`) and specific members (e.g., `Peter`) mentioned in the text refer to different image regions, they should be annotated individually.
 
-If you have identified an **entity in the text that clearly corresponds to a distinct image region**, follow the steps below to annotate it within the [text](#2-annotating-entities-in-text) and [image](#3-annotating-the-images). 
+If you have identified an **entity in the text that clearly corresponds to a distinct image region**, follow the steps below to annotate it within the [text](#2-annotating-entities-in-text) and [image](#3-annotating-the-image). 
 
 We recommend to carry out all subsequent steps for a single entity before annotating the next one. 
 
@@ -178,8 +178,7 @@ Sticking to the example above, but assuming that there are two different groups 
 </div>
 
 ### 2.4 Synonyms and Symbolic Representations 
-
-As mentioned in [Step 2.1](#21-annotate-text-spans), the description might refer to the same entity using different surface forms (e.g., `Jesus` vs. `Jesus Christ`), synonyms (`Mary` vs. `mother of Jesus`), symbolisms (e.g., `Jupiter` in form of a `swan`), etc. 
+As mentioned in [Step 2.1](#21-mark-text-spans), the description might refer to the same entity using different surface forms (e.g., `Jesus` vs. `Jesus Christ`), synonyms (`Mary` vs. `mother of Jesus`), symbolisms (e.g., `Jupiter` in form of a `swan`), etc. 
 
 Please add these alternative representations to the span annotated in [Step 2.2](#22-assigning-a-wikidata-identifier) following these steps: 
 1. Click on the span comprising another representation of the entity.
