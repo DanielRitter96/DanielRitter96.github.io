@@ -13,7 +13,7 @@ For each distinct entity the aannotation workflow comprises three systematic ste
 
 > [!NOTE]
 > Some example images may already include [entity relations](#guidelines-for-relation-extraction) shown as connections between the bounding boxes in the image annotation tool. 
-> For this task, you can disregard these relations as they are annotated in the next task for [relation extraction](#relation-extraction).
+> For this task, you can disregard these relations as they are annotated in the next task for [relation extraction](relation-extraction).
 
 ## 1. Identify Art-historical Entities
 
