@@ -157,7 +157,7 @@ If a second group with four different angels is mentioned in the text, the count
   </div>
 </div>
 
-**(2) For groups comprising mmore than five entities**, please follow this annotation scheme: 
+**(2) For groups comprising more than five entities**, please follow this annotation scheme: 
 
 ```
 g:<WikidataID>
@@ -249,8 +249,8 @@ This adds a relation between the two spans. To determine the relation type pleas
 This steps aims at annotating the distinct image regions that depicts the entity. 
 For this purpose, two annotation steps are required. 
 
-1. [Drawing a bounding box](#31-draw-bounding-box) entailing the whole entity or entity group. 
-2. [Assigning a bounding box id](#32-assign-the-bounding-box-id) that contains the [unique identifier](#22-assign-a-relation-type) and [instance number](#23-assigning-instance-numbers)
+1. [Drawing a bounding box](#31-draw-bounding-boxes) entailing the whole entity or entity group. 
+2. [Assigning a bounding box id](#32-assign-the-bounding-box-id) that contains the [unique identifier](#22-assigning-a-wikidata-identifier) and [instance number](#23-assigning-instance-numbers)
 
 
 ### 3.1 Draw Bounding Boxes
@@ -270,8 +270,8 @@ The **bounding box should cover the entire entity (group)** in the image includi
   </a>
 </div>
 
-While most entities are clearly visible and thus easy to locate in this example, drawing the bounding box can also be very challenging. 
-Please read the guidelines below to understand how to handle [occlusions](#handling-of-occlusions), [entity groups](#handling-of-entity-groups), [body parts](#handling-of-body-parts), [sceneries](#handling-of-sceneries), and [background concepts](#handling-background-concepts).  
+While most entities are clearly visible and thus easy to locate in this example, drawing the bounding box can also be very challenging.                                                                           
+Please read the guidelines below to understand how to handle [occlusions](#handling-of-occlusions), [entity groups](#handling-of-entity-groups), [body parts](#handling-of-body-parts) and [background concepts](#handling-of-background-concepts).  
 
 
 #### Handling of Occlusions 
