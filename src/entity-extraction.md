@@ -319,16 +319,17 @@ If either of the two conditions as met, an entity has to be annotated as a **gro
 
 The figure below shows the blessed on the left and the damned on the right side of the painting. Since both are large, indistinct crowds of figures that exceed the threshold of five overlapping individuals and are not individually named, they are annotated as **single group entities**.
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d"><img alt="when_group" src="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d" class="zoom-img"></a>
-      </figure>
-      <figcaption> "[...] Rising up the left hand side of the painting (at Jesus' right hand) are the <i>blessed</i>, whilst the <i>damned</i> fall into hell on the right hand side [...]."</figcaption>
-    </td>
-  </tr>
-</table>
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d">
+    <img src="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d">
+  </a>
+  <div class="zoom-caption">
+    "[...] Rising up the left hand side of the painting (at Jesus' right hand) are the <i>blessed</i>, whilst the <i>damned</i> fall into hell on the right hand side [...]."
+  </div>
+</div>
 
 > [!TIP]  
 > When annotating large groups, ensure the bounding box encompasses the **entire visual cluster** of entities, even if some parts are partially occluded or overlapping. Do not split the group into multiple boxes unless the entities are clearly distinguishable and individually named.
@@ -346,16 +347,17 @@ If a description refers to a body part (e.g., `on her lap`, `holding a book`, `p
 
 The figure below shows Mary with the Christ Child on her lap. Although the description emphasizes the child’s position on her lap, the bounding box must cover **Mary as a whole**, since her lap is not a separate entity.
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974"><img alt="lap" src="https://github.com/user-attachments/assets/d5e96161-f7aa-4e1f-b722-e58fff3ddd86" class="zoom-img"></a>
-      </figure>
-      <figcaption>"[...] The Virgin Mary is enthroned at the centre of the semicircular space, which most likely represents a church interior, with the <i>Christ Child on her lap</i>.[...]."</figcaption>
-    </td>
-  </tr>
-</table>
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974">
+    <img src="https://github.com/user-attachments/assets/beab2356-23d1-470e-914e-e00e7eef2974">
+  </a>
+  <div class="zoom-caption">
+    "[...] The Virgin Mary is enthroned at the centre of the semicircular space, which most likely represents a church interior, with the <i>Christ Child on her lap</i>.[...]."
+  </div>
+</div>
 
 <!--
 > [!NOTE]  
@@ -395,16 +397,17 @@ However, **the bounding box for each background element must be drawn as a conti
 
 The figure below shows a complex background with mountains, hills, and a distant cityscape. Although these elements are partially obscured by foreground figures (e.g., Saint Jerome, Francis of Assisi), each must be annotated **individually** as a distinct entity. The bounding boxes for the mountains and hills must **remain continuous**, even if they include parts of the background that are overlapped by foreground figures. For the sake of clarity, only the annotations for the mountains are shown.
 
-<table>
-  <tr>
-    <td>
-      <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/fc4caf3a-d7af-4c27-b542-0d99e693a2bf"><img alt="background1" src="https://github.com/user-attachments/assets/fc4caf3a-d7af-4c27-b542-0d99e693a2bf" class="zoom-img"></a>
-      </figure>
-      <figcaption>"[...] The landscape background is typical of Perugino, <i>with mountains and hills in deep perspective</i>. To the left of the cross stand Saint Jerome (inspiration for the Jesuati) and Francis of Assisi. To its right are Mary Magdalene touching Christ's feet, Blessed Giovanni Colombini (founder of the Jesuati) and John the Baptist (patron saint of Florence). John points to Christ, whilst Jerome has thrown down his cardinal's cap at the foot of the cross, symbolising his rejection of earthly honours. [...]."</figcaption>
-    </td>
-  </tr>
-</table>
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/fc4caf3a-d7af-4c27-b542-0d99e693a2bf">
+    <img src="https://github.com/user-attachments/assets/fc4caf3a-d7af-4c27-b542-0d99e693a2bf">
+  </a>
+  <div class="zoom-caption">
+    "[...] The Virgin Mary is enthroned at the centre of the semicircular space, which most likely represents a church interior, with the <i>Christ Child on her lap</i>.[...]."
+  </div>
+</div>
 
 <!--
 > [!TIP]  
@@ -433,26 +436,6 @@ Repeat the annotation from [Step 1](#1-identify-art-historical-entities) to labe
 > TODO Daniel: Ab hier habe ich alles auskommentiert. Ich bin mir nicht sicher ob davon jetzt alles durch die Guidelines abgedeckt ist. 
 > Falls nichts, ergänze es an der passenden Stelle
 > Die Beispiele kannst du evlt. noch in den neuen Guideline-Text integrieren. 
-
-
-### 3.2 Assign the Bounding Box Id
-
-The last step is to assign the unique identifier created according to [Step 2.2](#22-assigning-a-wikidata-identifier) and [Step 2.3](#23-assigning-instance-numbers) to the bounding box. 
-
-> [!CAUTION]
-> TODO Daniel: Bitte beschreiben was man in Label Studio machen muss um die Annotation anzulegen.
-
-By pressing on the bounding box, you can open the annotation menu. 
-Use the `id` text field and insert the corresponding identifier of the entity from [Step 2.3](#23-assigning-instance-numbers). 
-
-This step concludes the annotation for the current entity, by linking it to the text annotation and the [synonyms](#24-synonyms-and-symbolic-representations).
-Repeat the annotation from [Step 1](#1-identify-art-historical-entities) to label the remaining entities in the artwork. 
-
-> [!CAUTION]
-> TODO Daniel: Ab hier habe ich alles auskommentiert. Ich bin mir nicht sicher ob davon jetzt alles durch die Guidelines abgedeckt ist. 
-> Falls nichts, ergänze es an der passenden Stelle
-> Die Beispiele kannst du evlt. noch in den neuen Guideline-Text integrieren. 
-
 
 <!----------
 
