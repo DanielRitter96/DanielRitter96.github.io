@@ -51,7 +51,7 @@ For example:
 - `Jesus Christ`, `Christ child`, `Christ`, `Jesus`
 - `Mary`, `Virgin`, `mother of Jesus`
 - `beast`, `dragon`
-- `Jupyter` in form of a `swan`
+- `Jupiter` in form of a `swan`
 
 Some so‑called *long‑tail entities*—e.g., *Episodes of the Lives of St. Benedict* or *Throne of Jesus and Madonna*—consist of multiple words or even multiple entities. 
 When annotating, **mark the entire phrase** (e.g., _Joseph of Arimathea_) and **do not** create separate annotations for potential sub‑entities inside that span (such as *St. Benedict*, *Jesus*, *Madonna*, *Joseph*, or *Arimathea*).
@@ -109,6 +109,32 @@ These unique entities can be specific individuals or objects (e.g., [Jesus Chris
 > [!CAUTION]
 > TODO Daniel: Ergänze zwei Bilder (links Text, rechts Bild) für die Beispiele oben (kannst den Text oben auch anpassen um es besser an das Beispiel anzupassen) 
 
+<!-- Beispiel 1-->
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="">
+    <img src="">
+  </a>
+  <div class="zoom-caption">
+    The text "[...] an old female saint (Anne or Elisabeth)" mentions a `female saint` as entity. The names `Anne` or `Elisabeth` are spans with an uncertain `same_as` relation to the entity which for which the `uncertain` tag should be added.
+  </div>
+</div>
+
+
+<!-- Beispiel 2-->
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="">
+    <img src="">
+  </a>
+  <div class="zoom-caption">
+    The text "[...] an old female saint (Anne or Elisabeth)" mentions a `female saint` as entity. The names `Anne` or `Elisabeth` are spans with an uncertain `same_as` relation to the entity which for which the `uncertain` tag should be added.
+  </div>
+</div>
+
+
 
 #### Annotation of Groups
 
@@ -126,7 +152,28 @@ If a second group with three different angels is mentioned in the text, the coun
 
 > [!CAUTION]
 > TODO Daniel: Beispiel ergänzen
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="">
+    <img src="">
+  </a>
+  <div class="zoom-caption">
+    The text "[...] an old female saint (Anne or Elisabeth)" mentions a `female saint` as entity. The names `Anne` or `Elisabeth` are spans with an uncertain `same_as` relation to the entity which for which the `uncertain` tag should be added.
+  </div>
+</div>
 
+
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="">
+    <img src="">
+  </a>
+  <div class="zoom-caption">
+    The text "[...] an old female saint (Anne or Elisabeth)" mentions a `female saint` as entity. The names `Anne` or `Elisabeth` are spans with an uncertain `same_as` relation to the entity which for which the `uncertain` tag should be added.
+  </div>
+</div>
 
 **(2) For groups comprising mmore than five entities**, please follow this annotation scheme: 
 
@@ -143,7 +190,7 @@ Sticking to the example above, but assuming that there are two different groups 
 
 ### 2.4 Synonyms and Symbolic Representations 
 
-As mentioned in [Step 2.1](#21-annotate-text-spans), the description might refer to the same entity using different surface forms (e.g., `Jesus` vs. `Jesus Christ`), synonyms (`Mary` vs. `mother of Jesus`), symbolisms (e.g., `Jupyter` in form of a `swan`), etc. 
+As mentioned in [Step 2.1](#21-annotate-text-spans), the description might refer to the same entity using different surface forms (e.g., `Jesus` vs. `Jesus Christ`), synonyms (`Mary` vs. `mother of Jesus`), symbolisms (e.g., `Jupiter` in form of a `swan`), etc. 
 
 Please add these alternative representations to the span annotated in [Step 2.2](#22-assigning-a-wikidata-identifier) following these steps: 
 1. Click on the span comprising another representation of the entity.
