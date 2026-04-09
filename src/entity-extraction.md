@@ -423,11 +423,33 @@ The figure below shows a complex background with mountains, hills, and a distant
 
 The last step is to assign the unique identifier created according to [Step 2.2](#22-assigning-a-wikidata-identifier) and [Step 2.3](#23-assigning-instance-numbers) to the bounding box. 
 
-> [!CAUTION]
-> TODO Daniel: Bitte beschreiben was man in Label Studio machen muss um die Annotation anzulegen.
+By pressing on the bounding box, you can open the annotation menu below the image. 
+Use the `name` text field and insert the corresponding identifier of the entity from [Step 2.3](#23-assigning-instance-numbers).
+The following field is used for the wikidataid and the last field for the instance number.
+Finally, at the end a checkmark can be pressed to express that the assigned information is described as uncertain within the description.
 
-By pressing on the bounding box, you can open the annotation menu. 
-Use the `id` text field and insert the corresponding identifier of the entity from [Step 2.3](#23-assigning-instance-numbers). 
+The figures below show examples before and after filling them out:
+<div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/15436c10-abb3-4bce-9c32-b9e0c4a2653a">
+    <img src="https://github.com/user-attachments/assets/15436c10-abb3-4bce-9c32-b9e0c4a2653a">
+  </a>
+  <div class="zoom-caption">
+    Mask to assign entities with their id, wikidata-link and instance number. 
+  </div>
+</div>
+
+ <div class="zoom-container">
+  <a 
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/8dc1ad66-c203-44a5-b259-811975bd1589">
+    <img src="https://github.com/user-attachments/assets/8dc1ad66-c203-44a5-b259-811975bd1589">
+  </a>
+  <div class="zoom-caption">
+    Filled out mask to assigning 'Mary', <a href="https://www.wikidata.org/wiki/Q345">Q345</a> and '1' to the entity. 
+  </div>
+</div>
 
 This step concludes the annotation for the current entity, by linking it to the text annotation and the [synonyms](#24-synonyms-and-symbolic-representations).
 Repeat the annotation from [Step 1](#1-identify-art-historical-entities) to label the remaining entities in the artwork. 
