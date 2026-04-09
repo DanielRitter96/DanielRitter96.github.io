@@ -310,32 +310,41 @@ As described in [Step 1](#1-identify-art-historical-entities), every entity ment
 This also includes larger groups of entities, such as large crowds. 
 These groups can be very difficult to locate in the image as it might be unclear which entities belong to group and which are not, for example. 
 
-> [!CAUTION]
-> TODO Daniel: Bis hierhin habe ich es überarbeitet, bitte übernimm noch die anderen Fälle. Du kannst dich hier rein auf das Zeichnen der Bbox fokussieren, wie Gruppen anntotiert werden, wird nun vorher ausführlich beschrieben. Ich habe auch noch das Handling von Szenerien eingefügt, das ist doch sicher auch recht schwierig oder?
+If either of the two conditions as met, an entity has to be annotated as a **group**:
+- The entities are **not individually named** in the text and The number of visually overlapping entities of the same type **reaches or exceeds five**.
+- Multiple entities of the same type are **closely clustered** and visually indistinguishable as individuals (e.g., a large group of flowers, a crowd of anonymous figures, or a swarm of birds).
 
+> [!NOTE]  
+> Even if the text refers to a collective entity (e.g., `the blessed`, `the damned`), the group must be annotated as a single bounding box **only if** the visual representation consists of five or more overlapping individuals and they cannot be meaningfully disambiguated as separate entities.
 
-Entities have to be annotated as a group if
--  They are not specifically named
--  The number of relevant entities start overlapping and reach 5 overlapped entities
--  multiple entities of the same type close together e.g. flowers
-
-The figure below shows the blessed and the damned on the left and right side of the painting respectively. Since they both are a big group of people they exceed the maximum amount of individual entities and become a group.
+The figure below shows the blessed on the left and the damned on the right side of the painting. Since both are large, indistinct crowds of figures that exceed the threshold of five overlapping individuals and are not individually named, they are annotated as **single group entities**.
 
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d"><img alt="when_group" src="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d"><img alt="when_group" src="https://github.com/user-attachments/assets/79c4901a-073d-4f67-b05f-6520d566ee5d" class="zoom-img"></a>
       </figure>
       <figcaption> "[...] Rising up the left hand side of the painting (at Jesus' right hand) are the <i>blessed</i>, whilst the <i>damned</i> fall into hell on the right hand side [...]."</figcaption>
     </td>
   </tr>
 </table>
 
-#### Handling of Body parts 
-Body parts are not treated as their own entity and therefore can also not be part of a relation. Those body parts will be treated as the whole person. E.g. _child sits in her lap_ will be treated as child sits on mother. Therefore, there is no bounding box that spans over specific body part of a Person.
-The figure below shows Mary and the Christ child. While the descriptions describes Christ siting on her lap, the bounding box is drawn over Mary as a whole.
+> [!TIP]  
+> When annotating large groups, ensure the bounding box encompasses the **entire visual cluster** of entities, even if some parts are partially occluded or overlapping. Do not split the group into multiple boxes unless the entities are clearly distinguishable and individually named.
 
+---
+
+#### Handling of Body Parts
+
+Body parts (e.g., hands, feet, arms, heads) are **not treated as independent entities** and must **not** be annotated with separate bounding boxes.
+
+If a description refers to a body part (e.g., `on her lap`, `holding a book`, `pointing to Christ`), the bounding box must be drawn around the **entire person** to which the body part belongs.
+
+> [!WARNING]  
+> Do **not** draw a bounding box that spans only a limb or torso. The entity remains the full individual, regardless of the specific body part mentioned in the text.
+
+The figure below shows Mary with the Christ Child on her lap. Although the description emphasizes the child’s position on her lap, the bounding box must cover **Mary as a whole**, since her lap is not a separate entity.
 
 <table>
   <tr>
@@ -348,22 +357,82 @@ The figure below shows Mary and the Christ child. While the descriptions describ
   </tr>
 </table>
 
+<!--
+> [!NOTE]  
+> If the text explicitly refers to a body part as a symbolic or independent entity (e.g., `the hand of God`, `the eye of God`), then it may be annotated as a distinct entity **only if** it is visually distinct and clearly separable from the rest of the figure. Otherwise, treat it as part of the whole.
+-->
+
+<!--
+---
 #### Handling of Sceneries
 
+Sceneries (e.g., landscapes, architectural interiors, cityscapes, natural environments) are **annotated as single entity** if they are **visually coherent**, **spatially unified**, and **referenced as a whole** in the text.
 
-#### Handling Background Concepts 
-Background entities are of equal importance as foreground entities. The boxes are drawn in one complete box instead of multiple small ones. This needs to be followed even if major foreground scences would be part of the background bounding box.
+> [!CAUTION]  
+> Do **not** split a continuous scenery into multiple bounding boxes based on minor visual differences (e.g., separate trees, distant hills, or architectural elements). Instead, draw one bounding box that encompasses the **entire scene** as a single visual unit.
+
+For example, if the text refers to a "mountainous landscape in deep perspective" or "a church interior with a semicircular apse", the bounding box should cover the **entire visual space** of that setting, even if it includes multiple architectural or natural elements.
+
+> [!TIP]  
+> Use the context of the description to determine whether the scenery is meant to be treated as a single entity. If the text refers to it as a unified environment (e.g., "the background landscape", "the interior of the chapel"), annotate it as one.
+-->
+---
+#### Handling of Background Concepts
+
+Background entities are **equally important** as foreground entities and must be annotated with the same level of precision.
+
+When a background element is **visually distinct** and **referenced in the text**, it must be annotated as a **separate entity**, even if it lies behind other figures or objects.
+
+> [!NOTE]  
+> **Do not** treat the background as a single monolithic region. Instead, annotate **each visually distinct background element individually** (e.g., mountains, hills, trees, architectural structures, distant cityscapes), **provided they are clearly identifiable and referenced in the text**.
+
+However, **the bounding box for each background element must be drawn as a continuous, unbroken region** — **even if it overlaps with foreground objects**.
+
+<!--
+> [!CAUTION]  
+> **Do not** split a background element’s bounding box into multiple fragments due to occlusion by foreground figures. The box must cover the **entire visual extent** of the background element, including parts that may be partially hidden.
+-->
+
+The figure below shows a complex background with mountains, hills, and a distant cityscape. Although these elements are partially obscured by foreground figures (e.g., Saint Jerome, Francis of Assisi), each must be annotated **individually** as a distinct entity. The bounding boxes for the mountains and hills must **remain continuous**, even if they include parts of the background that are overlapped by foreground figures. For the sake of clarity, only the annotations for the mountains are shown.
 
 <table>
   <tr>
     <td>
       <figure class="zoom-container">
-        <a href="https://github.com/user-attachments/assets/fc4caf3a-d7af-4c27-b542-0d99e693a2bf"><img alt="background1" src="https://github.com/user-attachments/assets/fc4caf3a-d7af-4c27-b542-0d99e693a2bf"  class="zoom-img"></a>
+        <a href="https://github.com/user-attachments/assets/fc4caf3a-d7af-4c27-b542-0d99e693a2bf"><img alt="background1" src="https://github.com/user-attachments/assets/fc4caf3a-d7af-4c27-b542-0d99e693a2bf" class="zoom-img"></a>
       </figure>
-      <figcaption>"[...] The landscape background is typical of Perugino, <i>with mountains and hills in deep perspective</i>. To the left of the cross stand saint Jerome (inspiration for the Jesuati) and Francis of Assisi. To its right are Mary Magdalene touching Christ's feet, Blessed Giovanni Colombini (founder of the Jesuati) and John the Baptist (patron saint of Florence). John points to Christ, whilst Jerome has thrown down his cardinal's cap at the foot of the cross, symbolising his rejection of earthly honours. [...]."</figcaption>
+      <figcaption>"[...] The landscape background is typical of Perugino, <i>with mountains and hills in deep perspective</i>. To the left of the cross stand Saint Jerome (inspiration for the Jesuati) and Francis of Assisi. To its right are Mary Magdalene touching Christ's feet, Blessed Giovanni Colombini (founder of the Jesuati) and John the Baptist (patron saint of Florence). John points to Christ, whilst Jerome has thrown down his cardinal's cap at the foot of the cross, symbolising his rejection of earthly honours. [...]."</figcaption>
     </td>
   </tr>
 </table>
+
+<!--
+> [!TIP]  
+> Use the text description to determine whether a background element is meant to be treated as a distinct entity. If the text refers to it specifically (e.g., "the distant mountains", "the hillside in the background"), annotate it individually — even if it appears behind other figures.
+
+> [!WARNING]  
+> **Never** break a bounding box into multiple parts because a foreground object overlaps it. The box must represent the **complete visual extent** of the background element, regardless of occlusion.
+-->
+
+---
+
+### 3.2 Assign the Bounding Box Id
+
+The last step is to assign the unique identifier created according to [Step 2.2](#22-assigning-a-wikidata-identifier) and [Step 2.3](#23-assigning-instance-numbers) to the bounding box. 
+
+> [!CAUTION]
+> TODO Daniel: Bitte beschreiben was man in Label Studio machen muss um die Annotation anzulegen.
+
+By pressing on the bounding box, you can open the annotation menu. 
+Use the `id` text field and insert the corresponding identifier of the entity from [Step 2.3](#23-assigning-instance-numbers). 
+
+This step concludes the annotation for the current entity, by linking it to the text annotation and the [synonyms](#24-synonyms-and-symbolic-representations).
+Repeat the annotation from [Step 1](#1-identify-art-historical-entities) to label the remaining entities in the artwork. 
+
+> [!CAUTION]
+> TODO Daniel: Ab hier habe ich alles auskommentiert. Ich bin mir nicht sicher ob davon jetzt alles durch die Guidelines abgedeckt ist. 
+> Falls nichts, ergänze es an der passenden Stelle
+> Die Beispiele kannst du evlt. noch in den neuen Guideline-Text integrieren. 
 
 
 ### 3.2 Assign the Bounding Box Id
