@@ -222,17 +222,18 @@ This adds a relation between the two spans. To determine the relation type pleas
 
 <div class="zoom-container">
   <a 
-    class="zoom-img"![make_relation_5]
-    href="https://github.com/user-attachments/assets/0d5b82a3-1f43-4aad-b792-39efa652000c">
-    <img src="https://github.com/user-attachments/assets/0d5b82a3-1f43-4aad-b792-39efa652000c">
+    class="zoom-img"
+    href="https://github.com/user-attachments/assets/a8e8a806-8f7d-46ea-a578-04da0f834a28">
+    <img src="https://github.com/user-attachments/assets/a8e8a806-8f7d-46ea-a578-04da0f834a28">
   </a>
 </div>
 
 > [!NOTE]
-> If the relation is uncertain, please also pick `utc` from the drop-down list. 
+> If the relation is uncertain, please also pick `uct` from the drop-down list. 
 > For images, please use the 'uncertain?' checkmark. An example is shown below.
 
-<div class="zoom-container">
+<div class="zoom-container">![make_relation_5](https://github.com/user-attachments/assets/c755bfe4-1be6-4a23-9862-ed11ed732f53)
+
   <a 
     class="zoom-img"
     href="https://github.com/user-attachments/assets/900adaad-2f0c-4681-86d9-c2d4dbe1698d">
