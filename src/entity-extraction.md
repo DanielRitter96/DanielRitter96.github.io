@@ -232,8 +232,7 @@ This adds a relation between the two spans. To determine the relation type pleas
 > If the relation is uncertain, please also pick `uct` from the drop-down list. 
 > For images, please use the 'uncertain?' checkmark. An example is shown below.
 
-<div class="zoom-container">![make_relation_5](https://github.com/user-attachments/assets/c755bfe4-1be6-4a23-9862-ed11ed732f53)
-
+<div class="zoom-container">
   <a 
     class="zoom-img"
     href="https://github.com/user-attachments/assets/900adaad-2f0c-4681-86d9-c2d4dbe1698d">
